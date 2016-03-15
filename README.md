@@ -24,3 +24,16 @@ You may try the following resources for more help
 - [JSP Hello World Project] (http://www.srccodes.com/p/article/2/JSP-Hello-World-Program-using-Eclipse-IDE-and-Tomcat-web-server)
 - [Importing A Web project] (http://stackoverflow.com/questions/20563894/importing-existing-java-dynamic-web-project-into-eclipse)
 - [Connect SQL with JAVA Code] (http://www.javatpoint.com/example-to-connect-to-the-oracle-database)
+
+Contributors:
+
+    Himansu Rathi (12/CS/06)
+    Deepak Verma (12/CS/46)
+    Keshav Agarwal (12/CS/37)
+    Kumar Avinash (12/CS/05)
+    Saikat Kumar Dey (12/CS/40)
+    Soumyadip Mitra (12/CS/39)
+    Abhishek Agarwal (12/CS/57)
+    Deepak Kumar Singh (12/CS/58)
+    Suraj Kumar Biswas (12/CS/30)
+    Bijay Khatri (12/CS/45)
