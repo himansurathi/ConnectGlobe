@@ -1,0 +1,112 @@
+CREATE TABLE  "FORUMREG" 
+   (	"ID" NUMBER, 
+	"USERNAME" VARCHAR2(4000), 
+	"USERPASS" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	"MOBILE" NUMBER, 
+	"ADDRESS" VARCHAR2(4000), 
+	 CONSTRAINT "FORUMREG_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_FORUMREG" 
+  before insert on "FORUMREG"               
+  for each row  
+begin   
+    select "FORUMREG_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_FORUMREG" ENABLE
+/
+--------------------------------------------------------------
+
+CREATE TABLE  "FORUMREP" 
+   (	"ID" NUMBER, 
+	"COUNTRY" VARCHAR2(4000), 
+	"STATE" VARCHAR2(4000), 
+	"DISTRICT" VARCHAR2(4000), 
+	"POLICE_STATION" VARCHAR2(4000), 
+	"REPORT" VARCHAR2(4000), 
+	"STATUS" VARCHAR2(4000), 
+	"IMAGE" BLOB, 
+	"EMAIL" VARCHAR2(4000), 
+	"POSTEDON" DATE, 
+	 CONSTRAINT "FORUMREP_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_FORUMREP" 
+  before insert on "FORUMREP"               
+  for each row  
+begin   
+    select "FORUMREP_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_FORUMREP" ENABLE
+/
+
+--------------------------------------------------------------
+
+CREATE TABLE  "FORUMADVC" 
+   (	"RID" NUMBER, 
+	"ID" NUMBER, 
+	"CMT" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	 CONSTRAINT "FORUMADVC_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_FORUMADVC" 
+  before insert on "FORUMADVC"               
+  for each row  
+begin   
+    select "FORUMADVC_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_FORUMADVC" ENABLE
+/
+----------------------------------------------------------------
+
+CREATE TABLE  "FORUMTPC" 
+   (	"ID" NUMBER, 
+	"TOPIC" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	"CREATEDON" DATE NOT NULL ENABLE, 
+	 CONSTRAINT "FORUMTPC_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_FORUMTPC" 
+  before insert on "FORUMTPC"               
+  for each row  
+begin   
+    select "FORUMTPC_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_FORUMTPC" ENABLE
+/
+------------------------------------------------------------------
+
+CREATE TABLE  "FORUMTADVC" 
+   (	"ID" NUMBER, 
+	"TID" NUMBER, 
+	"CMT" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	 CONSTRAINT "FORUMTADVC_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_FORUMTADVC" 
+  before insert on "FORUMTADVC"               
+  for each row  
+begin   
+    select "FORUMTADVC_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_FORUMTADVC" ENABLE
+/
