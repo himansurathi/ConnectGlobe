@@ -19,7 +19,7 @@ ps.setString(2,userpass);
 ResultSet rs=ps.executeQuery();
 status=rs.next();
 if(status){
-System.out.print("hi");
+System.out.print("Login Succesful!!!! Hello  ");
 username=rs.getString(2);
 String email=rs.getString(4);
 session.setAttribute("email",email); 
@@ -31,7 +31,7 @@ session.setAttribute("islogin","plz sign in first");
 <%
 }
 else{
-System.out.print("hi");
+System.out.print("Login Not succesful!!!! Sorry ");
 request.setAttribute("Error","Sorry! Username or Password Error.");
 session.setAttribute("Loginmsg","plz sign in first");
 %>

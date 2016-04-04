@@ -46,7 +46,6 @@ int s=	ps.executeUpdate();
 if(s>0){
 System.out.print("save");
 %>
-
 <jsp:forward page="uploadpic.jsp"></jsp:forward>
 
 <%

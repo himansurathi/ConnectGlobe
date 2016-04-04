@@ -1,0 +1,130 @@
+.community-background-color .round-dropdown:before {
+	content : "";
+	color : #356cb5;
+	cursor : default;
+	font-size : 16px;
+	transform : none;
+}
+
+.cmty-search-bar-icon {
+	position : absolute;
+	color : #356cb5;
+	cursor : pointer;
+	font-size : 16px;
+	transform : none;
+	right : 10px;
+	font-family : "AoPS";
+}
+
+.cmty-main-crumb-search {
+	width : 238px;
+	color : #356cb5;
+	background-color : #fff;
+}
+
+
+
+.cmty-main-crumb-search input {
+	width : 222px;
+	clear : both;
+	padding : 0;
+	height : 20px;
+	border : none;
+	border-radius : 0;
+	background-color : transparent;
+}
+
+.cmty-main-crumb-search input:focus {
+	outline : none;
+}
+
+.header-user-data-bottom a {
+	margin-right : 5px;
+}
+
+.header-box .cmty-icon-w-text:hover {
+	border-bottom : 1px solid #fff;
+}
+
+.header-community .header-user-data-bottom a:hover {
+	text-decoration : none;
+}
+
+/** If the two below are edited, you'll need to hunt down the corresponding items in 
+community.css to edit.  The aops-icon one will be a bit of a pain; these details are spread
+across a couple classes **/
+#community-panel .aops-icon {
+	font-size : 16px;
+	padding-right : 2px;
+	font-family : AoPS;
+}
+
+@media (max-width: 800px) {
+	.cmty-phone-hide {
+		display : none !important;
+	}
+}
+
+
+@media (max-width: 930px) {
+	.header-user-data-bottom a:nth-child(3){
+		display : none;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	.cmty-main-crumb-search {
+		width : 550px;
+	}
+	
+	.cmty-main-crumb-search input {
+		width : 538px;
+	}
+}
+
+
+@media (max-width: 650px) {
+	.cmty-main-crumb-search {
+		width : 450px;
+	}
+	
+	.cmty-main-crumb-search input {
+		width : 438px;
+	}
+}
+
+@media (max-width: 550px) {
+	.cmty-main-crumb-search {
+		width : 350px;
+	}
+	
+	.cmty-main-crumb-search input {
+		width : 338px;
+	}
+}
+
+@media (max-width: 450px) {
+	.cmty-main-crumb-search {
+		width : 236px;
+	}
+	
+	.cmty-main-crumb-search input {
+		width : 220px;
+	}
+}
+
+
+@media (max-width: 400px) {
+	.cmty-main-crumb-search {
+		width : 216px;
+	}
+	
+	.cmty-main-crumb-search input {
+		width : 200px;
+	}
+	
+	#community-panel .cmty-category-cell-number {
+		font-size : 12px;
+	}
+}

@@ -1,0 +1,4995 @@
+/*
+In main now.
+
+
+.aops-modal-body {
+	position : relative;
+	height : 100%;
+}
+*/
+/** Breadcrumbs **/
+
+/*
+Chrome too jacked up.
+If we need to go after breadcrumbs, put the spans/divs inside the anchors.
+
+#breadcrumbs .crumb {
+	height : 25px;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	display : inline-block;
+	white-space : nowrap;
+	height : 100%;
+}
+
+#breadcrumbs .fa {
+	height : 25px;
+	padding-top : 5px;
+	max-width : 100px;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	display : inline-block;
+	white-space : nowrap;
+}
+
+#breadcrumbs  .crumb a {
+	height : 25px;
+	max-width : 100px;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	display : inline-block;
+	white-space : nowrap;
+}*/
+
+/** End Breadcrumbs **/
+
+
+
+.aops-admin {
+	color : #f00 !important;
+}
+
+
+#main-column-standard {
+/* Hiding overflow kills the shadow on the AoPS Master Collection */
+/*	overflow-y : hidden;*/
+/*	padding : 8px 0px !important;*/
+}
+
+.cmty-page-aops-master #main-column-standard {
+	overflow : visible;
+}
+
+#community-all  {
+	height : 100%;
+	position : relative;
+}
+
+.community #subheader {
+	background-color : #356cb5;
+}
+
+
+/*
+I can't remember why I needed to put the shadows on elements...
+I suspect it will be obvious when I finally hit it.*/
+#community-all.cmty-page-topic #cmty-topic-view-top .cmty-category-cell,
+#community-all.cmty-page-topic-list  #cmty-topic-view-top .cmty-category-cell,
+#community-all #cmty-topic-view-left,
+#community-all.cmty-page-topic-list  #cmty-no-topic-view-bottom,
+#community-all .cmty-flat-top .cmty-category-cell-bottom {
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+#community-all.cmty-page-topic-list  #cmty-topic-view-top .cmty-flat-top,
+#community-all.cmty-page-topic  #cmty-topic-view-top .cmty-flat-top {
+	box-shadow : none;
+}
+
+#community-all.cmty-page-topic #cmty-topic-view-right {
+	box-shadow : 9px 3px 13px -4px #aaa;
+}
+
+#community-all.cmty-page-topic-list #cmty-topic-view-right {
+	display : none;
+}
+
+#community-all.cmty-page-my-aops #cmty-topic-view-top .cmty-category-cell {
+	box-shadow : 3px 9px 13px #aaa;
+}
+
+/*
+#community-all.cmty-page-topic,
+#community-all.cmty-page-topic-list {
+	box-shadow : 3px 3px 13px #aaa;
+}*/
+
+#community-all.cmty-page-topic {
+	background-color : #666;
+}
+
+#community-all.cmty-page-topic  #cmty-topic-view-left {
+	background-color : #eee;
+}
+
+/*
+ Within the community, the router will decide what to show in the breadcrumbs.  Initially,
+	we want them hidden so that they don't appear, then disappear upon direct link to toplevel
+	community or My AoPS
+*/
+
+#breadcrumbs-wrapper {
+	display : none;
+}
+
+/*********
+ * Properties shared on multiple pages
+ *********/
+
+.cmty-page-title {
+	font-size : 24px;
+	font-weight : bold;
+	color : #356cb5;
+}
+
+.cmty-page-text {
+	font-size : 15px;
+}
+
+
+/** Category cells **/
+
+.cmty-category-cell {
+	position : relative;
+}
+
+.cmty-category-cell-heading {
+	position : relative;
+	cursor : pointer;
+	width : 100%;
+}
+
+.cmty-user-profile .cmty-category-cell-heading {
+	cursor: auto;
+}
+
+.cmty-category-cell-left {
+	display : inline-block;
+	padding-left : 10px;
+	max-width : 75%;
+	vertical-align : top;
+	height : 100%;
+}
+
+.cmty-category-cell-title {
+	text-align : left;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+
+
+
+.cmty-category-cell-heading a {
+	color : inherit;
+}
+
+.cmty-category-cell-desc {
+	text-align : left;
+	position : relative;
+	max-width : 100%;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+
+}
+
+.cmty-category-cell-small-desc {
+	display : none;
+
+}
+
+.cmty-category-cell-right {
+	right : 0px;
+	position : absolute;
+	top : 5px;
+	z-index : 10;
+}
+
+/** Help question mark **/
+.cmty-small-category-heading .cmty-cat-admin-help-wrap {
+	padding : 0 30px;
+}
+
+
+
+.cmty-category-cell-mid span {
+	padding : 0px 3px;
+	font-size : 16px;
+	z-index : 10;
+	vertical-align : top;
+	line-height : 22px;
+}
+
+.cmty-category-cell-mid span:hover {
+	color : #fff;
+}
+
+.cmty-cat-cell-aops-font-icon {
+	font-family : AoPS;
+	font-size : 16px;
+}
+
+.cmty-category-cell-right a {
+	z-index : 20;
+}
+
+
+.cmty-cat-cell-symbol-tag {
+	font-size : 15px;
+}
+
+.cmty-category-cell-bookmark:hover {
+	color : white;
+}
+
+.cmty-all-read .cmty-mark-all-read {
+	display : none;
+}
+
+.cmty-folder-grid .cmty-mark-all-read {
+	display : none;
+}
+
+.cmty-folder-grid .cmty-topics-list-global-announcement {
+	display : none;
+}
+
+.cmty-folder-grid .cmty-topics-list-local-announcement {
+	display : none;
+}
+
+.cmty-folder-grid .cmty-short-forum .cmty-topics-list-local-announcement {
+	display : block;
+}
+
+.cmty-folder-grid .cmty-cat-cell-cat-info {
+	display : none;
+}
+
+
+.cmty-category-cell-archive:hover {
+	color : white;
+}
+
+.cmty-mark-all-read:hover {
+	color : white;
+}
+
+.cmty-new-topic-button:hover {
+	color : white;
+}
+
+.cmty-cat-cell-cat-info:hover {
+	color : white;
+}
+
+.cmty-folder-top .cmty-cat-cell-cat-info:hover {
+	color : #999;
+}
+
+.cmty-folder-top .cmty-cat-cell-aops-font-icon:hover {
+	color : #dae7f6;
+}
+
+/** Bottom portion of a category cell box **/
+
+.cmty-category-cell-bottom {
+	width : 100%;
+	background-color : white;
+	position : relative;
+}
+
+.cmty-page-topic .cmty-category-cell-bottom {
+	display : none;
+}
+
+.cmty-page-topic.cmty-page-has-tag-filter .cmty-topics-list {
+	height : calc(100% - 72px);
+	height : -webkit-calc(100% - 72px);
+}
+
+
+
+.cmty-category-cell-long-desc {
+	width : 90%;
+	margin : 0 auto;
+	font-size : 10px;
+	font-weight : bold;
+	height : 33px;
+	overflow : hidden;
+	color : #444;
+}
+
+
+
+/** Tag box in a Category cell  **/
+
+
+.cmty-itembox {
+	width : 100%;
+	position : relative;
+	height : 100%;
+}
+
+.cmty-category-itembox-wrapper {
+	position : relative;
+	height : 176px;
+	margin : 2px auto 0 auto;
+	overflow : hidden;
+	background-color : #eee;
+}
+
+
+.cmty-itembox-inner-box, .cmty-itembox .cmty-topics-list-inner-box {
+	padding : 0 0px 6px 0px;
+	text-align : left;
+	position : relative;
+	z-index : 10;
+}
+
+/* Changed bottom from 6 to 0 2/7/15
+.cmty-itembox .cmty-topics-list-inner-box {
+	padding-bottom : 0px;
+}*/
+
+.cmty-itembox .aops-scroll-inner {
+	padding-bottom : 3px;
+}
+
+.cmty-itembox .aops-scroll-fade-top {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+    height : 5px;
+	width : 100%;
+	z-index : 10;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(200,200,200,1) 0%,rgba(200,200,200, 0.5) 50%,rgba(200,200,200,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+/* From http://www.colorzilla.com/gradient-editor/ */
+.cmty-itembox .aops-scroll-fade-bottom {
+	position : absolute;
+	height : 5px;
+	z-index : 10;
+	width : 100%;
+	left : 0px;
+	bottom : 0px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(200,200,200,0) 0%,rgba(200,200,200,0.5) 50%,rgba(200,200,200,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.cmty-itembox-loader {
+	width : 100%;
+	position : relative;
+	font-size : 12px;
+	color : #888;
+	text-align : center;
+}
+
+.cmty-cat-cell-focus-shadow .cmty-item-tag:before {
+	font-family : AoPS;
+	content: 'J';
+	margin-right : 4px;
+}
+
+
+
+
+
+
+/*********
+ * Folder page
+ *
+ * Some items (itembox and topic list) in the "Properties on multiple pages above"
+ **********/
+
+ /*
+.cmty-folder-top .cmty-category-cell-heading {
+	box-shadow : 3px 3px 8px #aaa;
+}
+*/
+
+.cmty-folder-top .cmty-cat-cell-cat-info {
+	cursor : pointer;
+	padding-right : 10px;
+}
+
+.cmty-folder-empty {
+	text-align : left;
+	margin-left : 20px;
+	padding-bottom : 10px;
+}
+
+.cmty-folder-top .cmty-small-category-heading .cmty-category-cell-right {
+	top : -2px; /* Look at the help button on view_tag and view_topic if you change this */
+} /** This shouldn't be here? That is, the CSS is right, but it should be placed elsewhere in this file?**/
+
+/** Shares some CSS with Category Cell Category Top via class .cmty-small-category-header **/
+/** These properties are set far below **/
+
+.cmty-folder-grid .cmty-category-cell {
+	display : inline-block;
+	vertical-align : top;
+	margin : 10px 10px;
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.cmty-folder-grid .cmty-cat-cell-symbol-tag {
+	display : none;
+}
+
+
+.cmty-category-cell-pop-tags:after {
+	content : "TAGS";
+}
+
+.cmty-forums-not-tags .cmty-category-cell-pop-tags:after {
+	content : "FORUMS";
+}
+
+.cmty-category-cell-sublink-bar {
+	width : 102px;
+	margin : 0 auto;
+	border-top : 4px solid #ddd;
+	text-align : center;
+}
+
+
+
+.cmty-folder-top {
+/* 	height : 100%; */
+	position : relative;
+	text-align : center;
+}
+
+
+.cmty-folder-grid {
+/* 	height : calc(100% - 40px); */
+/*	overflow : hidden; */
+	position : relative;
+	/*border : 1px solid black;*/
+	text-align : center;
+}
+
+.cmty-folder-grid-container {
+	position : relative;
+	text-align : left;
+}
+
+/** End Responsive items **/
+
+/** Category cell **/
+
+
+
+.cmty-folder-grid .cmty-category-cell-heading {
+	height : 48px;
+	text-align : left;
+}
+
+.cmty-folder-grid .cmty-category-cell-title {
+	font-size : 20px;
+	font-weight : bold;
+	padding-top : 2px;
+	height : 27px; /* added */
+}
+
+/* MAKE THIS BETTER */
+.cmty-folder-grid .bkmk-text {
+	display : none;
+}
+
+.cmty-folder-grid .cmty-category-cell-desc {
+	font-size : 14px;
+	/*margin-top : -5px;*/
+	height : 19px;
+	vertical-align : top;
+}
+
+.cmty-folder-grid .cmty-category-cell-right {
+	padding-top : 12px;
+	margin-right : 10px;
+}
+
+.cmty-folder-grid .cmty-category-cell-right .cmty-cat-cell-aops-font-icon {
+	font-size : 24px;
+}
+
+.cmty-folder-grid .cmty-mark-all-read {
+	display : none;
+	font-size : 30px;
+}
+
+
+/** Bottom portion of a category cell box **/
+
+
+.cmty-folder-grid .cmty-category-cell-bottom {
+	height : 197px;
+}
+
+
+.cmty-folder-grid .cmty-category-itembox-wrapper {
+	width : 95%;
+	height : 148px;
+	margin : 2px auto 0 auto;
+}
+
+
+
+/** Row above the box and below the header; only visible in folder view. **/
+.cmty-folder-grid .cmty-category-cell-numrow {
+	width : 100%;
+	text-align : left;
+	height : 40px;
+	padding-top : 0px;
+}
+
+#cmty-topic-view-top .cmty-category-cell-numrow {
+	display : none;
+}
+
+.cmty-category-cell-numbers {
+	display : inline-block;
+	padding-top : 10px;
+	padding-left : 21px;
+}
+
+.cmty-category-cell-numbers .aops-font {
+	font-size : 19px;
+	display : inline-block;
+	margin-right : 4px;
+}
+
+.cmty-category-cell-number {
+	font-size : 14px;
+	display : inline-block;
+	vertical-align : top;
+	padding-top : 2px;
+	font-family : helvetica;
+	line-height : 20px;
+}
+
+.cmty-category-cell-num-topics {
+	margin-right : 10px;
+}
+
+.cmty-category-cell-number .aops-font {
+	font-size : 15px;
+}
+
+
+.cmty-category-cell-sublink {
+	padding-top : 8px;
+	display : inline-block;
+	float : right;
+	vertical-align : top;
+}
+
+.cmty-category-cell-topics {
+	margin-right : 15px;
+}
+
+.cmty-category-cell-sublink-heading {
+	text-align : center;
+	color : #136cce;
+	font-weight : bold;
+	font-size : 12px;
+	margin-bottom : 1px;
+}
+
+
+.active-sublink .cmty-category-cell-sublink-heading {
+	color : #136cce;
+}
+
+
+
+.active-sublink .cmty-category-cell-sublink-bar {
+	margin : 0 auto;
+	border-top : 4px solid #136cce;
+}
+
+
+.cmty-category-cell-sublink-triangle {
+	/*position : absolute;
+	top : 0px;
+	left : 0px;*/
+	width : 0px;
+	height : 0px;
+	border-color : #136cce;
+	border-left : 8px solid transparent;
+	border-top : 4px solid #136cce;
+	border-right : 8px solid transparent;
+	margin : 0 auto;
+}
+
+.cmty-category-cell .cmty-topic-cell {
+	height : 60px;
+	border-bottom : 1px solid #aaa;
+}
+
+.cmty-category-cell .cmty-topic-cell.cmty-topics-list-global-announcement,
+.cmty-category-cell .cmty-topic-cell.cmty-topics-list-local-announcement {
+	height : 40px;
+}
+
+/** End the row between the colored title and the tag box **/
+
+/** Itembox **/
+
+
+.cmty-category-cell-bottom .aops-scroll-content {
+	padding-left : 2px;
+	padding-right : 2px;
+}
+
+.cmty-category-cell-bottom .cmty-topics-list-inner-box.aops-scroll-content {
+	margin-left : 2px;
+	padding-left : 0;
+}
+
+.cmty-category-cell-bottom .aops-scrollbar-not-visible .cmty-topics-list-inner-box .cmty-topic-cell {
+	width : calc(100% - 2px);
+	width : -webkit-calc(100% - 2px);
+}
+
+
+ /** Start responsive items **/
+
+
+.cmty-folder-grid .cmty-category-cell {
+	width : 595px;
+}
+
+
+.cmty-folder-grid .cmty-itembox .aops-scroll-content {
+	width : 557px;
+}
+
+.cmty-folder-grid  .cmty-itembox .aops-scrollbar-not-visible .aops-scroll-content {
+	width : 565px;
+}
+
+
+.cmty-category-cell-numbers {
+	width : 360px;
+}
+
+
+
+/** View_topics Category cells **/
+
+.cmty-category-cell-view-topics .cmty-category-cell-numrow {
+	display : none;
+}
+
+.cmty-category-cell-view-topics .cmty-category-itembox-wrapper {
+	height : 193px;
+}
+
+
+
+@media (max-width: 1270px) {
+	.cmty-folder-grid .cmty-category-cell {
+		width : 470px;
+	}
+
+
+
+
+	.cmty-folder-grid .cmty-itembox .aops-scroll-content {
+		width : 437px;
+	}
+
+	.cmty-folder-grid  .cmty-itembox .aops-scrollbar-not-visible .aops-scroll-content {
+		width : 445px;
+	}
+
+	.cmty-category-cell-numbers {
+		width : 240px;
+	}
+
+}
+
+@media (max-width: 1020px) {
+	.cmty-folder-grid .cmty-category-cell {
+		width : 425px;
+	}
+
+
+	.cmty-folder-grid .cmty-itembox .aops-scroll-content {
+		width : 395px;
+	}
+
+	.cmty-folder-grid  .cmty-itembox .aops-scrollbar-not-visible .aops-scroll-content {
+		width : 403px;
+	}
+
+
+	.cmty-category-cell-pop-tags:after {
+		content : "TAGS";
+	}
+
+	.cmty-forums-not-tags .cmty-category-cell-pop-tags:after {
+		content : "FORUMS";
+	}
+
+	.cmty-category-cell-sublink-bar {
+		width : 79px;
+	}
+}
+
+@media (max-width: 930px) {
+	.cmty-folder-grid .cmty-category-cell {
+		width : 380px;
+	}
+
+
+	.cmty-folder-grid .cmty-itembox .aops-scroll-content {
+		width : 352px;
+	}
+
+	.cmty-folder-grid  .cmty-itembox .aops-scrollbar-not-visible .aops-scroll-content {
+		width : 360px;
+	}
+
+
+	.cmty-category-cell-sublink-bar {
+		width : 54px;
+	}
+}
+
+
+
+@media (max-width: 840px) {
+	.cmty-category-cell-pop-tags:after {
+		content : "TAGS";
+	}
+
+	.cmty-folder-grid .cmty-category-cell {
+		width : calc(100% - 20px);
+		width : -webkit-calc(100% - 20px);
+	}
+
+	.cmty-folder-grid .cmty-itembox .aops-scroll-content {
+		width : calc(100% - 18px);
+		width : -webkit-calc(100% - 18px);
+	}
+
+	.cmty-folder-grid .cmty-itembox .aops-scrollbar-not-visible .aops-scroll-content {
+		width : calc(100% - 10px);
+		width : -webkit-calc(100% - 10px);
+	}
+
+	.cmty-category-cell-sublink-bar {
+		width : 102px;
+	}
+
+	.cmty-category-cell-numbers {
+		width : calc(100% - 220px);
+		width : -webkit-calc(100% - 220px);
+	}
+}
+
+
+
+/** Adjustments for category cell search **/
+.cmty-category-cell-with-search .cmty-category-cell-long-desc {
+	display : inline-block;
+	width : 45%;
+}
+
+.cmty-category-cell-with-search .cmty-category-cell-numrow {
+	padding : 0 15px;
+}
+
+.cmty-category-cell .cmty-category-autocomplete-wrapper {
+	width : 100%;
+	float : right;
+	border : 1px solid #aaa;
+	border-radius : 6px;
+	padding-left : 3px;
+	margin-top : -4px;
+	height : 20px;
+	line-height : 20px;
+	background-color : white;
+}
+.cmty-category-cell .cmty-category-autocomplete-wrapper input {
+	width : 89%;
+}
+
+[placeholder] {
+	text-overflow : ellipsis;
+}
+
+@media (max-width: 1020px) {
+	.cmty-category-cell .cmty-category-autocomplete-wrapper {
+		width : 83%;
+	}
+	.cmty-category-cell .cmty-category-autocomplete-wrapper input {
+		width : 83%;
+	}
+}
+
+@media (max-width: 930px) {
+	.cmty-category-cell .cmty-category-autocomplete-wrapper {
+		width : 66%;
+	}
+
+
+
+}
+
+@media (max-width: 840px) {
+	.cmty-category-cell .cmty-category-autocomplete-wrapper {
+		width : 100%;
+	}
+}
+
+@media (max-width : 500px) {
+	.cmty-category-cell .cmty-category-autocomplete-wrapper {
+		display : none;
+	}
+}
+
+.cmty-category-cell ul.ui-menu.category-autocomplete {
+	border-radius : 10px;
+}
+
+.cmty-category-help {
+	margin-right : 10px;
+}
+
+
+/*******
+Folder cells
+********/
+
+.cmty-folder-grid .cmty-category-cell-folder {
+	background-color : #fff;
+}
+
+
+
+/** Folder top stuff **/
+
+.cmty-folder-top .cmty-small-category-heading.cmty-category-cell-heading,
+.cmty-view-folder-top .cmty-small-category-heading.cmty-category-cell-heading {
+	box-shadow : none;
+	height : 30px;
+	color : #356cb5;
+	font-size : 28px;
+	background-color : #eee;
+}
+
+.cmty-folder-top .cmty-folder-top-placeholder {
+	display : none;
+	height : 30px;
+}
+
+.cmty-folder-top .cmty-small-category-heading.cmty-category-cell-heading .cmty-category-cell-title,
+.cmty-view-folder-top .cmty-small-category-heading.cmty-category-cell-heading  .cmty-category-cell-title {
+	font-size : 22px;
+	padding-left : 10px;
+	line-height : 26px;
+}
+
+
+
+.cmty-folder-top .cmty-small-category-heading.cmty-category-cell-heading a,
+.cmty-view-folder-top .cmty-small-category-heading.cmty-category-cell-heading a {
+	color : #356cb5;
+}
+
+.cmty-folder-top .cmty-small-category-heading .cmty-category-cell-title:before,
+.cmty-view-folder-top .cmty-small-category-heading .cmty-category-cell-title:before {
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 28px;
+	vertical-align : top;
+	padding-right : 2px;
+}
+
+
+.cmty-view-folder-top .cmty-category-cell-small-desc {
+	display : none;
+}
+/** End folder top stuff **/
+
+
+.cmty-category-cell-folder .cmty-category-cell-heading {
+	box-shadow : none;
+	padding-left : 0px;
+	border-top : 5px solid #356cb5;
+	color : #eee;
+}
+
+
+.cmty-category-cell-folder .cmty-category-cell-heading:hover {
+	background-color : #eee;
+}
+
+.cmty-category-cell-folder  .cmty-category-cell-left {
+	max-width : 95%;
+}
+
+
+.cmty-category-cell-folder .cmty-category-cell-right {
+	padding-top : 4px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-desc {
+	font-size : 10px;
+	font-weight : bold;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	display : inline-block;
+	white-space : nowrap;
+	color : #666;
+}
+
+.cmty-category-cell-view-tags .cmty-category-cell-desc {
+	max-width : 475px;
+}
+
+@media (max-width: 1270px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 350px;
+	}
+
+}
+
+
+@media (max-width: 1020px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 310px;
+	}
+
+}
+
+
+@media (max-width: 930px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 260px;
+	}
+
+}
+
+
+@media (max-width: 840px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 600px;
+	}
+
+}
+
+
+@media (max-width: 740px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 500px;
+	}
+
+}
+
+
+@media (max-width: 640px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 400px;
+	}
+
+}
+
+
+@media (max-width: 540px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-desc {
+		max-width : 350px;
+	}
+
+}
+
+.cmty-category-cell-folder .cmty-category-cell-title {
+	color : #356cb5;
+	height : 27px;
+	padding : 3px 12px 0 2px;
+	line-height : 23px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-title:before {
+	content : '8';
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 24px;
+	vertical-align : top;
+	padding-right : 2px;
+}
+
+
+.cmty-folder-grid .cmty-category-cell-folder .cmty-item-subtitle {
+	width : 95%;
+	font-size : 11px;
+	line-height : 13px;
+	color : #666;
+}
+
+.cmty-folder-grid .cmty-category-cell-folder  .cmty-item-subtitle-on-hover {
+	color : #ddd;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-numrow {
+	display : none;
+}
+
+
+.cmty-category-cell-folder .cmty-category-cell-bottom {
+	z-index : 1; /* If you remove this, the search dropdowns on the top will make you sad */
+	height : 207px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-sublink {
+	padding-top : 8px;
+}
+
+
+.cmty-category-cell-folder .cmty-category-itembox-wrapper {
+	height : 170px;
+	padding-top : 0px;
+	margin-top : 0px;
+	background-color : #f2f2f2;
+	-moz-box-shadow:    inset 0 0 4px #ccc;
+   -webkit-box-shadow: inset 0 0 4px #ccc;
+   box-shadow:         inset 0 0 4px #ccc;
+}
+/** Note: if we like the shadow inset, put a margin left on the topic cells in the folder to
+reveal the inset **/
+
+
+.cmty-category-cell-folder .cmty-category-cell-bottom  {
+	height : 197px;
+}
+
+.cmty-category-cell-folder .cmty-category-itembox-wrapper {
+	height : 186px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-sublink {
+	float : right;
+	margin-right : 15px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-sublink-heading {
+	color : #356cb5;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-sublink-bar {
+	border-top-color : #356cb5;
+	border-top : 0px;
+	width : 40px;
+}
+
+.cmty-category-cell-folder .cmty-category-cell-sublink-triangle {
+	width : 0px;
+	height : 0px;
+	border-color : #356cb5;
+	border-left : 8px solid transparent;
+	border-top : 4px solid #356cb5;
+	border-right : 8px solid transparent;
+	margin : 0 auto;
+}
+
+
+#community-all.cmty-page-topic #cmty-topic-view-top .cmty-view-folder-top .cmty-category-cell-bottom,
+#community-all.cmty-page-topic-list  #cmty-topic-view-top .cmty-view-folder-top .cmty-category-cell-bottom {
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+#community-all.cmty-page-topic #cmty-topic-view-top .cmty-view-folder-top,
+#community-all.cmty-page-topic-list  #cmty-topic-view-top .cmty-view-folder-top {
+	box-shadow : none;
+}
+
+.cmty-category-cell-view-tags .cmty-category-cell-left {
+	max-width : 75%
+}
+
+.cmty-category-cell-view-tags .cmty-category-cell-sublink,
+.cmty-forums-not-tags .cmty-category-cell-sublink {
+	margin-right : 5px;
+	padding-top : 16px;
+}
+
+.cmty-category-cell-view-tags .cmty-category-cell-sublink-triangle,
+.cmty-forums-not-tags .cmty-category-cell-sublink-triangle {
+	margin-top : -4px;
+}
+
+
+@media (max-width: 930px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-left {
+		max-width : 70%;
+	}
+}
+
+@media (max-width: 840px) {
+	.cmty-category-cell-view-tags .cmty-category-cell-left {
+		max-width : 75%;
+	}
+}
+
+
+/******
+* Start Master Collection Breadcrumb
+*******/
+
+/** See community_header.css **/
+
+
+.cmty-crumb-search-sub {
+	font-size : 12px;
+	position : absolute;
+	right : 0px;
+	top : 21px;
+}
+
+.cmty-crumb-search-sub a {
+	color : white;
+}
+.cmty-crumb-search-sub a:hover {
+	font-weight : normal;
+}
+
+/** Start responsive **/
+
+
+
+
+@media (max-width: 767px) {
+	.cmty-crumb-search-sub {
+		right : 0px;
+		top : -21px;
+	}
+
+}
+
+
+
+
+/** End responsive **/
+
+
+/******
+* End Master Collection Breadcrumb
+*******/
+
+
+/*********
+ * AoPS Master collection (extension of folder)
+ *********/
+
+.cmty-master-collection-extra-fora {
+	width : 100%;
+/*	background-color : #fff;
+	border-top : 6px #356cb5 solid;
+	color : #356cb5;
+	text-align : left;
+	margin-top : 10px;
+	box-shadow : 3px 3px 13px #aaa;
+	margin-bottom : 10px;
+	padding-top : 5px;*/
+}
+
+
+
+.cmty-master-heading {
+	text-align : left;
+	color : #356cb5;
+	font-weight : bold;
+	font-size : 22px;
+	padding-left : 20px;
+}
+
+.cmty-portal-featured .cmty-master-heading {
+	color : #990000;
+}
+
+
+.cmty-portal-featured .cmty-help {
+	background-color : #990000;
+}
+
+.cmty-portal-extra {
+	text-align : left;
+	font-size : 12px;
+	padding : 0 0 10px 20px;
+}
+
+.cmty-master-heading .cmty-help:hover {
+	background-color : #999;
+}
+
+a.cmty-featured-content {
+	color : #990000;
+}
+
+.cmty-whois {
+	padding-bottom : 10px;
+}
+.cmty-whois > div {
+	font-size : 11px;
+	text-align : left;
+	padding : 0 20px;
+}
+
+.cmty-whois .cmty-master-heading {
+	font-size : 22px;
+	padding-top : 5px;
+}
+
+.cmty-whois-memberlist-link a {
+	font-weight : bold;
+}
+
+.cmty-faq-link {
+	display : none;
+}
+
+@media (max-width : 768px) {
+	.cmty-faq-link {
+		display : inline-block;
+		padding : 0 10px;
+	}
+
+
+}
+
+.cmty-whois-hidden-users {
+	display : none;
+}
+
+.cmty-help {
+	display : inline-block;
+	background-color : #336cb5;
+	border-radius : 10px;
+	position : relative;
+	bottom : 2px;
+	font-weight : bold;
+	font-size : 16px;
+	width : 20px;
+	height : 20px;
+	line-height : 20px;
+	z-index : 10;
+	padding-right : 0.6px;
+	text-align : center;
+	color : #fff;
+	cursor : pointer;
+}
+
+.cmty-folder-inline {
+	color : #336cb5;
+	font-family : AoPS;
+}
+
+/*.cmty-master-collection-extra-fora:before {
+	content : "Help and Special Collections (And More To Come...)";
+	font-weight : bold;
+	margin-left : 25px;
+	margin-top : 10px;
+	font-size : 20px;
+}*/
+
+
+
+/*********
+ * Shared Community Topic List & Topic
+ *
+ *********/
+
+
+
+
+/** Category cell at top **/
+
+
+#cmty-topic-view-top .cmty-category-cell {
+	width : 100%;
+}
+
+.cmty-small-category-heading .cmty-category-cell-title {
+	max-width : 100%;
+}
+
+/*
+No room, I think
+.cmty-small-category-heading .cmty-category-cell-small-desc {
+	display : inline-block;
+	font-size : 14px;
+}
+*/
+
+.cmty-small-category-heading .cmty-category-cell-desc {
+	display : none;
+}
+
+.cmty-small-category-heading .cmty-category-cell-title {
+	font-size : 20px;
+	font-weight : bold;
+	line-height : 28px;
+	display : inline-block;
+	margin-right : 5px;
+}
+
+.cmty-small-category-heading.cmty-category-cell-heading {
+	height : 30px;
+	padding-top : 1px;
+	line-height : 24px;
+	text-align : left;
+	font-family : helvetica;
+}
+
+.cmty-small-category-heading .cmty-category-cell-mid {
+	display : inline-block;
+	z-index : 10;
+	position : absolute;
+	margin-top : 2px;
+}
+
+
+.cmty-small-category-heading .cmty-category-cell-right {
+	margin : 0px 10px 0 0;
+}
+
+/** Bottom portion of a category cell box **/
+
+
+#cmty-topic-view-top .cmty-category-cell-bottom {
+	height : 72px;
+}
+
+/** Focus **/
+
+#cmty-topic-view-top .cmty-tag-filter {
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-tag-filter .cmty-category-cell-focus {
+	font-family : helvetica;
+	text-align : left;
+	width : 220px;
+	vertical-align : top;
+	padding : 7px 0 0 12px;
+	background-color : white;
+	height : 72px;
+	overflow : hidden;
+
+}
+
+.cmty-tag-filter .cmty-focus-tag-line {
+	margin-bottom : 5px;
+	vertical-align : middle;
+	text-align : left;
+}
+
+.cmty-tag-filter .cmty-focus-tag-line .cmty-item-tag.focused:before {
+	content : 'J ';
+	font-family : AoPS;
+}
+
+.cmty-tag-filter .cmty-focus-tag-line .bkmk-icon {
+	display : inline-block;
+	font-size : 20px;
+	margin-top : 2px;
+}
+
+.cmty-page-topic-list #cmty-topic-view-left .cmty-tag-filter {
+	display : none;
+}
+
+/** Tag Search **/
+
+.cmty-tag-search {
+	border-radius : 6px;
+	border : 1px solid #ddd;
+	width : 200px;
+	padding-left : 5px;
+}
+
+.cmty-tag-search .aops-font {
+	color : #aaa;
+}
+
+.cmty-tag-search-input {
+	width : 170px;
+	clear : both;
+	padding : 0;
+	margin : 0 0 0 5px;
+	float : none;
+	height : 20px;
+	border : none;
+	border-width : none;
+	border-radius : 0;
+	background-color : transparent;
+}
+
+.cmty-tag-search-input:focus {
+	outline : none;
+}
+
+.cmty-tag-filter .cmty-category-cell-focus ul {
+	position : fixed;
+}
+
+/** Tag box **/
+
+
+.cmty-page-topic .cmty-category-itembox-wrapper,
+.cmty-page-topic-list .cmty-category-itembox-wrapper  {
+	width : calc(100% - 225px);
+	width : -webkit-calc(100% - 225px);
+	min-width : 300px;
+	position : relative;
+	display : inline-block;
+	height : calc(100% - 8px);
+	height : -webkit-calc(100% - 8px);
+	margin : 4px 5px 4px 0;
+}
+
+.cmty-category-cell-view-forums .cmty-category-itembox-wrapper {
+	width : calc(100% - 10px);
+	width : -webkit-calc(100% - 10px);
+	margin : 4px 5px;
+}
+
+
+/** Topics List **/
+/** More in community_common.css  **/
+
+.cmty-page-topic .cmty-topics-list {
+	border-top : 2px solid #666;
+	border-bottom : 2px solid #666;
+}
+
+.cmty-page-topic-list .cmty-topics-list {
+	border-top : 2px solid #666;
+	border-bottom : 2px solid #666;
+}
+
+
+/* Start responsive items */
+
+#cmty-topic-view-top  {
+	position : relative;
+	width : 100%;
+}
+
+/** Scrolling object; cannot be relative width **/
+
+#cmty-topic-view-top .cmty-itembox-inner-box {
+	width : 996px;
+}
+
+
+
+
+@media (max-width: 1270px) {
+
+	#cmty-topic-view-top .cmty-itembox-inner-box {
+		width : 746px;
+	}
+
+	#cmty-topic-view-top .cmty-category-cell-left {
+		max-width : 60%;
+	}
+}
+
+@media (max-width: 1020px) {
+
+	#cmty-topic-view-top .cmty-itembox-inner-box {
+		width : 656px;
+	}
+
+	#cmty-topic-view-top .cmty-category-cell-left {
+		max-width : 55%;
+	}
+
+}
+
+@media (max-width: 930px) {
+	.cmty-mark-all-read {
+		display : none;
+	}
+
+	#cmty-topic-view-top .cmty-itembox-inner-box {
+		width : 566px;
+	}
+
+	#cmty-topic-view-top .cmty-category-cell-left {
+		max-width : 65%;
+	}
+
+}
+
+@media (max-width: 840px) {
+	#cmty-topic-view-top .cmty-tag-filter {
+		display : none;
+	}
+
+	#cmty-topic-view-top .cmty-category-itembox-wrapper {
+		width : calc(100% - 8px);
+		width : -webkit-calc(100% - 8px);
+		margin : 4px;
+	}
+
+	#cmty-topic-view-top .cmty-itembox-inner-box {
+		width : calc(100% - 18px);
+		width : -webkit-calc(100% - 18px);
+	}
+
+	.cmty-category-cell-archive:after {
+		content : 'Archive';
+	}
+
+	.cmty-category-cell-archive .cmty-cat-cell-symbol-tag {
+		display : none;
+	}
+
+	/*
+	.cmty-category-cell-bookmark {
+		display : none;
+	}*/
+}
+
+@media (max-width: 679px) {
+	#cmty-topic-view-top .cmty-category-cell-left {
+		max-width : 55%;
+	}
+}
+
+
+/* End Responsive items */
+
+/*********
+ * Start Community Topic List page
+ * .cmty-page-topic-list
+ *
+ * See also "Shared Community Topic List & Topic" and community_common.css
+ *********/
+
+/** Category Cell at Top is in the Shared Community Topic List & Topic **/
+
+
+/** Topic list is mostly in community_common.css **/
+
+/*
+#cmty-no-topic-view-bottom {
+	height : calc(100% - 102px);
+	height : -webkit-calc(100% - 102px);
+	display : inline-block;
+	vertical-align : top;
+	position : relative;
+}
+*/
+
+.cmty-page-topic-list .cmty-topics-list-inner-box {
+	width : 100%;
+}
+
+
+/* Start responsive items */
+
+#cmty-no-topic-view-bottom,
+.cmty-page-topic-list #cmty-topic-view-left {
+	width : 1230px;
+}
+/** Scrolling object; cannot have relative width **/
+
+.cmty-page-topic-list .aops-scrollbar-visible .cmty-topics-list-inner-box {
+	width : 1222px;
+	left : 8px;
+}
+
+.cmty-page-topic-list .aops-scrollbar-not-visible .cmty-topics-list-inner-box {
+	width : 1230px;
+}
+
+
+@media (max-width: 1270px) {
+	#cmty-no-topic-view-bottom,
+	.cmty-page-topic-list #cmty-topic-view-left {
+		width : 980px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-visible .cmty-topics-list-inner-box {
+		width : 972px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-not-visible .cmty-topics-list-inner-box {
+		width : 980px;
+	}
+}
+
+@media (max-width: 1020px) {
+	#cmty-no-topic-view-bottom,
+	.cmty-page-topic-list #cmty-topic-view-left {
+		width : 890px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-visible .cmty-topics-list-inner-box {
+		width : 882px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-not-visible .cmty-topics-list-inner-box {
+		width : 890px;
+	}
+}
+
+@media (max-width: 930px) {
+	#cmty-no-topic-view-bottom,
+	.cmty-page-topic-list #cmty-topic-view-left {
+		width : 800px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-visible .cmty-topics-list-inner-box {
+		width : 792px;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-not-visible .cmty-topics-list-inner-box {
+		width : 800px;
+	}
+
+}
+
+@media (max-width: 840px) {
+	#cmty-no-topic-view-bottom,
+	.cmty-page-topic-list #cmty-topic-view-left {
+		width : 100%;
+	}
+
+	.cmty-page-topic-list #cmty-topic-view-left .cmty-scroll-outer .aops-scroll-inner {
+		width : 100%;
+		overflow-y : hidden !important;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-visible  .cmty-topics-list-inner-box {
+		width : 100%;
+	}
+
+	.cmty-page-topic-list .aops-scrollbar-not-visible  .cmty-topics-list-inner-box {
+		width : 100%;
+	}
+}
+/** End responsive items **/
+
+
+/*** End Topic List Page **/
+
+/** Start Topics List Topic view **/
+
+
+.cmty-topic-cell-right {
+	position : relative;
+	vertical-align : top;
+	height : 100%;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-left,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-left {
+	width : 70%;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-right,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-right{
+	display : inline-block;
+	width : 30%;
+}
+
+#cmty-no-topic-view-bottom .cmty-topics-list-local-announcement .cmty-topic-cell-avatar,
+#cmty-no-topic-view-bottom .cmty-topics-list-global-announcement .cmty-topic-cell-avatar,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topics-list-local-announcement .cmty-topic-cell-avatar,
+.cmty-condensed-topic-list .cmty-topic-cell-avatar,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topics-list-global-announcement .cmty-topic-cell-avatar {
+	display : none;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-second-row,
+#cmty-no-topic-view-bottom .cmty-topic-cell-subtitle,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-second-row,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-subtitle {
+	display : none;
+}
+
+#cmty-no-topic-view-bottom .cmty-topics-list .cmty-topic-cell-post,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topics-list .cmty-topic-cell-post  {
+	height : 88px;
+	width : 80%;
+}
+
+
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-data,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-data  {
+	display : block;
+	margin-right : 4px;
+	font-size : 12px;
+	float : right;
+	color : #aaa;
+	text-align : right;
+	vertical-align : top;
+}
+
+@media (max-width:768px) {
+	.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-data {
+		margin-right : 9px;
+	}
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-data div,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-data div  {
+	text-align : right;
+	vertical-align : top;
+}
+
+#cmty-no-topic-view-bottom .cmty-topics-list-local-announcement .cmty-topic-cell-post,
+#cmty-no-topic-view-bottom .cmty-topics-list-global-announcement .cmty-topic-cell-post,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topics-list-local-announcement .cmty-topic-cell-post,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topics-list-global-announcement .cmty-topic-cell-post  {
+	display : inline-block;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-subject,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-subject  {
+	font-size : 16px;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-time,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-time  {
+	font-size : 12px;
+	line-height : 12px;
+	color : #000;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell-username,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-username  {
+	height : 14px;
+	line-height : 16px;
+	white-space : nowrap;
+	display : inline-block;
+	text-overflow : ellipsis;
+	width : 100%;
+	position : relative;
+	overflow:hidden;
+}
+
+.cmty-topic-cell-forum-view-last-poster div {
+	padding-right : 2px;
+}
+
+
+.cmty-topic-cell-data-posts:before {
+	content : 'x';
+	font-family : AoPS;
+	font-style : normal;
+	margin-right : 3px;
+}
+
+.cmty-topic-cell-data-posts {
+	display : inline-block;
+}
+
+
+.cmty-topic-cell-forum-view-poster {
+	font-size : 12px;
+	text-align : left;
+	position : relative;
+	width : 50%;
+	border-left : 1px solid #aaa;
+	padding : 0 12px 0 12px;
+	display : inline-block;
+	vertical-align : top;
+	height : 100%;
+}
+.cmty-topic-cell-forum-view-last-poster {
+	color : #aaa;
+}
+/* TODO: clean up **/
+.cmty-topic-cell-forum-view-last-poster  .cmty-topic-cell-username,
+#cmty-no-topic-view-bottom .cmty-topic-cell-forum-view-last-poster  .cmty-topic-cell-time,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-forum-view-last-poster  .cmty-topic-cell-time  {
+	color : #aaa;
+}
+
+
+.cmty-topic-cell-forum-view-last-poster {
+	text-align : right;
+}
+
+/*
+#cmty-no-topic-view-bottom .cmty-topic-cell-forum-view-last-poster .cmty-topic-cell-username:before,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-forum-view-last-poster .cmty-topic-cell-username:before {
+	content : 'N';
+	font-family : AoPS;
+	font-style : normal;
+	margin-right : 3px;
+}
+*/
+
+.cmty-topic-cell-unread-popout {
+	display : none;
+}
+
+#cmty-no-topic-view-bottom .cmty-topic-cell.topic-unread .cmty-topic-cell-unread-popout,
+.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell.topic-unread .cmty-topic-cell-unread-popout  {
+	position : absolute;
+	right : 4px;
+	color : #f00;
+	z-index : 4;
+	display : inline-block;
+	font-style : normal;
+}
+
+/** Adjustments for the titles **/
+
+
+.cmty-topic-cell.cmty-topics-list-title {
+	display : block;
+	height : 20px !important;
+	padding : 0 0px 0 10px;
+	background-color : #eee;
+}
+
+.cmty-topic-cell.cmty-topics-list-title > div {
+	height : 16px;
+	width : 100%;
+	padding : 0px;
+	vertical-align : top;
+	color : #999;
+	line-height : 16px;
+	font-size : 12px;
+}
+
+.cmty-topic-cell.cmty-topics-list-title .cmty-topic-cell-right > div {
+	color : #999;
+}
+
+.cmty-category-cell .cmty-topics-list-title {
+	display : none;
+}
+
+.cmty-not-at-top .cmty-topics-list-title {
+	display : none;
+}
+
+/** End Topics List Topic **/
+
+/** Start Topics List Search Posts **/
+
+.cmty-topic-cell-top {
+	margin : -2px 5px 2px -5px;
+	color : #fff;
+	padding-left : 5px;
+	font-size : 12px;
+	font-weight : bold;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	white-space : nowrap;
+	position : relative;
+	height : 17px;
+	width : 100%;
+	top : 1px;
+}
+
+.cmty-topic-cell-top-left {
+	position : absolute;
+	left : 0px;
+	display : inline-block;
+	margin-left : 5px;
+	z-index : 30;
+	top : 1px;
+}
+
+.cmty-page-topic .cmty-topic-cell-top-left {
+	z-index : 1;
+}
+
+.cmty-focus-post-date {
+	position : absolute;
+	right : 0px;
+	display : inline-block;
+	margin-right : 5px;
+	z-index : 30;
+	font-weight : normal;
+}
+
+.cmty-page-topic .cmty-focus-post-date {
+	display : none;
+}
+
+.cmty-topic-cell-search-post .cmty-topics-list-jump-bottom-link,
+.cmty-topic-cell-search-post .cmty-topics-list-goto-unread-link ,
+.cmty-topic-cell-search-post .cmty-topic-cell-watchers,
+.cmty-topic-cell-search-post .cmty-topic-cell-data-watchers  {
+	display : none;
+}
+
+.cmty-topic-cell-search-post .cmty-topic-cell-right {
+	height : 87%;
+}
+/*
+.cmty-topic-cell-search-post .cmty-full-cell-link {
+	height : calc(100% - 20px);
+	height : -webkit-calc(100% - 20px);
+	top : 20px;
+}
+*/
+.cmty-page-topic .cmty-topic-cell-search-post .cmty-full-cell-link {
+	height : 100%;
+	height : 100%;
+	top : 0;
+}
+
+.cmty-topic-cell-search-post .cmty-topic-cell-top a {
+	color : white;
+	z-index:50;
+}
+
+.cmty-search-target-deleted,
+.cmty-search-target-deleted .cmty-topic-watchers {
+	background-color : #ccc !important;
+}
+
+.cmty-page-topic .cmty-condensed-topic-list .cmty-topic-cell-search-post.focus-topic .cmty-topic-cell-replies {
+	float : auto;
+	margin-left : 0;
+	position : absolute;
+	right : 0;
+	top : 1px;
+}
+
+.cmty-page-topic .cmty-condensed-topic-list .cmty-topic-cell-search-post.focus-topic .cmty-topic-cell-subject {
+	max-width : 80%;
+}
+
+/** End Topics List Search Posts **/
+
+/*********
+ * Start Community Topic  page
+ * .cmty-page-topic
+ *
+ * See also "Shared Community Topic List & Topic" and community_common.css
+ *********/
+
+
+/** Category Cell at Top is in the Shared Community Topic List & Topic **/
+
+
+/* Page structure */
+
+
+
+#cmty-topic-view-left,
+#topics-view-bottom .cmty-topics-list {
+	width : 220px;
+	height : calc(100% - 101px);
+	height : -webkit-calc(100% - 101px);
+/*	height : calc(100%);*/
+	display : inline-block;
+	vertical-align : top;
+	position : relative;
+	overflow-x : visible;
+}
+
+#cmty-topic-view-right,
+#topics-view-bottom .cmty-topic-full  {
+	width : calc(100% - 220px);
+	width : -webkit-calc(100% - 220px);
+	background-color : #666;
+	margin-left : 0px;
+	height : calc(100% - 101px);
+	height : -webkit-calc(100% - 101px);
+/*	height : calc(100%);*/
+/*	height : 300px;*/
+	display : inline-block;
+	position : relative;
+/*	top : 40px;
+	left : 220px;*/
+	overflow-y : hidden;
+}
+
+
+
+
+
+/* edits for view_topics pages */
+.cmty-view-topics-page #cmty-topic-view-left,
+.cmty-view-topics-page #cmty-topic-view-right,
+.cmty-view-topics-page #cmty-no-topic-view-bottom {
+	height : calc(100% - 29px);
+	height : -webkit-calc(100% - 29px);
+}
+
+/* End Page Structure */
+
+/** Scrolling object; cannot have relative width **/
+
+.cmty-page-topic .aops-scrollbar-visible .cmty-topics-list-inner-box {
+	width : 213px;
+	max-width : 213px; /* Attempt to deal with too-wide bug */
+	left : 8px;
+}
+
+.cmty-page-topic .aops-scrollbar-not-visible .cmty-topics-list-inner-box {
+	width : 221px;
+	max-width : 221px; /* Attempt to deal with too-wide bug */
+}
+/*
+.cmty-page-topic .cmty-topic-posts-top > div {
+	padding-top : 3px;
+	padding-bottom : 1px;
+	display : table-cell;
+	position : relative;
+
+}*/
+
+.cmty-topic-full .cmty-items-input-box ul.ui-menu {
+	background-color : #666;
+	border-radius : 10px;
+}
+
+.cmty-topic-full .cmty-items-input-box input {
+	/*color : white;
+	background-color: #585858;*/
+	border-radius : 10px;
+	margin : 1px 0 0 3px;
+	padding-left : 4px;
+}
+
+
+
+/** Start Responsive items **/
+
+
+.cmty-topic-posts-outer-wrapper  .aops-scroll-content {
+	width : 1004px;
+}
+
+.cmty-topic-posts-outer-wrapper  .aops-scrollbar-visible .aops-scroll-content {
+	width : 996px;
+}
+
+.cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+	width : 996px !important;
+}
+
+
+
+
+@media (max-width: 1270px) {
+	.cmty-topic-posts-outer-wrapper  .aops-scroll-content {
+		width : 754px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 746px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+		width : 746px !important;
+	}
+
+
+}
+
+
+@media (max-width: 1020px) {
+	.cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 664px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 656px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+		width : 656px !important;
+	}
+}
+
+
+@media (max-width: 930px) {
+	.cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 574px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 566px;
+	}
+
+	.cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+		width : 566px !important;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+
+	#cmty-topic-view-right {
+		width : 100%;
+	}
+
+	.cmty-page-topic #cmty-topic-view-left {
+		display : none;
+	}
+
+	.cmty-page-topic .cmty-topic-posts-outer-wrapper  .cmty-scroll-outer .aops-scroll-inner {
+		width : 100%;
+		overflow-y : hidden !important;
+	}
+
+	.cmty-page-topic .cmty-postbox-inner-box.aops-scroll-content  {
+		width : 100% !important;
+	}
+
+	.cmty-page-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content,
+	.cmty-page-topic .cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+		width : 100% !important;
+	}
+
+
+}
+
+
+@media (max-width: 768px) {
+
+	.cmty-page-topic .cmty-topic-posts-outer-wrapper .cmty-scroll-outer .aops-scroll-inner {
+		width : 100%;
+		overflow-y : hidden !important;
+	}
+
+	.cmty-page-topic .cmty-postbox-inner-box.aops-scroll-content  {
+		width : 100%;
+	}
+
+
+}
+
+
+
+/** End Responsive items **/
+
+
+/** Start View Posts **/
+
+.cmty-view-pdf {
+	right : 10px;
+	font-size : 20px;
+}
+
+.cmty-view-pdf a:before {
+	content : "\f1c1";
+	margin-right : 8px;
+	display : inline-block;
+	font-family : AoPS;
+	font-style : normal;
+	font-weight : normal;
+	line-height : 1;
+	color : red;
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing : grayscale;
+	position : relative;
+	top : -1px;
+}
+
+.cmty-page-view-posts  .cmty-folder-grid-container {
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.cmty-folder-grid-container .cmty-category-cell-left {
+	max-width : 87%;
+}
+
+.cmty-small-category-subheader {
+	text-align : left;
+	font-size : 12px;
+	padding-left : 20px;
+	color : #666;
+	margin-bottom : 5px;
+}
+
+.cmty-view-posts-item a.cmty-link-full-wrapper div {
+	color : black;
+}
+
+.cmty-view-posts-item {
+	background-color : white;
+	display : table;
+	table-layout : fixed;
+	position : relative;
+	width : 100%;
+	border-bottom : 2px #ccc solid;
+}
+
+
+.cmty-view-posts-item > div {
+	padding-top : 5px;
+	display : table-cell;
+	height : 100%;
+	padding-bottom : 5px;
+	position : relative;
+}
+
+.cmty-view-post-item-label {
+	width : 80px;
+	vertical-align : top;
+	text-align : right;
+/*	background-color : white;*/
+	display : inline-block;
+	padding-right : 8px;
+	font-weight : bold;
+	overflow : hidden;
+}
+
+/** Only border the label if we are linking to a post in the community **/
+.cmty-vp-right .cmty-view-post-item-label,
+.cmty-vp-both .cmty-view-post-item-label  {
+	border-right : 2px #ccc solid;
+}
+
+.cmty-view-post-item-text {
+	display : inline-block;
+	width : 100%;
+	position : relative;
+	padding-left : 8px;
+	padding-right : 8px;
+}
+
+
+.cmty-post-item-hidden-bar {
+	text-align : center;
+	width : 100%;
+	cursor : pointer;
+	color : #1155cc;
+}
+
+
+.cmty-post-item-hidden-content {
+	display : none;
+}
+
+.cmty-view-posts-item-reveal .cmty-post-item-hidden-content {
+	display : inline-block;
+}
+
+.cmty-view-posts-item-reveal .cmty-post-item-hidden-bar {
+	margin-bottom : 10px;
+}
+
+
+
+.cmty-view-post-poster {
+	display : inline-block;
+	width : 80px;
+	position : relative;
+	font-size : 10px;
+	border-left : 2px #ccc solid;
+	padding-left : 3px;
+	line-height : 12px;
+	cursor : pointer;
+}
+
+.cmty-view-post-poster:hover {
+	background-color : #eee;
+}
+
+.cmty-view-post-poster-username {
+	font-style : italic;
+	position : relative;
+	color : #aaa;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	width : 70px;
+	display : inline-block;
+	white-space : nowrap;
+}
+
+.cmty-view-post-topic-link {
+	font-weight : bold;
+}
+
+/** End View Posts **/
+
+/** Start My AoPS Top **/
+
+#cmty-my-aops-top {
+	width : 100%;
+	position : relative;
+}
+
+.cmty-my-aops-top-info {
+	width : 100%;
+	background-color : #eee;
+	position : relative;
+}
+
+.cmty-my-aops-top-info > div {
+	display : inline-block;
+	height : 50px;
+	vertical-align : top;
+}
+
+.cmty-my-aops-top-heading {
+	position : relative;
+	font-size : 22px;
+	font-weight : bold;
+	color : #356cb5;
+	padding-top : 14px;
+	width : 105px;
+	vertical-align : top;
+	text-align : right;
+}
+
+.cmty-my-aops-top-heading  a {
+	color : #356cb5;
+}
+
+.cmty-my-aops-top-divider {
+	position : relative;
+	height : 40px;
+	width : 2px;
+	background-color : #356cb5;
+	margin : 2px 8px;
+}
+
+@media (max-width:500px) {
+	.cmty-my-aops-top-heading,
+	.cmty-my-aops-top-divider {
+		display : none !important;
+	}
+}
+
+.cmty-my-aops-avatar {
+	margin : 6px 0px 0 0;
+	width : 50px;
+}
+
+.cmty-my-aops-top-user-data {
+	width : calc(100% - 180px);
+	width : -webkit-calc(100% - 180px);
+}
+
+@media (max-width:500px) {
+	.cmty-my-aops-top-heading,
+	.cmty-my-aops-top-divider {
+		display : none !important;
+	}
+
+	.cmty-my-aops-top-user-data {
+		width : calc(100% - 60px);
+		width : -webkit-calc(100% - 60px);
+	}
+	.cmty-my-aops-avatar {
+		margin-left: 5px;
+	}
+}
+
+.cmty-my-aops-top-data-left {
+	float : left;
+	text-align : left;
+	margin-top : 2px;
+}
+
+.cmty-my-aops-data-toprow {
+	height : 18px;
+	line-height : 18px;
+	font-size : 14px;
+	font-weight : bold;
+}
+
+.cmty-my-aops-data-middle {
+	height : 14px;
+	line-height : 14px;
+	font-size : 12px;
+	max-width : 300px;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	white-space : nowrap;
+
+
+}
+
+.cmty-my-aops-top-edit-link {
+	height : 14px;
+	font-size : 12px;
+	line-height : 18px;
+}
+
+.cmty-my-aops-top-data-right {
+	float : right;
+	text-align : right;
+	margin-top : 2px;
+}
+
+a.cmty-my-books-link {
+	margin-left : 10px;
+}
+
+.cmty-my-aops-navigation {
+	display : table;
+	table-layout : fixed;
+	width : 100%;
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.cmty-my-aops-navigation  div {
+	display : table-cell;
+	height : 26px;
+	color : #fff;
+	font-size : 14px;
+	line-height : 17px;
+	vertical-align : top;
+	padding-top : 5px;
+	text-align : center;
+	border-right : #aaa 1px solid;
+	background-color : #666;
+	cursor : pointer;
+}
+
+.cmty-my-aops-navigation > div:last-child {
+	border-right : none;
+}
+
+.cmty-page-my-profile .cmty-my-aops-profile-btn {
+	background-color : #356cb5;
+}
+
+.cmty-page-my-bookmarks .cmty-my-aops-bookmarks-btn {
+	background-color : #356cb5;
+}
+
+.cmty-page-messages .cmty-my-aops-messages-btn {
+	background-color : #356cb5;
+}
+
+.cmty-my-aops-navigation .cmty-messages-btn-unread {
+	font-weight : bold;
+}
+
+.cmty-messages-btn-unread:before {
+	font-family : AoPS;
+	content : 'm';
+	font-weight : normal;
+	padding-right : 5px;
+}
+
+.cmty-page-my-forums .cmty-my-aops-my-forums-btn {
+	background-color : #356cb5;
+}
+
+.cmty-page-my-collections .cmty-my-aops-my-collections-btn {
+	background-color : #356cb5;
+}
+
+/* Hiding add new collections until I sort that out. **/
+.cmty-page-my-collections .cmty-add-new-category {
+	/*display : none;*/
+}
+
+.cmty-page-my-blogs .cmty-my-aops-my-blogs-btn {
+	background-color : #356cb5;
+}
+
+.cmty-page-my-aops .cmty-folder-top {
+	padding-top : 5px;
+	background-color : white;
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.fullscreen #cmty-my-aops-top {
+	display : none;
+}
+
+.cmty-page-my-aops .cmty-category-cell-heading.cmty-small-category-heading {
+	line-height : 16px;
+	background-color : #fff;
+}
+
+.cmty-page-my-profile .cmty-user-profile-pm {
+	display : none;
+}
+
+
+.cmty-page-my-aops #cmty-no-topic-view-bottom,
+.cmty-page-my-aops #cmty-topic-view-left,
+.cmty-page-my-aops #cmty-topic-view-right  {
+	height : calc(100% - 184px);
+	height : -webkit-calc(100% - 184px);
+}
+
+.cmty-page-my-aops.cmty-page-my-bookmark-tags #cmty-no-topic-view-bottom,
+.cmty-page-my-aops.cmty-page-my-bookmark-tags #cmty-topic-view-left,
+.cmty-page-my-aops.cmty-page-my-bookmark-tags #cmty-topic-view-right {
+	height : calc(100% - 190px);
+	height : -webkit-calc(100% - 190px);
+}
+
+
+
+.cmty-page-my-aops.cmty-page-my-bookmark-topics #cmty-no-topic-view-bottom,
+.cmty-page-my-aops.cmty-page-my-bookmark-topics #cmty-topic-view-left,
+.cmty-page-my-aops.cmty-page-my-bookmark-topics #cmty-topic-view-right {
+	height : calc(100% - 116px);
+	height : -webkit-calc(100% - 116px);
+}
+
+
+@media (max-width : 640px) {
+	.cmty-my-aops-data-middle {
+		display : none;
+	}
+
+}
+
+.cmty-page-my-bookmark-tags .cmty-category-cell-bottom {
+	box-shadow : 3px 6px 13px #aaa !important;
+}
+/** End My AoPS **/
+
+/** Start Priv Categories **/
+
+.cmty-page-priv-category .cmty-category-cell-bottom,
+.cmty-page-priv-category .cmty-category-cell-right,
+.cmty-page-priv-category .cmty-cat-cell-search,
+.cmty-page-priv-category .cmty-post-thank,
+.cmty-page-priv-category .cmty-post-nothank,
+.cmty-page-priv-category .cmty-topic-archive,
+.cmty-page-priv-category .cmty-topic-reply,
+.cmty-page-priv-category .cmty-topic-mini-reply,
+.cmty-page-priv-category .cmty-post-quote,
+.cmty-page-priv-category .cmty-topic-third-row-left,
+.cmty-page-priv-category .cmty-category-cell-focus {
+	display : none;
+}
+
+.cmty-page-priv-category.cmty-page-topic.cmty-page-has-tag-filter .cmty-topics-list {
+	height : 100%;
+}
+
+.cmty-page-priv-category .cmty-topic-third-row-right {
+	text-align: left;
+}
+
+/** End Priv Categories **/
+
+/***
+ * Start admin post reports
+ ***/
+
+
+.cmty-post-reports-top {
+	padding : 5px;
+}
+
+.cmty-post-reports-container {
+	margin-top : 10px;
+}
+
+/** .cmty-post-body dealt with in community-common **/
+
+.cmty-post-reports-loader {
+	display : none;
+	padding-left : 10px;
+}
+
+.cmty-post-reports-none-found {
+	display : none;
+	padding-left : 10px;
+}
+
+.cmty-admin-post-report {
+	border-top : 5px solid #000;
+	margin-bottom : 4px;
+}
+
+.cmty-admin-post-report .feed-topic-forum:hover {
+	color : #fff !important;
+}
+
+.cmty-admin-post-report .cmty-topic-subject {
+	background-color : #666;
+	padding : 4px;
+	width : 100%;
+	color : #ccc;
+}
+
+.cmty-admin-post-report .cmty-topic-subject:hover {
+	color : #fff !important;
+}
+
+.cmty-post-report-post {
+	display : inline-block;
+	width : 75%;
+	margin-top : 1px;
+}
+
+
+
+.cmty-post-report-data {
+	display : inline-block;
+	width : 25%;
+	vertical-align : top;
+	padding-left : 5px;
+}
+
+.cmty-post-report-details {
+	padding : 0px 5px;
+	font-style : italic;
+}
+
+.cmty-admin-post-report .cmty-post-report-admin-btn {
+	width : 100%;
+	text-align : right;
+	padding-right : 5px;
+}
+
+.cmty-post-report-settle-notebox {
+	width : 80%;
+	margin : 10px auto;
+}
+
+.cmty-post-report-settle-note {
+	width : 100%;
+	height : 80px;
+}
+
+
+.cmty-post-report-post .cmty-post-quote,
+.cmty-post-report-post .cmty-post-thank {
+	display : none;
+}
+
+.cmty-no-more-reports {
+	width : 100%;
+	text-align : center;
+	font-weight : bold;
+
+}
+
+/** End Post Report **/
+
+
+/** Start user profile **/
+
+.cmty-user-profile-heading {
+	height : 30px;
+	color : #356cb5;
+	font-size : 22px;
+	padding-left : 10px;
+	line-height : 25px;
+	font-weight : bold;
+	background-color : #eee;
+}
+
+.cmty-profile-admin {
+	font-size : 12px;
+}
+
+.cmty-profile-admin a {
+	margin : 0 5px;
+}
+
+.cmty-user-profile-main {
+	overflow : hidden;
+}
+
+.cmty-user-profile-main .cmty-index-card-heading span {
+	font-size : 14px;
+}
+
+
+.cmty-user-profile-username {
+	width : 260px;
+	overflow : hidden;
+	white-space : nowrap;
+	font-size : 18px !important;
+	text-overflow : ellipsis;
+	display : inline-block;
+}
+
+.cmty-inactive-user {
+	font-weight : bold;
+	color : #c00 !important;
+}
+
+.cmty-banned-user {
+	font-weight : bold;
+	color : #f00 !important;
+}
+
+.cmty-coppa-blocked {
+	font-weight : bold;
+	color : #0c0 !important;
+}
+
+.cmty-user-profile-data-row .cmty-user-online {
+	font-weight : bold;
+	color : #356cb5;
+}
+
+@media (max-width : 930px) {
+	.cmty-user-profile-username {
+		width : 205px;
+	}
+}
+
+@media (max-width : 840px) {
+	.cmty-user-profile-username {
+		width : 180px;
+	}
+}
+@media (max-width : 768px) {
+	.cmty-user-profile-username {
+		width : 260px;
+	}
+}
+
+@media (max-width : 480px) {
+	.cmty-user-profile-username {
+		width : 200px;
+	}
+}
+
+
+@media (max-width : 600px) {
+	.cmty-user-profile-main .cmty-no-phone {
+		display : none;
+	}
+}
+
+.cmty-user-profile-main .cmty-index-card-heading span {
+	font-size : 14px;
+}
+
+.cmty-user-profile-row {
+	display : table;
+	table-layout : fixed;
+	width : 100%;
+	border-spacing : 5px;
+	position : relative;
+}
+
+.cmty-user-profile-row  > div {
+	display : table-cell;
+	box-shadow : 3px 3px 13px #aaa;
+	padding : 0 0 0 0;
+	vertical-align : top;
+}
+
+.cmty-user-profile-row table {
+	table-layout : fixed;
+	width : 270px;
+}
+
+.cmty-user-profile-row td:nth-child(1) {
+	text-align : right;
+	padding-right : 4px;
+	font-size : 10px;
+	width : 31px;
+}
+
+.cmty-profile-1-digits .cmty-user-profile-row td:nth-child(1)  {
+	width : 10px;
+}
+
+.cmty-profile-2-digits .cmty-user-profile-row td:nth-child(1)  {
+	width : 15px;
+}
+
+.cmty-profile-3-digits .cmty-user-profile-row td:nth-child(1)  {
+	width : 20px;
+}
+
+.cmty-profile-4-digits .cmty-user-profile-row td:nth-child(1)  {
+	width : 26px;
+}
+
+.cmty-user-profile-row td:nth-child(2) {
+	width : 220px;
+	font-size : 10px;
+	font-weight : bold;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+
+
+.cmty-user-profile-main {
+	width : 65%;
+	margin-right : 8px;
+}
+
+.cmty-user-profile-activity {
+	width : 35%;
+}
+
+.cmty-index-card {
+	border-top : 5px solid #356cb5;
+	background-color : #fff;
+	position : relative;
+}
+
+.cmty-index-card-heading {
+	color : #356cb5;
+	height : 28px;
+	line-height : 23px;
+	font-size : 18px;
+	font-weight : bold;
+	padding : 3px 12px 0px 12px;
+	text-align : left;
+}
+
+.cmty-index-card-heading  .aops-font {
+	margin-right : 4px;
+}
+
+.cmty-user-profile-pm {
+	cursor : pointer;
+	float : right;
+	margin-left : 12px;
+}
+
+.cmty-user-profile-avatar {
+	width : 100px;
+/*	height : 100px;*/
+	padding-left : 10px;
+	display : inline-block;
+	margin-top : 5px;
+}
+
+.cmty-user-profile-main-info {
+	position : relative;
+	width : calc(100% - 100px);
+	width : -webkit-calc(100% - 100px);
+	vertical-align : top;
+	display : inline-block;
+}
+
+.cmty-user-profile-main-info > div.cmty-editable-row {
+	padding : 5px 0;
+}
+
+.cmty-page-edit-profile .cmty-user-profile-main-info > div.cmty-editable-row {
+	min-height : 33px; /* OMG RR IS OCD TODAY */
+}
+
+.cmty-user-profile-data {
+	font-size : 12px;
+	width : 100%;
+	position : relative;
+	vertical-align : top;
+
+}
+
+.cmty-page-my-profile .cmty-user-profile-activity .cmty-user-profile-data,
+.cmty-page-user-profile .cmty-user-profile-activity .cmty-user-profile-data {
+	padding-bottom : 5px;
+}
+
+.cmty-user-profile-data-row {
+/*	display : table;
+	table-layout : fixed;*/
+	width : 100%;
+	overflow-x : hidden;
+	padding : 5px 0;
+}
+
+.cmty-page-edit-profile .cmty-user-profile-data-row {
+	min-height : 33px;
+}
+
+.cmty-user-profile-data-row > div {
+/*	display : table-cell;*/
+	display : inline-block;
+	position : relative;
+	vertical-align : top;
+}
+
+.cmty-user-profile-data-row > div:first-child {
+	width : 80px;
+	text-align : right;
+	font-weight : bold;
+}
+
+.cmty-category-cell-user .cmty-user-profile-data-row tr {
+	line-height : 12px;
+}
+
+.cmty-no-count-note {
+	font-size : 9px;
+	padding-left : 28px;
+}
+
+.cmty-user-profile-activity .cmty-user-profile-data-row > div:first-child {
+	width : 111px;
+}
+
+.cmty-user-profile-data-row > div:nth-child(2) {
+	width : calc(100% - 130px);
+	width : -webkit-calc(100% - 130px);
+	text-align : left;
+	margin-left : 10px;
+}
+
+.cmty-user-profile-notes-data {
+	height : 200px;
+	overflow-y : scroll;
+	overflow-x : hidden;
+}
+
+.cmty-user-profile-row .cmty-user-profile-notes-data table {
+	width : calc(100% - 15px);
+	width : -webkit-calc(100% - 15px);
+	text-align : left;
+	margin-left : 15px;
+}
+
+
+.cmty-user-profile-notes-data  th:nth-child(1),
+.cmty-user-profile-notes-data  td:nth-child(1) {
+	width : 75px !important;
+}
+
+.cmty-user-profile-notes-data  th:nth-child(3),
+.cmty-user-profile-notes-data  td:nth-child(3) {
+	width : 75px !important;
+}
+
+.cmty-user-profile-notes-data  td:nth-child(3) {
+	font-size : 12px;
+}
+
+.cmty-user-profile-notes-data  td:nth-child(2) {
+	white-space : normal;
+	font-size : 12px;
+}
+
+.cmty-user-profile-notes-data  td:nth-child(1) {
+	width : 75px !important;
+	text-align : left;
+	font-size : 12px;
+	overflow : hidden;
+}
+
+.cmty-user-profile-add-note {
+	width : 30%;
+}
+
+.cmty-user-profile-add-note textarea {
+	width : 95%;
+	height : 160px;
+	margin-bottom : 10px;
+}
+
+.cmty-friends-box {
+/*	width : 100%;*/
+	padding : 5px;
+	vertical-align : top;
+	text-align: left;
+	position : relative;
+	margin : 0 auto;
+}
+
+.cmty-user-add-new-friend {
+	float : right;
+	cursor : pointer;
+}
+
+.cmty-add-friend-input-row {
+	margin-top : 16px;
+}
+
+.cmty-friend-requests-warning {
+	margin-left : 12px;
+}
+
+
+.cmty-friends-heading {
+	color : #356cb5;
+	font-weight : bold;
+	font-size : 14px;
+}
+
+
+.cmty-user-add-this-friend {
+	float : right;
+	cursor : pointer;
+	margin-left : 12px;
+}
+
+.cmty-toggle-user-bookmark {
+	float : right;
+	cursor : pointer;
+}
+
+.cmty-user-profile-friends .aops-scroll-inner {
+	height : 127px;
+	border : solid #eee;
+	border-left : 2px;
+	border-right : 2px;
+	padding-bottom : 0px !important;
+}
+
+.cmty-user-profile-friends .cmty-many-requests  .aops-scroll-inner {
+	height : 175px;
+}
+
+.cmty-friend-request-buttons {
+	position : absolute;
+	right : 5px;
+	bottom : 5px;
+}
+
+.cmty-friend-requests-box {
+	text-align : left;
+}
+
+/* Bunch of friends stuff moved to common for Alcumus **/
+
+.cmty-page-my-profile .cmty-unfriend {
+	display : block;
+}
+
+
+.cmty-chosen-new-friend {
+	font-weight : bold;
+}
+
+
+
+@media (max-width: 1270px) {
+	.cmty-friend-box {
+		width : 310px;
+	}
+
+	.cmty-user-profile-row table {
+		width : 200px;
+	}
+
+	.cmty-user-profile-row td:nth-child(2) {
+		width : 152px;
+	}
+}
+
+
+@media (max-width: 1020px) {
+	.cmty-friend-box {
+		width : 423px;
+	}
+
+	.cmty-user-profile-friends .cmty-three-requests  .aops-scroll-inner {
+		height : 175px;
+	}
+
+	.cmty-user-profile-row table {
+		width : 185px;
+	}
+
+	.cmty-user-profile-row td:nth-child(2) {
+		width : 146px;
+	}
+}
+
+
+@media (max-width: 930px) {
+	.cmty-friend-box {
+		width : 379px;
+	}
+
+	.cmty-user-profile-row table {
+		width : 142px;
+	}
+
+	.cmty-user-profile-row td:nth-child(2) {
+		width : 103px;
+	}
+}
+
+
+@media (max-width: 840px) {
+	.cmty-friend-box {
+		width : 360px;
+	}
+
+
+}
+
+
+@media (max-width: 768px) {
+	.cmty-user-profile-row {
+		display : block;
+	}
+
+	.cmty-user-profile-row:last-child {
+		padding-bottom : 10px;
+	}
+
+	.cmty-user-profile-row > div {
+		display : block;
+		width : 98% !important;
+		margin : 0 auto 10px auto;
+	}
+
+	.cmty-user-profile-row table {
+		width : 100%;
+	}
+
+	.cmty-user-profile-row td:nth-child(2) {
+		width : auto;
+	}
+
+	.cmty-friend-box {
+		width : calc(100% - 10px);
+		width : -webkit-calc(100% - 10px);
+	}
+
+
+
+
+	.cmty-page-my-profile .cmty-user-profile-activity  .cmty-user-profile-data,
+	.cmty-page-user-profile .cmty-user-profile-activity  .cmty-user-profile-data	{
+		margin-left : 70px;
+		width : calc(100% - 70px);
+		width : -webkit-calc(100% - 70px);
+	}
+}
+
+
+.cmty-page-edit-profile .cmty-user-profile-main {
+	width : 57%;
+}
+
+.cmty-page-edit-profile .cmty-user-profile-activity {
+	width : 43%;
+}
+
+.cmty-page-edit-profile .cmty-category-cell-heading,
+.cmty-page-edit-settings .cmty-category-cell-heading  {
+	cursor : auto;
+}
+
+.cmty-user-edit-avatar {
+	padding : 5px 2px;
+}
+
+
+.cmty-limited-user-profile {
+	padding : 5px;
+	text-align : left;
+	font-size : 14px;
+}
+
+.cmty-change-password input {
+	width : 100%;
+}
+
+.cmty-change-password .cmty-user-profile-data-row > div:first-child {
+	padding-top : 2px;
+}
+/*
+.cmty-page-edit-profile .cmty-user-profile-data-row > div:nth-child(2) {
+	width : calc(100% - 120px);
+}*/
+
+.cmty-password-buttons {
+	display : none;
+	width : 100px;
+	margin : 5px 5px 5px auto;
+}
+
+.cmty-password-warning {
+	color : #f00;
+	font-weight : bold;
+	font-size : 14px;
+}
+
+.aops-modal-standard.cmty-upload-avatar-modal .aops-modal-body {
+	width : 250px;
+	min-width : 250px;
+}
+
+.cmty-edit-avatar {
+	width : 100%;
+}
+
+#edit-avatar.dropzone {
+	height : 200px;
+	width : 200px;
+	padding : 10px;
+	min-height : 200px;
+	margin : 0 auto;
+	padding : 10px 0 0 26px;
+}
+
+#edit-avatar .dz-message {
+	position : absolute;
+	color : #888;
+	width : 155px;
+}
+
+#edit-avatar .dz-message a {
+	cursor : pointer;
+}
+
+/** End user profile **/
+
+/** Start category cell user (user profile wedged in a cell) **/
+
+.cmty-category-cell-user .cmty-user-profile .cmty-category-cell-heading {
+	display : none;
+}
+
+.cmty-category-cell-user  {
+	overflow : hidden;
+}
+
+.cmty-page-my-aops .cmty-category-cell-user .cmty-folder-top {
+	box-shadow : none;
+}
+
+.cmty-category-cell-user .cmty-category-cell-heading {
+	background-color : #356cb6;
+	color : #dae7f6;
+}
+
+.cmty-category-cell-user .cmty-category-cell-heading:hover  .cmty-category-cell-left,
+.cmty-category-cell-user .cmty-category-cell-heading:hover  .cmty-category-cell-desc {
+	color : white;
+}
+
+.cmty-category-cell-user .cmty-category-cell-left {
+	height : 50%;
+}
+
+.cmty-category-cell-user .cmty-category-cell-right {
+	padding-top : 0;
+}
+
+.cmty-category-cell-user .cmty-category-cell-bottom {
+	padding-top : 5px;
+}
+
+.cmty-folder-grid .cmty-category-cell-user .cmty-icon-w-text:hover {
+	border-bottom : 1px solid #fff;
+	color : #fff;
+}
+
+.cmty-folder-grid .cmty-category-cell-user  .cmty-category-cell-right .cmty-cat-cell-aops-font-icon {
+	font-size : 16px;
+}
+
+.cmty-folder-grid .cmty-category-cell-user .cmty-cat-cell-symbol-tag {
+	display : inline-block;
+}
+
+.cmty-category-cell-user  .cmty-category-cell-desc {
+	padding : 0 10px;
+	font-size : 12px;
+	margin-top : 5px;
+/*	max-width : calc(100% - 20px);
+	max-width : -webkit-calc(100% - 10px);
+*/
+}
+
+.cmty-category-cell-user  .cmty-index-card-heading {
+	display : none;
+}
+
+.cmty-category-cell-user  .cmty-index-card {
+	border-top : none;
+	box-shadow : none;
+}
+
+.cmty-category-cell-user  .cmty-user-profile-avatar {
+	width : 90px;
+	height : 90px;
+	padding-left : 0;
+}
+
+.cmty-category-cell-user  .cmty-user-profile-avatar img {
+	width : 80px;
+	height : 80px;
+
+}
+.cmty-category-cell-user .cmty-user-profile-main {
+	width : 90px !important;
+	display : inline-block;
+}
+
+.cmty-category-cell-user .cmty-user-profile-activity{
+	width : calc(100% - 110px) !important;
+	width : -webkit-calc(100% - 110px) !important;
+	display : inline-block;
+}
+
+.cmty-category-cell-user .cmty-user-profile-activity .cmty-user-profile-data-row > div:first-child {
+	width : 90px;
+}
+
+.cmty-category-cell-user .cmty-user-profile-main-info {
+	display : none;
+}
+
+.cmty-category-cell-user  .cmty-user-profile-data {
+	font-size : 11px;
+}
+.cmty-category-cell-user  .cmty-user-profile-row {
+	border-spacing : 2px;
+}
+
+.cmty-nowrap {
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+
+@media (max-width:930px) {
+	.cmty-category-cell-user .cmty-category-cell-title {
+		width : 175px;
+	}
+}
+
+@media (max-width:840px) {
+	.cmty-category-cell-user .cmty-category-cell-title {
+		width : auto;
+	}
+}
+
+@media (max-width:600px) {
+	.cmty-category-cell-user .cmty-user-profile-main .cmty-no-phone {
+		display : inline-block !important;
+	}
+}
+
+@media (max-width:420px) {
+	.cmty-category-cell-user .cmty-user-profile-main {
+		display : none;
+	}
+
+	.cmty-category-cell-user .cmty-user-profile-activity {
+		width : 90% !important;
+	}
+}
+
+.cmty-category-cell-user .cmty-user-profile-data-row {
+	padding : 2px 0;
+}
+
+.cmty-page-my-aops .cmty-category-cell-user .cmty-folder-top {
+	padding-top : 3px;
+}
+/** End category cell user **/
+
+
+
+/** Start edit community settings **/
+
+
+
+/** End edit community settings **/
+
+/** Start category admin **/
+
+.cmty-cat-admin-heading {
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+
+
+.cmty-cat-info-top-btn {
+	display : inline-block;
+	float : right;
+}
+
+.cmty-cat-info-top-btn .aops-font {
+	margin-right : 5px;
+	font-size : 18px;
+	vertical-align : middle;
+}
+
+.cmty-category-admin .aops-panel {
+	position : relative;
+}
+
+.cmty-cat-admin-contents-current-state {
+	text-align : left;
+}
+
+.cmty-cat-admin-special-links {
+	position : absolute;
+	right : 10px;
+	top : 22px;
+	font-weight : bold;
+	font-size : 14px;
+}
+
+.cmty-cat-admin-special-links > a {
+	margin-right : 5px;
+}
+
+.cmty-cat-admin-warn {
+	font-style : italic;
+	font-size : 10px;
+}
+
+.cmty-category-admin .form-group > div:nth-child(2) {
+	width : 70%;
+	margin-top : 7px;
+	line-height : 19px;
+}
+
+.cmty-category-admin .form-group > div:nth-child(2) input {
+	margin-top : -7px;
+}
+
+.cmty-category-admin .cmty-cat-admin-perm-panel .form-group > div:nth-child(2) {
+/*	margin-top : 7px;*/
+}
+
+.cmty-category-admin .cmty-category-admin-users .cmty-edit-user-list {
+	margin-top : -5px;
+}
+
+
+.cmty-show-on-edit {
+	display : none;
+}
+
+.cmty-editing-contents .cmty-show-on-edit {
+	display : block;
+}
+
+.cmty-editing-contents .cmty-hide-on-edit {
+	display : none;
+}
+
+.cmty-content-edit {
+	font-size : 0.8em;
+}
+
+/** Start admin edit view_posts contents **/
+.cmty-cat-admin-edit-post-view {
+	position : relative;
+	display : inline-block;
+	vertical-align : top;
+	width : calc(100% - 28px);
+	width : -webkit-calc(100% - 28px);
+}
+
+.cmty-cat-admin-edit-post-view .cmty-view-posts-item {
+	border-bottom : 0;
+	margin-bottom : 2px;
+}
+
+
+.cmty-cat-admin-add-post .cmty-cat-admin-add-post-head > div {
+	display : inline-block;
+	width : 150px;
+}
+
+.cmty-admin-new-post-option {
+	margin : 5px 0;
+}
+
+.cmty-admin-new-post-option input,
+.cmty-admin-new-post-option textarea {
+	width : 320px;
+}
+
+.cmty-admin-new-post-option textarea {
+	height : 80px;
+}
+
+.cmty-admin-new-post-option {
+	display : none;
+}
+
+.cmty-admin-new-forum_post {
+	display : block;
+}
+
+.cmty-admin-new-post-option > div {
+	margin : 5px 0;
+}
+
+
+.cmty-admin-new-post-option > div > div {
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-admin-new-post-option .cmty-admin-new-contents-add-head {
+	font-weight : normal;
+	text-align : right;
+	width : 120px;
+}
+
+.cmty-cat-admin-add-post-buttons {
+	margin-bottom : 10px;
+	position : relative;
+}
+
+.cmty-cat-admin-add-post-buttons .btn {
+	position : relative;
+	left : 278px;
+}
+
+/** End admin edit view_posts contents **/
+
+
+/** Overriding main.css settings **/
+.cmty-category-admin  .form-group > div div.cmty-item-tag {
+	line-height : 12px;
+}
+
+
+.cmty-cat-admin-topic-item,
+.cmty-cat-admin-topic-item > div {
+	display : inline-block;
+}
+
+.cmty-cat-admin-topic-item {
+	line-height : 30px;
+}
+
+.cmty-cat-admin-topic-title {
+	font-weight : bold;
+}
+
+
+.cmty-category-admin-helper {
+	font-size : 12px;
+	font-style : italic;
+}
+
+.cmty-cat-admin-inherit-info {
+	line-height : 14px !important;
+}
+
+.cmty-static-user-list .cmty-itemlist-username {
+	padding-right : 4px;
+	padding-left : 0px;
+	font-size : 14px;
+}
+
+.cmty-static-user-list .cmty-delete-item {
+	margin-left : 4px;
+	font-size : 14px;
+}
+
+.cmty-edit-user-list {
+	margin-top : 7px;
+	margin-left : 5px;
+	cursor : pointer;
+	display : inline-block;
+}
+
+.cmty-category-admin-users .cmty-items-input-box {
+	width : 100%;
+	position : relative;
+	min-height : 30px;
+	margin-top : -4px;
+}
+
+.cmty-category-admin-users .cmty-items-input {
+	margin-left : 5px;
+}
+
+.cmty-category-admin .buttons {
+	height : 34px;
+}
+
+.cmty-create-category {
+	float : right;
+}
+
+.cmty-cat-admin-gen-info .footer {
+	display : none;
+}
+
+.cmty-admin-only-line {
+	text-align : center;
+	font-weight : bold;
+}
+
+.cmty-cat-admin-help {
+	background-color : #336cb5;
+	border-radius : 10px;
+	position : absolute;
+	top : 5px;
+	right : 5px;
+	font-weight : bold;
+	font-size : 15px;
+	width : 20px;
+	height : 20px;
+	line-height : 20px;
+	z-index : 10;
+	text-align : center;
+	color : #fff;
+	cursor : pointer;
+}
+
+.cmty-cat-admin-helper-modal.aops-modal-standard .aops-modal-body {
+	padding-top : 0px;
+	width : 590px;
+}
+
+.cmty-item-folder .cmty-delete-item,
+.cmty-item-folder_forums .cmty-delete-item,
+.cmty-item-folder_collections .cmty-delete-item,
+.cmty-item-view_tags .cmty-delete-item,
+.cmty-item-forum .cmty-delete-item,
+.cmty-item-blogroll .cmty-delete-item {
+	font-size : 16px;
+	margin-right : 4px;
+	z-index : 10;
+	vertical-align : top;
+}
+
+
+.cmty-admin-location-containers {
+	background-color : white;
+	position : relative;
+}
+
+.cmty-admin-location-containers .cmty-itembox {
+	background-color : white;
+	height : 120px;
+	z-index : 0; /* needed to make autocompletes go above the items */
+}
+
+.cmty-category-admin  .cmty-item-subtitle {
+	width : 93%;
+}
+
+.cmty-admin-location-add-to,
+.cmty-admin-new-contents-category {
+	padding : 2px 6px;
+	width : 300px;
+}
+.cmty-admin-new-contents-view_topics {
+	vertical-align : middle;
+	margin-right : 6px;
+}
+
+.cmty-category-admin  .cmty-item-tag .cmty-delete-item {
+	margin-right : 6px;
+}
+
+.cmty-cat-admin-content-add {
+	line-height : 34px;
+}
+
+.cmty-category-admin  .form-group > div .cmty-cat-admin-contents-sublabel {
+	width : 50px;
+	display : inline-block;
+	line-height : 34px; /** Overriding main.css settings **/
+	text-align : right;
+	vertical-align : top;
+}
+
+.cmty-category-admin  .form-group > div .cmty-cat-admin-contents-add-tag-forum {
+	display : inline-block;
+	line-height : 34px; /** Overriding main.css settings **/
+}
+
+.cmty-cat-admin-contents-add-tag-forum .cmty-item-forum,
+.cmty-cat-admin-contents-add-tag-forum .cmty-item-forum_class  {
+	width : 100%;
+	margin-top : 0px;
+}
+
+.cmty-category-admin .cmty-tag-search {
+	border : none;
+	margin-left : 6px;
+}
+
+.cmty-category-admin .cmty-tag-search input {
+	width : 200px;
+	padding : 2px 6px;
+}
+
+
+/** Move this to the right place , remove the border none above after I change the
+one on the focus cell**/
+.cmty-tag-search {
+	position : relative;
+	display : inline-block;
+}
+
+/** End move **/
+
+.cmty-cat-admin-blog-css-text {
+	width : 100%;
+	height : 400px;
+}
+
+
+
+/** Category admin contents **/
+.cmty-admin-contents-help ul {
+	list-style : none;
+}
+.cmty-admin-contents-btns {
+	position : relative;
+	width : 100%;
+	text-align : right;
+}
+.cmty-cat-admin-contents .btn {
+	position : relative;
+	margin-right : 10px;
+}
+
+.cmty-category-admin .cmty-folder-grid .cmty-category-cell {
+	margin : -5px 0 0 0;
+
+}
+
+.cmty-cat-admin-edit-window {
+	display : none;
+}
+
+.cmty-cat-admin-edit-window {
+	width : 100%;
+/*	border : 1px solid #356cb5;*/
+	border-top : 5px solid #356cb5;
+	background-color : #fff;
+	box-shadow : 3px 3px 13px #aaa;
+	padding : 0 10px 5px 10px;
+	position : relative;
+}
+
+.cmty-cat-admin-edit-main {
+	position : relative;
+}
+
+.cmty-cat-admin-edit-contents-top{
+	min-height : 30px;
+}
+.cmty-cat-admin-edit-title {
+	color : #356cb5;
+	height : 27px;
+	padding : 3px 12px 0 2px;
+	line-height : 23px;
+	font-size : 20px;
+	font-weight : bold;
+	text-align : left;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+
+.cmty-cat-admin-edit-title:before {
+	content : '8';
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 24px;
+	vertical-align : top;
+	padding-right : 2px;
+}
+
+.cmty-cat-admin-edit-title-desc {
+	font-size : 10px;
+	font-weight : bold;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	display : inline-block;
+	white-space : nowrap;
+	color : #666;
+	height : 19px;
+	vertical-align : top;
+	text-align : left;
+	position : relative;
+	max-width : 100%;
+}
+
+
+.cat-admin-tab {
+	display : inline-block;
+	width : 50%;
+	font-weight : bold;
+	padding : 0 5px;
+	background-color : #ccc;
+	cursor : pointer;
+}
+
+.cat-admin-tab.active-tab {
+	background-color  : #356cb5;
+	color : white;
+}
+
+.cmty-cat-admin-available-item-list {
+	display : none;
+	border : 2px solid #356cb5;
+}
+
+.cmty-cat-admin-content-items  {
+/*	border : 2px solid #356cb5;*/
+	-moz-box-shadow : inset 0 0 4px #ccc;
+	-webkit-box-shadow : inset 0 0 4px #ccc;
+	box-shadow : inset 0 0 4px #ccc;
+	padding : 2px;
+}
+
+
+
+.cmty-admin-contents-edit-row .cmty-delete-item,
+.cmty-admin-contents-edit-row .cmty-add-available-item {
+	font-size : 16px;
+	padding : 6px 7px 0 7px;
+	cursor : pointer;
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-admin-contents-edit-row {
+	background-color : #f6f6f6;
+	border-bottom : 2px solid #ccc;
+	border-top : 2px solid #fff;
+	width : 100%;
+}
+
+.cmty-admin-contents-edit-row:first-child{
+	border-top : 0px;
+}
+.cmty-admin-contents-edit-row:last-child{
+	border-bottom : 0px;
+}
+
+/** Start Edit bookmarks **/
+
+.cmty-edit-bookmark {
+	display : inline-block;
+	padding : 2px 6px 0 6px;
+	color : #356cb5;
+	font-size : 20px;
+
+}
+/** End edit bookmarks **/
+
+.cmty-cat-admin-edit-buttons-top {
+	position : absolute;
+	top : 5px;
+	right : 1px;
+}
+
+
+.cmty-cat-admin-edit-buttons-bottom {
+	text-align : right;
+	margin : 5px -9px 0 0;
+}
+
+.cmty-cat-admin-edit-row,
+.cmty-cat-admin-add-post {
+	margin : 5px 0 10px 5px;
+}
+
+.cmty-cat-admin-edit-row > div {
+	display : inline-block;
+	vertical-align : middle;
+}
+
+.cmty-cat-admin-edit-row > div:first-child,
+.cmty-admin-new-contents-add-head {
+	font-weight : bold;
+	width : 120px;
+	text-align : right;
+	margin-right : 3px;
+}
+
+.cmty-cat-admin-edit-contents-top .cmty-delete-item {
+	position : absolute;
+	right : -20px;
+	line-height : 24px;
+	font-size : 20px;
+	color : #990000;
+}
+
+.cmty-cat-admin-edit-contents-top .cmty-delete-item:hover {
+	color : #bb6666
+}
+
+.cmty-cat-admin-edit-contents-top .cmty-item-forum .cmty-item-text,
+.cmty-cat-admin-edit-contents-top .cmty-item-forum_class .cmty-item-text {
+	width : 95%;
+}
+
+.cmty-category-admin .cmty-add-new-category {
+	display : none;
+}
+
+.cmty-cat-admin-view_tags-tag {
+	display : inline-block;
+	font-size : 14px;
+	vertical-align : top;
+	padding : 2px 0;
+}
+
+.cmty-cat-admin-view_tags-forum {
+	font-weight : bold;
+	line-height : 28px;
+}
+@media (max-width : 767px) {
+	.cmty-cat-admin-special-links {
+		position : relative;
+		right : auto;
+		top : 0px;
+		margin : -6px 0 6px 0;
+	}
+}
+
+@media (max-width : 640px) {
+	.cmty-category-admin  .form-group > div:nth-child(2) {
+		width : 100%;
+		margin-top : 1px;
+	}
+}
+
+/** End category Admin **/
+
+/** Shared properties that overwrite other items **/
+
+.cmty-category-cell .cmty-icon-w-text {
+	vertical-align : super;
+	line-height : 17px;
+}
+
+.cmty-icon-w-text .aops-icon,
+.cmty-icon-w-text .bkmk-icon,
+.cmty-icon-w-text .cmty-cat-cell-aops-font-icon {
+	font-size : 16px;
+	padding-right : 2px;
+}
+
+.cmty-topic-full .cmty-icon-w-text:hover {
+	border-bottom : 1px solid #ddd;
+}
+
+.cmty-category-cell .cmty-icon-w-text:hover {
+	border-bottom : 1px solid #fff;
+}
+
+
+.cmty-folder-grid .cmty-icon-w-text:hover {
+	border-bottom : 0px;
+}
+
+/*** Adjustments for Blog Cells **/
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-cell-heading {
+	height : 72px;
+	background-color : #fff;
+}
+
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-cell-heading:hover {
+	background-color : #eee;
+}
+
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-cell-bottom {
+	height : 173px;
+}
+
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-itembox-wrapper {
+	height : 166px;
+}
+
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-cell-title {
+	padding-right : 0;
+}
+
+.cmty-folder-grid .cmty-category-cell-blog .cmty-category-cell-title:before {
+	content : none;
+	padding-right : 0;
+}
+
+
+.cmty-category-cell-blog  .cmty-category-cell-left {
+	max-width : 85%;
+}
+
+@media (max-width:500px) {
+	.cmty-category-cell-blog  .cmty-category-cell-left {
+		max-width : 80%;
+	}
+}
+
+.cmty-blog-cell-avatar {
+	padding : 5px 0 0 5px;
+	display : inline-block;
+}
+
+.cmty-blog-cell-entry-count {
+	color : #356cb5;
+	font-size : 12px;
+}
+
+.cmty-blog-cell-entry-count:before {
+	font-family : AoPS;
+	content : 't';
+	margin-right : 6px;
+}
+
+.cmty-category-cell-blog .cmty-topic-cell-jump-to-bottom {
+	display : none;
+}
+
+.cmty-category-cell-blog .cmty-topic-cell-replies {
+	display : none;
+}
+
+.cmty-category-cell-blog .cmty-topic-cell.topic-unread .cmty-topic-cell-goto-unread {
+	display : none;
+}
+
+.cmty-category-cell-blog .cmty-topic-cell-watchers {
+	display : none;
+}
+
+.cmty-category-cell-blog .cmty-topic-cell-subject .aops-font {
+	display : none;
+}
+/** End Adjustments for Blog Cells **/
+
+/** START Search **/
+
+.cmty-search-results .cmty-category-cell-right {
+	font-size : 14px;
+}
+
+#cmty-topic-view-top .cmty-search-results .cmty-category-cell-left {
+	max-width : calc(100% - 250px);
+}
+
+
+.cmty-search-results .cmty-search-window {
+	border : #aaa 1px solid;
+	border-radius : 12px;
+	padding-left : 5px;
+	width : 236px;
+	background-color : #fff;
+}
+/*
+.cmty-search-window:before {
+	position : absolute;
+	right : 10px;
+	content : "M";
+	font-family : "AoPS";
+	color : #356cb5;
+	font-size : 16px;
+	cursor : auto;
+}
+*/
+
+.cmty-search-window input {
+	width : 203px;
+	clear : both;
+	padding : 0;
+	height : 20px;
+	border : none;
+	border-radius : 0;
+	background-color : transparent;
+}
+
+.cmty-search-window input:focus {
+	outline : none;
+}
+
+.cmty-main-crumb-search .aops-font {
+/*	float : right;
+	margin-right : 10px;*/
+}
+.cmty-search-expanded-setting {
+	display : none;
+}
+
+.cmty-search-expanded .cmty-search-expanded-setting {
+	display : block;
+}
+
+.cmty-search-expanded .cmty-search-general-text {
+	display : none;
+}
+
+.cmty-private-search  .cmty-search-forum-row{
+	display : none;
+}
+
+.cmty-search-page .aops-panel {
+	margin-top : 2px;
+}
+
+.cmty-search-page .aops-panel .form {
+	background-color : #fff;
+	padding : 0px;
+	margin-bottom : 0;
+}
+
+.cmty-search-form  > div {
+	background-color : #eee;
+	padding : 15px 0;
+}
+
+
+.cmty-search-form > div > div {
+	position : relative;
+	margin : 3px 5px;
+}
+
+
+.cmty-search-form > div > div > div {
+	display : inline-block;
+	vertical-align : top;
+	position : relative;
+}
+
+
+.cmty-search-form > div > div > div:first-child {
+	font-weight : bold;
+	text-align : right;
+	padding-right : 4px;
+	color : #356cb5;
+	width : 140px;
+}
+
+.cmty-search-form > div > div > div:nth-child(2) {
+	width : calc(100% - 150px);
+}
+
+.cmty-search-form > div > div > div:nth-child(2) > input {
+	width : 100%;
+}
+
+.cmty-search-form .cmty-search-section-end {
+	margin-bottom : 12px;
+}
+
+.cmty-search-form  .cmty-search-button-row {
+	text-align : right;
+	background-color : #fff;
+}
+
+.cmty-search-button-row .btn {
+	margin-left : 5px;
+}
+
+.cmty-search-form .cmty-items-input-box {
+	position : relative;
+	width : 100%;
+}
+
+.cmty-search-posters-include > .cmty-items-input-box {
+	z-index : 4; /* Get this higher than the forums */
+}
+
+.cmty-search-form .cmty-item-forum,
+.cmty-mod-topic-move .cmty-item-forum {
+	width : auto;
+	line-height : 22px;
+	height : 22px;
+	padding-top : 0px;
+	margin : 0 3px;
+}
+
+.cmty-search-form .cmty-item-forum  .cmty-delete-item {
+	font-size : 10px;
+}
+
+.cmty-search-form  .cmty-item-forum:before ,
+.cmty-mod-topic-move .cmty-item-forum:before  {
+	font-size : 13px;
+}
+
+.cmty-search-form .cmty-search-forums-radios  input,
+.cmty-search-form .cmty-search-first-post  input  {
+	margin-top : 1px;
+	margin-right : 3px;
+}
+
+.cmty-search-form .cmty-search-forums-radios {
+	font-size : 12px;
+	margin-top : 4px;
+}
+
+.cmty-unsearchable-forums {
+	font-size : 12px;
+}
+
+.cmty-search-form .cmty-search-first-post label {
+	vertical-align : top;
+	font-size : 12px;
+}
+
+
+.cmty-search-form .cmty-search-forums-radios label {
+	margin-top : -2px;
+	vertical-align : top;
+}
+
+.cmty-search-dates {
+	display : inline-block;
+}
+
+.cmty-search-dates-range {
+	margin-top : 4px;
+	display : none;
+}
+
+.search-dates-range input {
+	width : 175px;
+}
+
+/* required in order to ensure datepicker is on top of input boxes */
+.community .ui-datepicker {
+	z-index: 99999 !important;
+}
+
+.cmty-search-datepicker {
+	width : 177px;
+}
+
+.cmty-search-datepicker .ui-datepicker-calendar {
+	width : 175px;
+}
+
+.cmty-items-input-box .cmty-item-forum {
+	height : 18px;
+	line-height : 19px;
+}
+
+.cmty-items-input-box .cmty-item-forum::before {
+	line-height : 20px;
+}
+
+.cmty-search-sort input {
+	vertical-align : text-top;
+	margin-top : 0;
+}
+
+.cmty-search-tips {
+	float : right;
+	font-weight : bold;
+	padding-right : 10px;
+}
+
+/** Responsive stuff **/
+
+@media (max-width:600px) {
+	.cmty-topic-cell-search-post {
+		height : 144px;
+	}
+
+	.cmty-topic-cell-search-post .cmty-topic-cell-top {
+		height : 35px;
+	}
+
+	.cmty-topic-cell-search-post .cmty-focus-post-date {
+		right : auto;
+		display : block;
+		top : 18px;
+	}
+
+	.cmty-topic-cell-search-post .cmty-topic-watchers {
+		top : 84px;
+	}
+
+}
+
+
+/** END Search **/
+
+/** Oh hell datepicker CSS **/
+
+/* Needed because this thing has a little height to it that jacks up the bottom of pages */
+#ui-datepicker-div {
+	display : none;
+}
+
+.ui-datepicker.ui-datepicker-multi {
+	width : auto;
+}
+
+.ui-datepicker.ui-widget-content {
+	border : 1px solid #ddd;
+	background-color : #eee;
+	color : #333;
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.ui-datepicker .ui-datepicker-group {
+	width : 33.3%;
+	float : left;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	position : relative;
+	padding : 0.2em 0;
+}
+
+.ui-datepicker .ui-widget-header {
+	border : 1px solid #333;
+	background-color : #aaa;
+	color : #111;
+	font-weight : bold;
+}
+
+.ui-datepicker .ui-helper-clearfix {
+	min-height : 0;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position : absolute;
+	top : 1px;
+	width : 15px;
+	height : 23px;
+	cursor : pointer;
+	color : #1155cc;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left : 4px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right : 4px;
+	text-align : right;
+}
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display : none;
+}
+
+.ui-datepicker a.ui-datepicker-prev:before,
+.ui-datepicker a.ui-datepicker-next:after {
+	font-family : 'AoPS';
+	font-size : 18px;
+}
+
+.ui-datepicker .ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker .ui-datepicker-next.ui-state-disabled {
+	display : none;
+}
+
+.ui-datepicker a.ui-datepicker-prev:before {
+	content : 'g';
+}
+
+.ui-datepicker a.ui-datepicker-next:after {
+	content : '0';
+	text-align : right;
+}
+
+
+.ui-datepicker-title {
+	margin : 0 5px;
+	line-height : 18px;
+	text-align : center;
+	height : 20px;
+}
+
+ui.datepicker select.ui-datepicker-month,
+ui.datepicker select.ui-datepicker-year {
+	width : 49%;
+}
+
+ui.datepicker ui.datepicker-title select {
+	font-size : 1em;
+	margin : 1px 0;
+}
+
+
+/* start the calendar */
+
+.ui-datepicker-multi .ui-datepicker-group table {
+	width : 95%;
+	margin : 0 auto 2px;
+}
+
+.ui-datepicker table {
+	font-size : 13px;
+	border-collapse : collapse;
+}
+
+.ui-datepicker th {
+	padding : 4px 2px;
+	text-align : center;
+	font-weight : 700;
+	border : 0;
+}
+
+.ui-datepicker .ui-state-disabled {
+	opacity : 0.35;
+	filter : Alpha(Opacity=35);
+	background-image : none;
+	cursor : default!important;
+}
+
+.ui-datepicker td {
+	border : 0;
+	padding : 1px;
+}
+
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display : block;
+	padding : 2px;
+	text-align : center;
+	text-decoration : none;
+}
+
+.ui-datepicker td.ui-state-disabled span,
+.ui-datepicker td.ui-state-disabled a {
+	color : #aaa;
+}
+
+.ui-datepicker .ui-state-default,
+.ui-datepicker .ui-widget-content .ui-state-default {
+	border : 1px solid #ccc;
+	background-color : #f6f6f6;
+	font-weight : bold;
+	color : #1155cc;
+}
+
+
+/* End the calendar */
+
+
+/** End datepicker CSS **/
+
+
+/** START tag-term map **/
+
+.cmty-tag-term-top {
+	text-align : center;
+}
+
+.cmty-tag-term-nav {
+	display : inline-block;
+	text-align : center;
+	width : 200px;
+}
+
+.cmty-terms-page .cmty-term-tag-link {
+	background-color : #fff;
+	font-weight : bold;
+}
+
+.cmty-tag-info-page .cmty-tag-info-link {
+	background-color : #fff;
+	font-weight : bold;
+}
+
+.cmty-tag-map-page .cmty-tag-term-link {
+	background-color : #fff;
+	font-weight : bold;
+}
+
+.cmty-term-add-tag {
+	display : none;
+	padding-bottom : 10px;
+}
+
+.cmty-term-add-tag .btn {
+	margin-left : 20px;
+}
+
+.cmty-term-list,
+.cmty-tag-mapper-add-list {
+	border-top : 5px solid black;
+	margin-top : 10px;
+}
+
+.cmty-term-cell {
+	border-top : 1px solid black;
+	height : 30px;
+}
+
+.cmty-term-cell:hover {
+	background-color : #fff;
+}
+
+.cmty-term-main {
+	margin-top : 4px;
+	vertical-align : middle;
+}
+.cmty-term-cell > div {
+	display : inline-block;
+}
+
+.cmty-term-cell .cmty-item-tag,
+.cmty-tag-info-tag  .cmty-item-tag,
+.cmty-tag-map-page .cmty-item-tag {
+	background-color : #356cb5;
+}
+
+.cmty-term-fetch .ui-state-focus {
+	background-color : #fa0;
+}
+
+.cmty-term-fetch ul.ui-autocomplete,
+.cmty-tag-mapper-add-term ul.ui-autocomplete {
+	background-color : #fff;
+	width : 300px;
+	position : absolute;
+	border : 1px black solid;
+	box-shadow : 3px 3px 8px #aaa;
+	-webkit-padding-start : 3px !important;
+}
+
+.cmty-term-fetch li {
+	cursor : pointer;
+	list-style : none;
+}
+
+.cmty-tag-info-top {
+	margin-top : 10px;
+}
+
+.cmty-tag-info-page .cmty-tag-search,
+.cmty-tag-map-page .cmty-tag-search {
+	border : none;
+}
+
+.cmty-tag-data {
+	margin-top : 5px;
+	border-top : 1px solid black;
+}
+
+.cmty-tag-data .btn {
+	margin : 5px 0;
+}
+
+.cmty-tag-data table td:first-child {
+	width : 20px;
+}
+.cmty-tag-data table td:nth-child(2) {
+	width : 200px;
+}
+
+.cmty-tag-data table tr {
+	border-bottom : 1px solid black;
+}
+
+.cmty-tag-data table td:nth-child(3) {
+	text-align : right;
+	width : 50px;
+}
+
+.cmty-tag-map-page .cmty-delete-item {
+	cursor : pointer;
+	font-size : 15px;
+}
+
+.cmty-tag-mapper-warning {
+	font-size : 12px;
+	margin-top : 5px;
+}
+
+.cmty-tag-mapper-cell:hover {
+	background-color : #fff;
+}
+
+.cmty-tag-mapper-cell {
+	border-top : 1px solid black;
+}
+.cmty-tags-map-terms {
+	display : inline-block;
+}
+/** END tag-term map **/
+
+/** START Memberlist **/
+
+.cmty-overall-title {
+	color : #356cb5;
+	font-size : 22px;
+	padding-left : 10px;
+	line-height : 25px;
+	font-weight : bold;
+}
+
+.cmty-memberlist-subtitle {
+	color : #356cb5;
+	font-size : 18px;
+	font-weight : bold;
+}
+
+.cmty-memberlist-banned a {
+	color : #990000;
+	font-style : italic;
+}
+
+.cmty-memberlist-thanks span {
+	font-family : AoPS;
+	font-weight : normal;
+}
+.cmty-memberlist th span.aops-font {
+	padding-left : 2px;
+}
+
+.cmty-user-search-row {
+	margin-top : 10px;
+	background-color : #eee;
+	padding : 10px;
+}
+
+.cmty-user-search-row > div {
+	display : inline-block;
+	color : #356cb5;
+	font-weight : bold;
+	width : 80px;
+	margin-right : 6px;
+}
+
+.cmty-user-search-row > input {
+	width : calc(100% - 180px);
+}
+
+.cmty-user-search-row > .btn {
+	width : 86px;
+	margin-left : 8px;
+	margin-top : -2px;
+}
+
+.cmty-memberlist table {
+	margin : 5px auto;
+	box-shadow : 3px 3px 13px #aaa;
+}
+
+.cmty-memberlist table, .cmty-memberlist th, .cmty-memberlist td {
+	border : 1px solid white;
+}
+
+
+.cmty-memberlist th.clickable:hover {
+	background-color : #dae7f6;
+	color : #356cb5;
+}
+
+.cmty-memberlist thead {
+	color : #fff;
+	background-color : #356cb5;
+
+}
+
+.cmty-memberlist tbody {
+	font-size : 14px;
+}
+
+.cmty-memberlist td,
+.cmty-memberlist th {
+	padding : 2px 10px;
+}
+
+td.cmty-right-align {
+	text-align : right;
+}
+
+.cmty-memberlist tbody tr:nth-child(odd) {
+   background-color: #f2f2f2;
+}
+
+.cmty-memberlist tbody tr:nth-child(even) {
+   background-color: #e1e1e1;
+}
+
+.cmty-memberlist-none {
+	margin : 2px auto;
+	text-align : center;
+}
+/*
+.cmty-memberlist th span.aops-font {
+	display : none;
+}
+
+.cmty-memberlist table.cmty-sort-username th[sort-on="username"] span.aops-font {
+	display : inline-block;
+}
+*/
+
+/** END Memberlist **/
+
+/** START FAQ **/
+
+.cmty-faq-panel .grey-panel .header {
+	cursor : pointer;
+}
+
+.cmty-faq-question {
+	font-weight : bold;
+}
+
+.cmty-faq-answer {
+	margin-left : 10px;
+}
+
+.cmty-faq-item {
+	margin-bottom : 8px;
+}
+
+/** END FAQ **/
+
+
+/** START log admin **/
+
+/** END log admin **/
+
+.cmty-log-col-reveal > label {
+	margin-right : 8px;
+}
+
+#cmty-log-admin-top-panel-right {
+	display : inline-block;
+	width : 64%;
+	vertical-align : top;
+}
+
+#cmty-log-admin-top-panel-left {
+	display : inline-block;
+	width : 35%;
+	vertical-align : top;
+}
+
+.cmty-log-admin-results > table,
+.cmty-log-admin-results th,
+.cmty-log-admin-results td {
+	border : 1px solid black;
+	padding : 2px;
+}
+
+.cmty-log-admin-actions {
+	margin : 5px 0;
+}
+.cmty-log-reverted-row {
+	background-color : #FFAAAA;
+}
+
+.cmty-log-failed-revert {
+	background-color : #AAAAFF;
+}
+
+.cmty-log-reverted-row input {
+	display : none;
+}
+
+#cmty-log-admin-warning {
+	background-color : #990000;
+	color : white;
+	font-weight : bold;
+	padding : 5px;
+}
+
+#cmty-log-admin-directions,
+#cmty-log-admin-form {
+	background-color : white;
+	padding : 5px;
+	border : 1px black solid;
+}
+
+#cmty-log-admin-directions {
+	font-size : 12px;
+}
+
+.cmty-log-col-reveal > div {
+	font-weight : bold;
+}
+
+.cmty-log-form-input {
+	width : 400px;
+}
+
+/** Phone-view stuff / ipad stuff too **/
+
+@media (max-width: 840px) {
+	.cmty-no-ipad {
+		display : none;
+	}
+}
+
+@media (max-width: 480px), (max-height:480px) {
+	#cmty-topic-view-top .cmty-category-cell-left {
+		max-width : 75%;
+	}
+
+	#community-all.cmty-page-topic #cmty-topic-view-right {
+		box-shadow : none;
+	}
+	.cmty-topic-third-row-right {
+		width : 100%;
+	}
+
+	.cmty-topic-moderate {
+		float : right;
+	}
+
+	.cmty-topic-locked,
+	.cmty-topic-forum-locked,
+	.cmty-topic-reply {
+		float : left;
+	}
+
+	/*.cmty-category-cell-right {
+		display : none;
+	}*/
+
+	.aops-modal-frame {
+		max-width : 100%;
+		height : auto;
+	}
+
+	.aops-modal-body {
+		min-width : 200px !important;
+	}
+
+	/** Reading a forum **/
+
+	.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-right {
+		display : none;
+	}
+
+	.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-left {
+		width : 100%;
+	}
+
+
+
+	.cmty-my-aops-top-user-data {
+		width : 200px;
+	}
+
+	/** Profile **/
+	.cmty-user-profile-main-info {
+		width : 100%;
+	}
+
+	.cmty-page-my-profile .cmty-user-profile-activity .cmty-user-profile-data,
+	.cmty-page-user-profile .cmty-user-profile-activity .cmty-user-profile-data {
+		margin-left : 0px;
+		width : 100%;
+	}
+
+	.cmty-my-aops-avatar {
+		margin-left : 5px;
+	}
+
+	/** PM **/
+
+	.cmty-category-cell-archive:after {
+		display : none;
+	}
+
+	.cmty-phone-cell-top .cmty-category-cell-archive {
+		display : none;
+	}
+
+	/** View posts **/
+	.cmty-view-post-item-label {
+		width : 30px;
+		font-size : 13px;
+	}
+
+	.cmty-view-post-poster {
+		width : 50px;
+	}
+
+	.cmty-view-post-poster-username {
+		width : 46px;
+	}
+
+	/** Category cell tags/topics/forums sublinks **/
+	.cmty-category-cell-folder .cmty-category-cell-sublink-triangle {
+		margin-top : -4px;
+	}
+
+	.cmty-category-cell-folder .cmty-category-cell-sublink {
+		padding-top : 16px;
+	}
+
+	/** Search form **/
+	.cmty-search-form > div > div > div:first-child {
+		text-align : left;
+		width : 100%;
+	}
+
+	.cmty-search-form > div > div > div:nth-child(2) {
+		display : block;
+		width : 100%;
+	}
+
+	/** Add category **/
+	.cmty-add-new-category {
+		display : none;
+	}
+
+
+}
+
+/** Announcement on home page **/
+.cmty-home-announce-loud {
+	border : 3px solid #000;
+	font-size : 14px;
+	padding : 4px;
+	background-color : #ffc;
+	width : 95%;
+	margin : 3px auto 0 auto;
+	text-align : left;
+}
+
+/** Announcement on home page **/
+.cmty-home-announce {
+	font-size : 14px;
+	padding : 4px;
+	background-color : #20458c;
+	width : 100%;
+	color : #fff;
+	text-align : center;
+}
+
+.cmty-announce-content a {
+	color : #90d4Ff;
+}
+
+.cmty-announce-content {
+	width : 1230px;
+	margin : 0 auto;
+	text-align : left;
+	padding : 0 20px;
+	line-height : 18px;
+}
+
+@media (max-width: 1270px) {
+	.cmty-announce-content {
+		width : 980px;
+	}
+}
+
+@media (max-width: 1020px) {
+	.cmty-announce-content {
+		width : 890px;
+	}
+}
+
+@media (max-width: 930px) {
+	.cmty-announce-content {
+		width : 800px;
+	}
+}
+
+
+@media (max-width: 840px) {
+	.cmty-announce-content {
+		width : 100%;
+	}
+}

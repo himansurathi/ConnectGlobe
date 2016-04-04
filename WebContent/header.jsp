@@ -93,12 +93,12 @@ $(document).ready(function() {
 									<div class="prev_img"><img src="images/pic-01.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper </p>
-									<div class="read"><a href="#">read more</a></div>
+									<p><a href="#">Sample News  </a><br/>
+										Sample News Details</p> <br/><br/>
+									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+									
 								</div>
 							</div>
 				
@@ -112,10 +112,10 @@ $(document).ready(function() {
 									<div class="prev_img"><img src="images/header_scroll.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/><p><a href="#"> Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+																		
 								</div>
 							</div>
 				
@@ -130,12 +130,12 @@ $(document).ready(function() {
 									<div class="prev_img"><img src="images/header_scroll2.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper </p>
-									<div class="read"><a href="#">read more</a></div>
+									<p><a href="#">Sample News  </a><br/>
+										Sample News Details</p> <br/><br/>
+									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+									
 								</div>
 							</div>
 				
@@ -150,10 +150,10 @@ $(document).ready(function() {
 									<div class="prev_img"><img src="images/header_scroll3.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/><p><a href="#"> Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+																		
 								</div>
 							</div>
 				

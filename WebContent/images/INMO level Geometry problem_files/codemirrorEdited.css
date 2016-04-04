@@ -1,0 +1,627 @@
+/* BASICS */
+
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: auto;
+}
+.CodeMirror-scroll {
+  /* Set scrolling behaviour here */
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+/* PADDING */
+
+.CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+}
+.CodeMirror pre {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white; /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+.CodeMirror-linenumbers {}
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+}
+
+/* CURSOR */
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid black;
+  z-index: 3;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor {
+  width: auto;
+  border: 0;
+  background: #7e7;
+  z-index: 1;
+}
+/* Can style cursor different in overwrite (non-insert) mode */
+.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite {}
+
+.cm-tab { display: inline-block; }
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-keyword {color: #ff7700;}
+.cm-s-default .cm-atom {color: #219;}
+.cm-s-default .cm-number {color: #000000;}
+.cm-s-default .cm-def {color: #00f;}
+.cm-s-default .cm-variable {color: black;}
+.cm-s-default .cm-variable-2 {color: #05a;}
+.cm-s-default .cm-variable-3 {color: #085;}
+.cm-s-default .cm-property {color: black;}
+.cm-s-default .cm-operator {color: black;}
+.cm-s-default .cm-comment {color: #dd0000;}
+.cm-s-default .cm-string {color: #00aa00;}
+.cm-s-default .cm-string-2 {color: #f50;}
+.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-builtin {color: #900090;}
+.cm-s-default .cm-bracket {color: #997;}
+.cm-s-default .cm-tag {color: #170;}
+.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-header {color: blue;}
+.cm-s-default .cm-quote {color: #090;}
+.cm-s-default .cm-hr {color: #999;}
+.cm-s-default .cm-link {color: #00c;}
+
+.cm-negative {color: #d44;}
+.cm-positive {color: #292;}
+.cm-header, .cm-strong {font-weight: bold;}
+.cm-em {font-style: italic;}
+.cm-link {text-decoration: underline;}
+
+.cm-s-default .cm-error {color: #f00;}
+.cm-invalidchar {color: #f00;}
+
+div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
+.CodeMirror-activeline-background {background: #e8f2ff;}
+
+/* STOP */
+
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+
+.CodeMirror {
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+
+.CodeMirror-scroll {
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px; margin-right: -30px;
+  padding-bottom: 30px; padding-right: 30px;
+  height: 100%;
+  outline: none; /* Prevent dragging from highlighting the element */
+  position: relative;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.CodeMirror-sizer {
+  position: relative;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actuall scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+.CodeMirror-vscrollbar {
+  right: 0; top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.CodeMirror-hscrollbar {
+  bottom: 0; left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.CodeMirror-scrollbar-filler {
+  right: 0; bottom: 0;
+}
+.CodeMirror-gutter-filler {
+  left: 0; bottom: 0;
+}
+
+.CodeMirror-gutters {
+  position: absolute; left: 0; top: 0;
+  padding-bottom: 30px;
+  z-index: 3;
+}
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding-bottom: 30px;
+  margin-bottom: -32px;
+  display: inline-block;
+  /* Hack to make IE7 behave */
+  *zoom:1;
+  *display:inline;
+}
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+
+.CodeMirror-lines {
+  cursor: text;
+}
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+}
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+.CodeMirror-code pre {
+  border-right: 30px solid transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.CodeMirror-wrap .CodeMirror-code pre {
+  border-right: none;
+  width: auto;
+}
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+}
+
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+}
+
+.CodeMirror-widget {}
+
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: hidden;
+}
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.CodeMirror-measure pre { position: static; }
+
+.CodeMirror div.CodeMirror-cursor {
+  position: absolute;
+  visibility: hidden;
+  border-right: none;
+  width: 0;
+}
+.CodeMirror-focused div.CodeMirror-cursor {
+  visibility: visible;
+}
+
+.CodeMirror-selected { background: #d9d9d9; }
+.CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }
+
+.cm-searching {
+  background: #ffa;
+  background: rgba(255, 255, 0, .4);
+}
+
+/* IE7 hack to prevent it from returning funny offsetTops on the spans */
+.CodeMirror span { *vertical-align: text-bottom; }
+
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursor {
+    visibility: hidden;
+  }
+}
+
+.error {
+  background-color: #fdd;
+}
+
+#tab-grader .pywindow, #tab-homework .pywindow {
+/*    background-color: #c5f0e5;*/
+/*  background-color: #eefaf8;*/
+/*  padding: 10px 15px 15px 15px;*/
+/*  margin: 5px 0px 5px 0px;*/
+/*  border-radius: 15px*/
+}
+
+.pywindow .CodeMirror {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.pywindow > pre, .pywindow .error pre {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono', monospace;
+/*    font-size: 0.95em;*/
+    letter-spacing: 0.015em;
+    line-height: 120%;
+/*    border: 1px solid #ccc;*/
+/*    background-color: #f8f8f8;*/
+    display: block;
+    padding: 9.5px;
+    margin: 5px 0 10px;
+    font-size: 13px;
+/*    line-height: 1.428571429;*/
+    color: #333;
+/*    word-break: break-all;*/
+/*    word-wrap: break-word;*/
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  min-height: 20px;
+/*  max-height: 500px;*/
+  resize: vertical;
+  overflow: auto;
+}
+
+.pywindow > pre a, .pywindow .error pre a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.pywindow .btn, .btn.pywindow-preview-popout{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 3px 6px;
+    height: 24px;
+    line-height: 16px;
+    /*font-weight: normal;*/
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-size: 1em;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    float: right;
+}
+.pywindow .btn-link, .btn-link.pywindow-preview-popout{
+    outline: 0px;
+    font-size: 15px;
+}
+
+.pyfile-preview-modal-holder .aops-modal-title {
+    text-align: center;
+    font-size: 150%;
+}
+.pyfile-preview-modal-holder textarea {
+    padding: 20px!important;
+}
+
+.pywindow .btn-run, .pywindow .btn-run-disabled {
+    float: left;
+    margin: 5px 0px;
+}
+.pywindow .btn-reset {
+    margin: 5px 0px;
+}
+
+.pywindow .btn-run:hover, .pywindow .btn-run:focus,
+.pywindow .btn-reset:hover, .pywindow .btn-reset:focus {
+    outline: 0px;
+    text-decoration: none;
+}
+
+.pywindow .btn-run:active, .pywindow .btn-run.active,
+.pywindow .btn-reset:active, .pywindow .btn-reset.active {
+    outline: 0px;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.pywindow .btn.disabled, .pywindow .btn[disabled], .pywindow fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.pywindow .btn-run {
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.pywindow .btn-run:hover, .pywindow .btn-run:focus, .pywindow .btn-run:active, .pywindow .btn-run.active {
+    color: #fff;
+    background-color: #47a447;
+}
+
+.pywindow .btn-run:active, .pywindow .btn-run.active {
+    background-image: none
+}
+
+.pywindow .btn-run.disabled, .pywindow .btn-run[disabled], .pywindow fieldset[disabled] .btn-run,
+.pywindow .btn-run.disabled:hover, .pywindow .btn-run[disabled]:hover, .pywindow fieldset[disabled] .btn-run:hover,
+.pywindow .btn-run.disabled:focus, .pywindow .btn-run[disabled]:focus, .pywindow fieldset[disabled] .btn-run:focus,
+.pywindow .btn-run.disabled:active, .pywindow .btn-run[disabled]:active, .pywindow fieldset[disabled] .btn-run:active,
+.pywindow .btn-run.disabled.active, .pywindow .btn-run[disabled].active, .pywindow fieldset[disabled] .btn-run.active {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+
+.pywindow .btn-reset {
+    color: #fff;
+    background-color: #ed9c28;
+}
+
+.pywindow .btn-reset:hover, .pywindow .btn-reset:focus, .pywindow .btn-reset:active, .pywindow .btn-reset.active {
+    color: #fff;
+    background-color: #ea8b02;
+}
+
+.pywindow .btn-reset:active, .pywindow .btn-reset.active {
+    background-image: none
+}
+
+.pywindow .btn-reset.disabled, .pywindow .btn-reset[disabled], .pywindow fieldset[disabled] .btn-reset,
+.pywindow .btn-reset.disabled:hover, .pywindow .btn-reset[disabled]:hover, .pywindow fieldset[disabled] .btn-reset:hover,
+.pywindow .btn-reset.disabled:focus, .pywindow .btn-reset[disabled]:focus, .pywindow fieldset[disabled] .btn-reset:focus,
+.pywindow .btn-reset.disabled:active, .pywindow .btn-reset[disabled]:active, .pywindow fieldset[disabled] .btn-reset:active,
+.pywindow .btn-reset.disabled.active, .pywindow .btn-reset[disabled].active, .pywindow fieldset[disabled] .btn-reset.active {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+/*.pyfile-preview-modal .btn-pop, .pywindow .btn-pop, .pywindow .btn-viewfiles, .pywindow .btn-linenumbers, .pywindow .btn-showdeleted, .pywindow .btn-hidedeleted {
+    color: #fff;
+    background-color: #999;
+}
+
+.pywindow-file-preview-modal .btn-pop:hover, .pywindow-file-preview-modal .btn-pop:focus, 
+.pywindow-file-preview-modal .btn-pop:active, .pywindow-file-preview-modal .btn-pop.active,
+.pywindow .btn-pop:hover, .pywindow .btn-pop:focus, .pywindow .btn-pop:active, .pywindow .btn-pop.active,
+.pywindow .btn-viewfiles:hover, .pywindow .btn-viewfiles:focus, .pywindow .btn-viewfiles:active, .pywindow .btn-viewfiles.active,
+.pywindow .btn-linenumbers:hover, .pywindow .btn-linenumbers:focus, .pywindow .btn-linenumbers:active, .pywindow .btn-linenumbers.active,
+.pywindow .btn-showdeleted:hover, .pywindow .btn-showdeleted:focus, .pywindow .btn-showdeleted:active, .pywindow .btn-showdeleted.active,
+.pywindow .btn-hidedeleted:hover, .pywindow .btn-hidedeleted:focus, .pywindow .btn-hidedeleted:active, .pywindow .btn-hidedeleted.active {
+    color: #fff;
+    background-color: #888;
+}*/
+
+
+.pywindow .alert {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+}
+.pywindow .alert h3 {
+  text-align: left;
+}
+.pywindow .alert p {
+  margin: 10px 0px 20px;
+}
+.pywindow .alert pre {
+  margin: 10px 0px 20px;
+}
+
+.pywindow .ac-files-hidden {
+  display: none;
+}
+
+
+.pywindow .pywindow-file-table-holder {
+  border:1px solid black; 
+  border-radius:6px; 
+  background-color: #fff;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.pywindow .pywindow-file-table {
+  margin-bottom: 7px;
+  width: 100%;
+}
+.pywindow .pywindow-file-table tr:nth-of-type(even) {
+  background-color: #eee;
+}
+.pywindow .pywindow-file-table th {
+  padding: 5px;
+}
+.pywindow .pywindow-file-table th:nth-of-type(2) {
+  text-align: left;
+}
+.pywindow .pywindow-file-table td {
+  padding: 5px;
+}
+.pywindow .pywindow-file-table td:nth-of-type(2) {
+  min-width: 100px;
+}
+
+.pyfile_restore, .pyfile_reset, .pyfile_delete, .pyfile_preview_cursor {
+  cursor: pointer;
+}
+.pyfile_delete {
+  max-width: 30px;
+}
+.pyfile-clickable-icons {
+  text-align: center;
+  clear: both;
+}
+.pywindow .pyfile_restore, .pywindow .pyfile_reset, .pywindow .pyfile_delete, .pywindow .pyfile-div-a-float-holder {
+  float: left;
+  margin-left: 10px;
+  min-width: 20px;
+}
+
+.pywindow-readonly .CodeMirror-gutters {
+    background-color: #eaeaea;
+}
+.pywindow-readonly .CodeMirror {
+    background-color: #f2f2f2;
+}
+
+.pywindow .pywindow-btn-small {
+  padding: 0px 3px;
+  margin: 0px;
+}
+
+
+
+
+.pywindow .active-out-hidden {
+    display: none;
+}
+
+.pywindow .pywindow-temp-preview-code .python {
+    white-space: pre;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 2px;
+    border: 2px solid #ccc;
+    font-size: 15px; /* or 14.86 */
+    font-family: monospace;
+}
+.pywindow .pywindow-temp-preview-code ol {
+    background-color: #fcfcfc!important;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-left: 0px!important;
+    padding-bottom: 8px;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    margin-left: 0px!important;
+/*    border-radius: 2px;*/
+    list-style-type: none;
+}
+.pywindow .pywindow-temp-preview-code li {
+    counter-increment: customlistcounter;
+    position: relative;
+    top: 3px;
+    height: 15px; /* or 14.86 */
+/*    margin: -5px 0px 0px 0px!important;*/
+}
+.pywindow .pywindow-temp-preview-code li:before {
+    content: " " counter(customlistcounter);
+    background-color: #f7f7f7;
+    position: relative;
+    top: -2px;
+    height: 15px; /* or 14.86 */
+    float: left;
+    border-right: 1px solid #ddd;
+    width: 34px; /* 27 or 21 or 35*/
+    margin: 0px 4px 0px -7px!important;
+    text-align: center;
+    color: #999;
+}
+.pywindow .pywindow-temp-preview-code li:last-child:before {
+    height: 21px; /* or 20.86 */
+    margin-bottom: -6px!important;
+}
+
+.pywindow .pywindow-one-digit-lines li:before {
+    width: 28px;
+}
+.pywindow .pywindow-two-digit-lines li:before {
+    width: 34px;
+}
+.pywindow .pywindow-three-digit-lines li:before {
+    width: 42px;
+}
+/*.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(1):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(1) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(2):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(2) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(3):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(3) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(4):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(4) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(5):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(5) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(6):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(6) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(7):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(7) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(8):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(8) ~ li:before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(9):before,
+.pywindow .pywindow-temp-preview-code li:first-child:nth-last-child(9) ~ li:before {
+    width: 28px;
+}*/
+
+.pywindow .pywindow-temp-preview-code ol:first-child {
+    counter-reset: customlistcounter;
+}
+.pywindow .pywindow-temp-preview-code span {
+}
+.pywindow .pywindow-temp-preview-code li>div {
+    cursor: text;
+    color: black;
+}
+
+.pywindow .ac-canvas {
+    background-color: white;
+    border: 2px solid #777;
+
+}
+
+.pywindow-enable-onclickpre-button {
+    float: left!important;
+}
+.pywindow-onclickpre-preview {
+    border: 2px solid #ccc;
+    padding: 10px;
+}

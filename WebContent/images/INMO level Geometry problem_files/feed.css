@@ -1,0 +1,778 @@
+/**
+Start speculative stuff right here
+**/
+/*!
+ * jQuery UI Resizable 1.10.2
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+/**
+End Speculative stuff
+**/
+
+.feed-hidden {
+	display : none;
+}
+
+/** Start wrapper **/
+
+#feed-wrapper {
+	animation : feed-slide 0.5s;
+	-webkit-animation : feed-slide 0.5s;
+	position : fixed;
+	right : -204px;
+	height : calc(100% - 110px);
+	height : -webkit-calc(100% - 110px);
+	top : 100px;
+	z-index : 1200; /* Must be lower than 1250 (flyout) */
+	text-align : top;
+	vertical-align : top;
+	padding : 0;
+	margin : 0;
+	text-align : left;
+}
+
+#feed-wrapper.feed-preloaded-topic {
+	animation : none !important;
+	-webkit-animation : none !important;
+}
+
+@-webkit-keyframes feed-slide {
+	from {right : -230px;}
+	to {right : -204px;}
+}
+
+@keyframes feed-slide {
+	from {right : -230px;}
+	to {right : -204px;}
+}
+
+#feed-wrapper.feed-open {
+	right : 0px;
+}
+
+/** Set to Chrome Mac scrollbar width; need to test on others **/
+/*
+MODALCHANGE RR 2/18/15
+
+.modal-page-overflow.aops-modal-open #feed-wrapper {
+	right : -189px;
+}
+
+.modal-page-overflow.aops-modal-open #feed-wrapper.feed-open {
+	right : 15px;
+}
+*/
+/** End wrapper **/
+
+/** Start topic cell **/
+#feed-wrapper .cmty-topic-cell-post a:hover {
+	text-decoration : none;
+}
+
+/** End topic cell **/
+
+.feed-fullscreen #page-wrapper {
+	display : none;
+}
+
+/** Start left and tabs **/
+
+#feed-left {
+	position : relative;
+	display : inline-block;
+}
+
+#feed-tabs {
+	padding : 0;
+	margin : 0;
+	position : absolute;
+	float : right;
+	width : 30px;
+	text-align : right;
+	margin-left : auto;
+	margin-right : 0;
+	top : 30px;
+	right : 0px;
+	box-shadow : -3px 3px 3px rgba(40,40,40,0.7);
+}
+
+
+@media (max-width:1290px) and (min-width:1270px) {
+	#feed-tabs {
+		top : 180px;
+	}
+}
+
+
+@media (max-width:1040px) and (min-width:1020px) {
+	#feed-tabs {
+		top : 180px;
+	}
+}
+
+@media (max-width:800px) {
+	#feed-tabs {
+		top : 120px;
+	}
+}
+
+@media (max-width:767px) {
+	#feed-tabs {
+		top : 180px;
+	}
+}
+
+.feed-tab {
+	border-bottom : 1px solid #aaa;
+}
+
+.feed-tab:last-child {
+	border-bottom : none;
+}
+
+/*
+#feed-global-tab {
+	border-bottom : 1px solid #aaa;
+}
+
+
+#feed-egosearch-tab {
+	border-bottom : 1px solid #aaa;
+}
+
+#feed-privates-tab {
+	border-bottom : 1px solid #aaa;
+}
+
+#feed-bookmark-tab {
+}*/
+
+
+.feed-tab {
+	background : #444;
+	width : 30px;
+	color : #777;
+	position : relative;
+	left : 0px;
+	padding-top : 6px;
+	font-size : 16px;
+	line-height : 16px;
+	height : 30px;
+	text-align : center;
+	cursor : pointer;
+/*	box-shadow : -5px 0 5px rgba(60,60,60,0.7);*/
+}
+
+/** Must come before -selected below **/
+.feed-subfeed-new-topic {
+	color : #fff;/*#BBDDF0;*/
+}
+
+
+.feed-subfeed-button-selected {
+	background-color : white; 
+	color : #f00;
+	z-index : 2;
+	left : -5px; /* Have to change width from 35px to deal with browser animate issues if want animation*/
+	width : 35px;
+	box-shadow : -4px 0 1px rgba(60,60,60,0.7);
+/*		0 5px 5px rgba(60,60,60,0.7),
+		0 -2px 5px rgba(60,60,60,0.7);*/
+}
+
+.feed-hide-page-feed #feed-page-tab {
+	display : none;
+}
+
+.feed-hide-page-feed #feed-bookmark-tab {
+	border-bottom : none;
+}
+
+/** End tabs **/
+
+
+/** Start subfeed (topic list) **/
+
+
+.cmty-subfeed {
+	height : 100%;
+	position : relative;
+}
+
+.cmty-subfeed .cmty-topics-list .aops-scroll-bar {
+	left : auto;
+}
+
+.cmty-subfeed .cmty-topics-list .aops-scroll-inner {
+	left : 0px;
+}
+
+.feed-subfeed-header-right {
+	float : right;
+	margin-right : 5px;
+}
+
+.feed-subtitle {
+	font-size : 12px;
+	padding-left : 5px;
+	padding-top : 1px;
+	height : 20px;
+	position : relative;
+	width : 95%;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+}
+
+#feed-wrapper .cmty-topics-list-title {
+	display : none;
+}
+
+
+.cmty-subfeed-bookmarks {
+	
+}
+
+
+.feed-subfeed-header {
+	margin : 2px 0 2px 0;
+	height : 26px;
+	background-color : #1b5db1;
+	color : white;
+	font-size : 16px;
+	padding-top : 4px;
+	padding-left : 5px;
+	cursor : pointer;
+	line-height : 16px;
+}
+
+.feed-subfeed-title {
+	font-weight : bold;
+	font-size : 14px;
+}
+
+.feed-resort {
+	padding : 0 4px;
+	display : none;
+}
+
+#feed-topic-list {
+	display : inline-block;
+	position : relative;
+	height : 100%;
+	width : 204px;
+/*	padding-left : 2px;*/
+	background-color : white;
+	top : 0px;
+	z-index : 1;
+	vertical-align : top;
+}
+
+#feed-wrapper.feed-open #feed-topic-list {
+	box-shadow : -5px 5px 5px rgba(20,20,20,0.7);
+}
+
+
+
+#feed-topic-list .cmty-topics-list {
+	height : calc(100% - 30px);
+	height : -webkit-calc(100% - 30px);
+}
+
+#feed-topic-list .cmty-subfeed-w-subtitle .cmty-topics-list {
+	height : calc(100% - 50px);
+	height : -webkit-calc(100% - 50px);
+}
+
+#feed-bookmark-filter {
+	margin-left : 5px;
+}
+
+#feed-bookmark-filter label {
+	font-weight : normal;
+	cursor : pointer;
+	font-size : 12px;
+	margin-right : 5px;
+}
+
+#feed-bookmark-filter input {
+	top : 2px;
+	left : 1px;
+	position : relative;
+	margin-left : 2px;
+	
+}
+
+.feed-no-bookmarks {
+	background-color : #faa;
+	width : 100%;
+	padding : 5px;
+}
+
+/** Topic list overwrites of common **/
+
+/*#feed-topic-list .cmty-topic-cell {
+	width : 100%;
+}
+*/
+#feed-topic-list .aops-scrollbar-visible .aops-scroll-content {
+	width : 196px;
+}
+
+#feed-topic-list .aops-scrollbar-not-visible .aops-scroll-content {
+	width : 205px;
+}
+
+#feed-topic-list .cmty-topics-list  .aops-scrollbar-visible .cmty-topic-list-popout {
+	width : calc(100% - 9px);
+	width : -webkit-calc(100% - 9px);
+	left : 0px;
+}
+
+#feed-topic-list .cmty-topic-cell-double {
+	left : 0px;
+	width : 196px;
+}
+
+#feed-topic-list .cmty-stunt-double-announcement {
+	height : 113px;
+}
+
+#feed-topic-list .cmty-condensed-topic-list .cmty-stunt-double-announcement {
+	height : 60px;
+}
+
+#feed-topic-list .cmty-stunt-double-announcement.focus-topic .cmty-topic-cell-close-topic {
+	top : 89px;
+}
+
+/** End Subfeed (topic list) **/
+
+/** Start topic **/
+
+#feed-topic {
+	right : 0px;
+	height : calc(100% - 260px);
+	height : -webkit-calc(100% - 260px);
+	background-color : #666;
+	display : none;
+	position : fixed;
+	top : 237px;
+	box-shadow : -3px 3px 3px rgba(40,40,40,0.7), -3px -3px 3px rgba(40,40,40,0.7) ;
+	z-index : 3;
+}
+
+.feed-open #feed-topic {
+	right : 204px;
+}
+
+.modal-page-overflow.aops-modal-open #feed-topic {
+	right : 204px;
+}
+
+.feed-topic-forum {
+	width : 100%;
+	height : 30px;
+	font-size : 14px;
+	color : white;
+	padding : 3px 8px 4px 8px;
+	line-height : 18px;
+}	
+
+.feed-topic-forum-left {
+	float : left;
+	font-size : 20px;
+	font-weight : bold;
+	width : 92%;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;	
+	line-height : 25px;
+	position : relative;
+}
+
+.feed-topic-forum-left:hover {
+	color : #fff;
+}
+
+.feed-topic-forum-right {
+	float : right;
+	color : #eee;
+}
+
+.feed-topic-top-right {
+	display : inline-block;
+	width : 122px;
+	text-align : right;
+	vertical-align : top;
+	position : relative;
+	color : #eee;
+	height : 30px;
+	padding-right : 3px;
+
+}
+
+
+
+#feed-topic .too-many-icons .feed-topic-top-right  {
+	width : 147px;
+}
+
+#feed-topic .too-many-icons .feed-topic-top-right .cmty-topic-bookmark {
+	margin : 0 7px;
+}
+
+.feed-topic-forum-right {
+	font-size : 24px;
+	color : #fff;
+	line-height : 24px;
+}
+
+.feed-topic-forum-right .cmty-topic-close{
+	margin-top : 2px;
+}
+
+#feed-topic .cmty-topic-subject {
+	vertical-align : top;
+	width : calc(100% - 122px);
+	width : -webkit-calc(100% - 122px);
+	padding-top : 6px;
+}
+
+#feed-topic .too-many-icons .cmty-topic-subject {
+	width : calc(100% - 147px);
+	width : -webkit-calc(100% - 147px);
+}
+
+.feed-topic-top-right a {
+	color : #eee;
+}
+
+.feed-topic-top-right a:visited {
+	color : #eee;
+}
+
+.feed-topic-top-right a:hover {
+	text-decoration : none;
+}
+
+
+#feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-bar {
+	right : initial;
+	left : 0px;
+}
+
+#feed-topic .cmty-topic-jump {
+	left : 0px;
+	right : auto;
+}
+
+#feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-inner {
+	left : 0px;
+	width : calc(100% + 30px);
+	width : -webkit-calc(100% + 30px);
+}
+
+
+#feed-topic .cmty-topic-posts-outer-wrapper  .aops-scrollbar-visible .aops-scroll-inner,
+#feed-topic .cmty-topic-posts-outer-wrapper  .aops-spoof-scrollbar-visible .aops-scroll-inner {
+	left : 11px;
+	width : calc(100% + 11px);
+	width : -webkit-calc(100% + 11px);
+}
+
+#feed-topic .cmty-topic-posts-outer-wrapper  .aops-spoof-scrollbar-visible .aops-scroll-inner {
+	width : 515px !important;
+}
+
+
+#feed-topic  .cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+	width : 483px !important; 
+}	
+
+#feed-topic .aops-spoof-scrollbar-visible .cmty-post-wrapper {
+	width : 483px;
+}
+
+#feed-topic  .cmty-topic-posts-outer-wrapper .aops-scroll-fade-top {
+	left : 10px;
+}
+
+#feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-fade-bottom {
+	left : 10px;
+}
+
+#feed-topic .cmty-post-body {
+	width : 339px;
+}
+
+
+#feed-topic .cmty-tags-itembox-wrapper {
+	display : none;
+}
+
+#feed-topic .cmty-topic-moderate {
+	display : none;
+	margin-right : 4px;
+}
+
+.cmty-show-feed-tags #feed-topic .cmty-tags-itembox-wrapper {
+	display : block;
+}
+
+.feed-fullscreen #feed-topic .cmty-tags-itembox-wrapper {
+	display : block;
+}
+
+.feed-fullscreen #feed-topic .cmty-topic-moderate {
+	display : inline-block;
+}
+
+.feed-fullscreen #feed-topic .feed-topic-top-right {
+	width : 133px;
+}
+
+.feed-fullscreen #feed-topic .too-many-icons .feed-topic-top-right  {
+	width : 175px;
+}
+
+.feed-fullscreen  #feed-topic .cmty-topic-subject {
+	width : calc(100% - 135px);
+	width : -webkit-calc(100% - 135px);
+}
+
+.feed-fullscreen  #feed-topic .too-many-icons .cmty-topic-subject {
+	width : calc(100% - 177px);
+	width : -webkit-calc(100% - 177px);
+}
+
+
+
+/** Feed adjustments to bbcode buttons **/
+
+#feed-topic .cmty-bbcode-list {
+	display : none;
+}
+
+#feed-topic .cmty-bbcode-code {
+	display : none;
+}
+
+#feed-topic .cmty-bbcode-img {
+	display : none;
+}
+
+
+/** End Feed adjustments **/
+
+
+/* Start responsive items */
+
+#feed-topic {
+	width : 500px;
+}
+
+#feed-topic .cmty-topic-posts-outer-wrapper  .aops-scroll-content {
+	width : 494px;
+}	
+
+#feed-topic  .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content,
+#feed-topic  .cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+	width : 483px; 
+}
+
+.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+	width : 1224px;
+}	
+
+.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+	width : 1212px;
+}	
+
+
+
+
+@media (max-width : 1270px) {
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 974px;
+	}	
+
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 963px;
+	}	
+}
+
+@media (max-width: 1020px) {
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 884px;
+	}	
+
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 873px;
+	}
+}
+
+@media (max-width: 930px) {
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 794px;
+	}	
+
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 783px;
+	}
+}
+
+@media (max-width: 840px) {
+/*	#feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-inner {
+		width : 100%;
+		overflow-y : hidden !important;
+	}
+	*/
+	
+	/*
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper {
+		margin-right : 6px;
+	}*/
+	
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper  .aops-scroll-inner {
+		width : 100%;
+		overflow-y : hidden !important;
+	}	
+	
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 100% !important;
+	}	
+	
+	
+	.feed-follscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content,
+	.feed-follscreen #feed-topic  .cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+		width : 100% !important;
+	}
+/*
+	.feed-fullscreen #feed-topic .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : calc(100% - 22px);
+		width : -webkit-calc(100% - 22px);
+	}*/
+
+}
+
+@media (max-width: 810px) {
+	.feed-tab {
+		display : none;
+	}
+	
+	#feed-global-tab {
+		display : block;
+	}
+	
+	.feed-open .feed-tab {
+		display : block;
+	}
+
+}
+
+@media (max-width: 767px) {
+	#feed-wrapper {
+		top : 77px;
+	}
+
+}
+
+
+@media (max-width : 700px) {
+	#feed-wrapper {
+		display : none;
+	}
+
+	.new-topic-btn {
+		display : none !important;
+	}
+
+	.open-feed-btn {
+		display : none !important;
+	}
+}
+
+@media print {
+	#feed-wrapper {
+		display : none;
+	}
+}
+
+
+/* End responsive items */
+

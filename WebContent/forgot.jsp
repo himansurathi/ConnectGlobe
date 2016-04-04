@@ -117,12 +117,12 @@ else{return true;}
 									<div class="prev_img"><img src="images/pic-01.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper </p>
-									<div class="read"><a href="#">read more</a></div>
+									<p><a href="#">Sample News  </a><br/>
+										Sample News Details</p> <br/><br/>
+									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+									
 								</div>
 							</div>
 				
@@ -136,10 +136,10 @@ else{return true;}
 									<div class="prev_img"><img src="images/header_scroll.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/><p><a href="#"> Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+																		
 								</div>
 							</div>
 				
@@ -154,12 +154,12 @@ else{return true;}
 									<div class="prev_img"><img src="images/header_scroll2.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper </p>
-									<div class="read"><a href="#">read more</a></div>
+									<p><a href="#">Sample News  </a><br/>
+										Sample News Details</p> <br/><br/>
+									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+									
 								</div>
 							</div>
 				
@@ -174,10 +174,10 @@ else{return true;}
 									<div class="prev_img"><img src="images/header_scroll3.jpg" alt="" title=""/></div>
 								</div>
 								<div class="prev_but_center_right">
-									<p><a href="#">Vivamus id lobortis nisi. Duis semper porta justo, vel sodales velit vehicula vel. </a><br/>
-										Donec non vulputate odio. Quisque tellus augue, tristique vel lobortis ut, convallis vel est. Nam vel congue lectus. Suspendisse ullamcorper odio et leo congue eu semper Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><br/>
-										Nam justo odio, congue id fermentum sit amet, placerat sed nibh. Vestibulum pharetra nibh eu magna accumsan tristique. Sed ac velit urna, venenatis vulputate purus.</p>
-									<div class="read"><a href="#">read more</a></div>									
+									<p><a href="#">Sample News </a><br/>
+										Sample News Details</p> <br/><br/><p><a href="#"> Sample News </a><br/>
+										Sample News Details</p> <br/><br/>
+																		
 								</div>
 							</div>
 				
@@ -196,7 +196,7 @@ else{return true;}
 							<div id="index_box_bg">
 								<h3>Now You can Share Your Social Problem such as some kind of Harassment,Bribe matters.</h3>
 								<p>Simply just Register Yourself and Do login After that click on Post Report Link as shown above.And After selecting Your subject and location YOu can post Your matter Simply .This will be visible to every visitors and our Supporters will try to proceed it further</p>
-								<div class="readred"><a href="#">read more</a></div>
+								
 							</div>
 							<div id="index_box_bot"></div>
 						</div>
@@ -207,24 +207,19 @@ else{return true;}
 								<img src="images/notebook.png" alt="" title="" style="float: left; padding-right: 10px; padding-bottom: 4px;" />
 								<h4>Latest News</h4>
 								<div class="pad" style="padding-bottom: 7px; border-bottom: 1px dotted #666666; margin-bottom: 10px;">
-									<a href="#">Apr. 10, 2010</a><br/>
-									<p><a href="#">Suspendisse rutrum interdum lacinia. </a><br/>
-										Suspendisse tempus aliquet elit sit amet pellentesque. Donec iaculis pulvinar mauris, </p>
-									<div style="text-align: right"><a href="#">read more...</a></div>
+									<a href="#">Mar. 30, 2016</a><br/>
+									<p><a href="#">Recent News Heading </a><br/>
+										Recent News Details </p>
+
 								</div>
 								<div class="pad" style="padding-bottom: 3px;">
-									<a href="#">Apr. 10, 2010</a><br/>
-									<p><a href="#">Suspendisse rutrum interdum lacinia. </a><br/>
-										Suspendisse tempus aliquet elit sit amet pellentesque. Donec iaculis pulvinar mauris, </p>
-									<div style="text-align: right"><a href="#">read more...</a></div>
+									<a href="#">Mar. 30, 2016</a><br/>
+									<p><a href="#">Recent News Heading </a><br/>
+										Recent News Details </p>
+
 								</div>
 							</div>
-							<div id="index_col2">
-								<img src="images/green.png" alt="" title="" style="float: left; padding-right: 10px; padding-bottom: 4px;" />
-								<h4>Recent Discovery</h4><br/>
-								<a href="images/project1.jpg" class="pirobox_footer" title="First Project Screenshot"><img src="images/pic-02.jpg" alt="" title=""/></a><br/><br/>
-								<a href="images/project2.jpg" class="pirobox_footer" title="Second Project Screenshot"><img src="images/pic-03.jpg" alt="" title=""/></a>
-							</div>
+							
 							<div id="index_col3">
 								<img src="images/contact.png" alt="" title="" style="float: left; padding-right: 10px; padding-bottom: 4px;" />
 								<h4>Recover Password</h4>

@@ -18,7 +18,7 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 							<div id="index_box_bg">
 								<h3>Now You can Share Your Social Problem such as some kind of Harassment,Bribe matters.</h3>
 								<p>Simply just Register Yourself and Do login After that click on Post Report Link as shown above.And After selecting Your subject and location YOu can post Your matter Simply .This will be visible to every visitors and our Supporters will try to proceed it further</p>
-								<div class="readred"><a href="#">read more</a></div>
+								
 							</div>
 							<div id="index_box_bot"></div>
 						

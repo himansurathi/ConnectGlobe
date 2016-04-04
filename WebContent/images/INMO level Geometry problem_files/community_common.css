@@ -1,0 +1,4709 @@
+/*.infobar {
+	display : none;
+}*/
+.cmty-color {
+	color : #356cb5;
+}
+
+#flyout.flyout-atop-modal {
+	z-index : 200000;
+}
+
+.community #breadcrumbs {
+	overflow : hidden;
+}
+
+.community input[type="text"]:focus,
+.community textarea:focus,
+.cmty-items-input-box.cmty-focused-editableitemlist {
+	border-top: 2px groove #eee;
+	border-right: 2px ridge #eee;
+	border-bottom: 2px ridge #eee;
+	border-left: 2px groove #eee;
+	outline : none;
+	padding : 1px;
+}
+
+.community input[type="text"],
+.community textarea {
+	border : 1px solid #aaa;
+	padding : 2px;
+}
+
+.cmty-topic-watchers {
+	position : absolute;
+	width : 100%;
+	background-color : #eaeaea;
+	top : 86px;
+	font-size : 12px;
+	color : #aaa;
+	vertical-align : bottom;
+	font-style : italic;
+	line-height : 14px;
+	height : 18px;
+}
+
+.cmty-topic-list-popout .cmty-topic-watchers {
+	top : 88px;
+}
+
+.topic-unread .cmty-topic-watchers {
+	background-color : #fff;
+}
+
+.focus-topic .cmty-topic-watchers {
+	background-color : #666;
+}
+
+.cmty-topic-watchers img {
+	margin : 0 2px;
+}
+
+.cmty-topic-watchers span {
+	height : 14px;
+	display : inline-block;
+	vertical-align : bottom;
+}
+
+.cmty-topic-cell-search-post .cmty-topic-watchers {
+	top : 71px;
+}
+
+.force-hidden {
+	display : none !important;
+}
+
+.cmty-hide-avatars .cmty-avatar {
+	display : none;
+}
+
+.cmty-text {
+	color : #336CB5;
+}
+
+.new-topic-btn,
+.open-feed-btn {
+	font-family : AoPS;
+	font-size : 16px;
+	cursor : pointer;
+}
+
+
+
+/** LaTeX width **/
+
+img.latex,
+img.latexcenter {
+	max-width : 100%;
+}
+
+/** end LaTeX **/
+
+/* latex modal, will probably move to main */
+
+.latex-modal-wrapper {
+	min-width : 0px;
+}
+
+.latex-modal-wrapper .latex-modal {
+	width : calc(100% - 15px);
+	width : -webkit-calc(100% - 15px);
+}
+
+.latex-modal-wrapper .aops-scrollbar-visible .latex-modal {
+	width : calc(100% - 27px);
+	width : -webkit-calc(100% - 27px);
+}
+
+/*
+.latex-modal-wrapper .latex-modal img.asy-image {
+	padding : 0 0 0 25px;
+}
+*/
+.latex-modal {
+	padding : 10px;
+	text-align : left;
+}
+
+
+.latex-modal img {
+	margin-bottom : 5px;
+	max-width : 100%;
+}
+
+.latex-modal-bottom-title {
+	text-align : left;
+	width : 153px;
+}
+
+.latex-modal-code {
+	text-align : left;
+}
+
+/** Bookmark modal **/
+.cmty-bookmark-modal-icon {
+	font-family : AoPS;
+	color : #336CB5;
+	font-size : 20px;
+}
+
+.cmty-bookmark-modal  form {
+	margin-top : 15px;
+}
+
+.cmty-bookmark-modal  label {
+	margin-left : 25px;
+}
+
+/** community editables **/
+
+.cmty-editable-row {
+	position : relative;
+/*	display : table;
+	border-spacing : 5px;
+	table-layout : fixed;*/
+	width : 100%;
+	text-align: left;
+
+}
+.cmty-editable-active-row {
+	background : #eee;
+}
+
+.cmty-editable-label {
+/*	display : table-cell;*/
+	display : inline-block;
+	font-weight : bold;
+	vertical-align : top;
+	padding-top : 2px;
+	text-align : right;
+	width : 105px;
+}
+
+.cmty-editable-label > div {
+	width : 100px;
+}
+
+.cmty-contenteditable-with-placeholder:empty:before {
+  content: attr(data-placeholder);
+  color : #aaa;
+}
+
+.cmty-contenteditable-with-placeholder {
+	vertical-align : top;
+}
+
+.cmty-contenteditable-with-placeholder:empty {
+	border : 1px solid #ddd;
+}
+
+.cmty-editable-row > .cmty-contenteditable-with-placeholder {
+	position : relative;
+	padding : 2px 48px 2px 2px;
+/*	margin-left : -2px;*/
+
+	text-align : left;
+	display : inline-block;
+	width : calc(100% - 120px);
+	width : -webkit-calc(100% - 120px);
+
+}
+
+.cmty-editable-row > .cmty-contenteditable-with-placeholder[contenteditable="true"] {
+	cursor : pointer;
+}
+
+.cmty-editable-row > div[contenteditable="true"]:focus {
+	cursor : auto;
+}
+
+.cmty-editable-pencil {
+	padding-left : 4px;
+	color : #336cb5;
+	cursor : pointer;
+}
+
+.cmty-editable-buttons {
+	position : absolute;
+	display : none;
+	right : 18px;
+	top : 7px;
+}
+
+.cmty-editable-buttons > span {
+	background-color : #136cce;
+	font-family : AoPS;
+	margin-right : 4px;
+	color : #fff;
+	padding : 2px 6px;
+	font-size : 12px;
+	cursor : pointer;
+}
+/** End community editables **/
+
+/** Community selects **/
+
+.cmty-select-row {
+	vertical-align : top;
+	margin-bottom : 6px;
+}
+
+.cmty-select-row > div {
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-select-row-select {
+	width : 80px;
+	text-align : right;
+	margin-right : 5px;
+	padding-top : 1px;
+}
+
+.cmty-select-row-text {
+	width : calc(100% - 90px);
+	width : -webkit-calc(100% - 90px);
+	text-align : left;
+	font-size : 14px;
+	padding-right : 5px;
+}
+
+
+.cmty-select-row-flash {
+	background-color : #dae7f6;
+}
+/** End Community selects **/
+
+.cmty-link-label-row {
+	vertical-align : top;
+	margin-bottom : 6px;
+	text-align : left;
+}
+
+.cmty-link-label-row > div {
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-link-label-row-link {
+	width : 80px;
+	text-align : right;
+	margin-right : 5px;
+	font-size : 14px;
+	cursor : pointer;
+}
+
+.cmty-link-label-row-label {
+	width : calc(100% - 90px);
+	width : -webkit-calc(100% - 90px);
+	text-align : left;
+	font-size : 14px;
+	padding-right : 5px;
+}
+
+/** Start Community link label rows **/
+
+
+/** End Community link label rows **/
+
+/** Global responsive stuff **/
+
+@media (max-width: 800px) {
+	.cmty-phone-hide {
+		display : none !important;
+	}
+}
+
+/*
+[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-color : green;
+}
+*/
+
+.aops-loader {
+	text-align : center;
+}
+
+.cmty-quick-message {
+	width : 100%;
+	position : relative;
+	text-align : center;
+}
+
+.cmty-highlight {
+	background-color : #ff0;
+	color : black;
+	padding : 0 3px;
+}
+
+
+/** scrollbar fades **/
+
+.aops-scroll-fade-top {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	width : 100%;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.aops-scroll-fade-bottom {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	position : absolute;
+	width : 100%;
+	left : 0px;
+	bottom : 0px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+.aops-scroll-fade-left {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	height : 100%;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.aops-scroll-fade-right {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	position : absolute;
+	height : 100%;
+	right : 0px;
+	top : 0px;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+/** originally had .community aops-icon **/
+.aops-icon {
+	font-family : AoPS;
+	font-size : 24px;
+}
+
+
+a.cmty-full-cell-link {
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	top : 0;
+	left : 0;
+	z-index : 3;
+	background-color : white;
+	opacity : 0;
+	filter : alpha(opacity=1);
+}
+
+
+
+/* Delete if not using the wrapped span for a link */
+/*span.cmty-span-link {
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	top : 0;
+	left : 0;
+	z-index : 3;
+}*/
+
+.cmty-topic-list-popout span.cmty-span-link {
+	z-index : 5;
+}
+
+
+/** Community/Feed Scrollbar CSS **/
+
+.cmty-scroll-outer {
+	left : 0px;
+}
+
+.cmty-scroll-outer .scrollbar-right {
+	left : 20px;
+}
+
+.cmty-scroll-outer {
+	width : 100%;
+	height : 100%;
+}
+
+.cmty-scroll-outer .aops-scroll-inner {
+	width : calc(100% + 26px);
+	width : -webkit-calc(100% + 26px);
+	padding : 4px 0;
+}
+
+/** Old scrollbar, delete on 8/1/2014
+.cmty-scroll-outer .aops-scroll-bar {
+	right : 0px;
+	top : 0px;
+	height : 100%;
+	border-radius : 6px;
+	width : 8px;
+	background-color : #ddd;
+	z-index : 20;
+
+	text-align : center;
+	box-shadow : inset 1px 1px 1px #aaa;
+}
+
+.cmty-scroll-outer .aops-scroll-slider {
+	background-color : #204ba7;
+	border-radius : 6px;
+	width : 8px;
+	
+}
+
+ Extra div needed for firefox centering and scrolling to work with stuff in the scrollbar 
+.cmty-scroll-outer .aops-scroll-slider div {
+	display : table-cell;
+	vertical-align : middle;
+	padding-left : 2px;
+}
+
+.cmty-scroll-outer .aops-slider-bars {
+	border-top : 1px solid;
+	border-bottom : 1px solid;
+	border-color : rgba(255,255,255,0.6);
+	width : 8px; 
+	height : 3px;
+}
+
+/** End Scrollbar **/
+
+/** START NEW SCROLLBAR **/
+
+
+.cmty-scroll-outer .aops-scroll-bar {
+	right : 1px; /* For some reason, this fixes a small rendering issue on Chrome (rather than having 0 here) */
+	top : 0px;
+	height : 100%;
+	border-radius : 0px; /* was 4px */
+	width : 8px; 
+	background-color : #ccc;
+	z-index : 20;
+	/*box-shadow : inset 1px 1px 1px #aaa;*/
+}
+
+.cmty-scroll-outer .aops-scroll-slider {
+	background-color : #666;
+	border-radius : 4px;
+	width : 8px;
+	
+}
+
+
+/** END NEW SCROLLBAR **/
+
+/** Item lists **/
+
+.cmty-editable-item-close {
+	font-family : AoPS;
+	position : absolute;
+	right : 3px;
+	top : 3px;
+	padding : 2px 8px;
+	font-size : 12px;
+	line-height : 14px;
+	color : #fff;
+	background-color : #136cce;
+	cursor : pointer;
+	border-radius : 3px;
+}
+
+.cmty-itembox-placeholder {
+	color : #888;
+	padding-left : 6px;
+}
+
+.cmty-itembox .aops-scroll-bar {
+	border-radius : 0px;
+}
+
+/** Bookmark **/
+
+
+.bkmk-icon {
+	font-family : AoPS;
+	font-size : 24px;
+}
+
+
+
+/** Anything I can click **/
+.clickable {
+	cursor : pointer;
+}
+
+
+/** 
+ * Autocompletes, Itemboxes 
+ * NOTE: a little autocomplete stuff combined with tags below.
+ **/
+
+.cmty-username-autocomplete-wrapper {
+	display : inline-block;
+}
+
+ /** Items in the dropdown list and in the itemlists/userlists **/
+.aops-editable-item-list-item,
+.cmty-itemlist-username, 
+ .cmty-items-input-box li.ui-menu-item a,
+.cmty-username-autocomplete li.ui-menu-item a {
+	position : relative;
+	border-radius : 0px;
+	height : 14px;
+	color : black; 
+	border : 1px solid;
+	display : inline-block;
+/*	font-style : italic;*/
+	font-size : 11px;
+	margin : 2px;
+	cursor : pointer;
+	padding : 1px 8px 1px 8px;
+	line-height : 14px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+.cmty-itemlist-username, 
+.cmty-username-autocomplete  li.ui-menu-item a {
+	border : 0px;
+	font-style : italic;
+	font-size : 12px;
+}
+
+.cmty-username-autocomplete  li.ui-menu-item a  {
+	color : white;
+}
+
+.cmty-username-autocomplete .ui-state-focus {
+/*	background-color : #000;*/
+	font-weight : bold;
+}
+
+.cmty-username-autocomplete .ui-state-focus:before {
+	content : '0';
+	font-family : AoPS;
+	color : #fff;
+	position : absolute;
+	left : -1px;
+	font-style : normal;
+}
+
+.cmty-username-autocomplete .cmty-user-admin.ui-state-focus span:before {
+	content : 'X';
+	font-family : AoPS;
+	font-style : normal;
+	font-weight : normal;
+	color : #fff;
+}
+
+
+/** Box where the items live **/
+.cmty-items-input-box {
+	border : 1px solid #aaa;
+	width : 400px;
+	display : inline-block;
+	z-index : 2;
+	line-height : 17px;
+	padding : 1px; /* was 2px */
+	background-color : white;
+}
+
+.cmty-items-input {
+	border : 0 !important;
+	padding : 0 2px !important;
+	width : 150px;
+	line-height : 21px; /* new */
+}
+
+.cmty-items-input:focus {
+	outline : none !important;
+	border : none !important;
+}
+
+
+.cmty-items-input-box ul.ui-menu, .cmty-tag-search ul.ui-menu,
+.cmty-no-results-found,
+ul.cmty-username-autocomplete {
+	position : absolute;
+	background-color : #666;
+	border-radius : 10px;
+	/*border : 1px solid #ccc;*/
+	box-shadow : 3px 3px 13px #aaa;
+	z-index : 500;
+	padding : 3px;
+	display : none;
+	top : 22px;
+	color : white;
+	
+}
+
+.cmty-tag-search ul.ui-menu,
+.cmty-no-results-found {
+	width : 200px;
+	
+}
+
+
+/* BRING THIS BACK FOR USERNAMES OR FORUMS IF WE NEED IT.
+ But make sure to narrow the CSS to just the autocomplete that uses it.
+.cmty-items-input-box .ui-state-focus {
+	background-color : #fff !important;
+}
+*/
+
+
+.cmty-items-input-box ul.ui-menu li, .cmty-tag-search ul.ui-menu li,
+ul.cmty-username-autocomplete li {
+	list-style : none;
+	margin-left : 2px;
+}
+
+.cmty-delete-item {
+	font-size : 10px;
+	margin-right : 2px;
+}
+
+.cmty-delete-item:hover {
+	color : #aaa;
+}
+
+.cmty-private-recipients .cmty-delete-item {
+	margin-left : 0px;
+}
+
+/* Start category autocomplete */
+
+.cmty-category-autocomplete-wrapper {
+	display : inline-block;
+	position : relative;
+}
+
+.cmty-category-autocomplete-wrapper .cmty-no-results-found {
+	width : 250px;
+	background-color : #ddd;
+	box-shadow : 3px 3px 13px #aaa;
+	padding : 3px 0 3px 6px;
+	color : black;
+}
+
+ul.ui-menu.category-autocomplete {
+	position : absolute;
+	padding-left : 1px;
+	background-color : #ddd;
+	box-shadow : 3px 3px 13px #aaa;
+/*	border : 1px solid black;*/
+/*	z-index : 500; main.css takes care of this*/
+	width : 200px;
+	padding : 3px 0 3px 1px;
+}
+
+
+ul.ui-menu.category-autocomplete li {
+	list-style : none;
+	margin : 4px 0px 4px 2px;
+	font-size : 14px;
+}
+
+ul.ui-menu.category-autocomplete li a:before {
+	font-family : 'AoPS';
+	margin-right : 5px;
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-forum a:before {
+	content : 'u';
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-forum_class a:before {
+	content : 'u';
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-folder a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-folder_forums a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-blogroll a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-folder_collections a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-view_tags a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-view_topics a:before {
+	font-family : 'AoPS';
+	content : '8';
+}
+
+
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-view_posts a:before {
+	font-family : 'AoPS';
+	content : 'x';
+}
+
+
+ul.ui-menu.category-autocomplete li.cmty-category-autocomplete-item-blog a:before {
+	font-family : 'AoPS';
+	content : '!';
+}
+
+
+a.cmty-category-autocomplete,
+.cmty-items-input-box li.ui-menu-item a.cmty-category-autocomplete {
+	color : white; 
+	cursor : pointer;
+	border : none;
+	font-size : 14px;
+	line-height : 15px;
+	height : auto;
+	margin : 0px;
+	padding : 2px 6px;
+}
+
+.cmty-search-with-icon ul.ui-menu.category-autocomplete li {
+	padding-left : 10px;
+	text-indent : -28px;
+	margin-left : 28px;
+}
+
+
+.cmty-search-with-icon .aops-font {
+	color : #aaa;
+}
+
+/*
+ul.ui-menu.category-autocomplete .ui-state-focus {
+	background-color : #fff !important;
+}
+*/
+
+/* End category autocomplete */
+
+.cmty-itembox .cmty-topic-cell-username {
+	font-style : italic;
+	font-size : 12px;
+	color : #000;
+}
+
+.cmty-itembox .cmty-topic-cell-post {
+	white-space : nowrap;
+	width : calc(100% - 20px);
+	width : -webkit-calc(100% - 20px);
+	text-overflow : ellipsis;
+	height : 18px;
+	overflow-y : hidden;
+}
+
+.cmty-topic-third-row .cmty-items-input-box {
+	padding-right : 32px; /* Prevent tags from hitting checkmark */
+
+}
+/** End autocompletes **/
+
+/** New topic **/
+
+.cmty-mark-all-read {
+	cursor : pointer;
+	z-index : 10;
+	font-size : 24px;
+}
+
+
+.cmty-new-topic-button {
+	cursor : pointer;
+	z-index : 10;
+	font-size : 24px;
+}
+
+
+/** Tags Start **/
+
+/** 
+ * Style for tags (and takes care of tags that are in
+ *  the tag autocompletes)
+ */
+/* pre-dot
+.cmty-item-tag, .cmty-tags-itembox-wrapper .cmty-items-input-box li.ui-menu-item a, .cmty-tags-line .cmty-items-input-box li.ui-menu-item a, .cmty-tag-search li.ui-menu-item a {
+	position : relative;
+	border-radius : 10px;
+	height : 20px;
+	color : white; 
+	border : 0px solid; 
+	display : inline-block;
+		white-space : nowrap;
+	font-size : 12px;
+	font-family : sans-serif;
+	margin : 4px 2px 4px 2px;
+	cursor : pointer;
+	padding : 4px 10px 3px 10px;
+	line-height : 12px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    vertical-align : top;
+    user-select: none;
+	webkit-text-stroke: 0.1px;
+}
+*/
+/*
+.cmty-item-tag, .cmty-tags-itembox-wrapper .cmty-items-input-box li.ui-menu-item a, .cmty-tags-line .cmty-items-input-box li.ui-menu-item a, .cmty-tag-search li.ui-menu-item a {
+	position : relative;
+	border-radius : 15px;
+	height : 20px;
+	color : white; 
+	border : 0px solid; 
+	display : inline-block;
+		white-space : nowrap;
+	font-size : 12px;
+	font-family : sans-serif;
+	margin : 4px 4px 4px 2px;
+	cursor : pointer;
+	
+	padding : 4px 12px 3px 5px;
+	line-height : 12px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    vertical-align : top;
+    user-select: none;
+	webkit-text-stroke: 0.1px;
+		border-top-left-radius : 0px;
+	border-bottom-left-radius : 0px;
+	
+	
+}
+
+.cmty-item-tag:after, 
+.cmty-tags-itembox-wrapper .cmty-items-input-box li.ui-menu-item a:after, 
+.cmty-tags-line .cmty-items-input-box li.ui-menu-item a:after, 
+.cmty-tag-search li.ui-menu-item a:after {
+	content : '.';
+	font-size : 14px;
+	position : absolute;
+	font-family : AoPS;
+	right : 5px;
+	line-height : 12px;
+}*/
+
+
+.cmty-item-tag, .cmty-tags-itembox-wrapper .cmty-items-input-box li.ui-menu-item a, .cmty-tags-line .cmty-items-input-box li.ui-menu-item a, .cmty-tag-search li.ui-menu-item a {
+	position : relative;
+	border-top-right-radius : 12px;
+	height : 20px;
+	color : white; 
+	border : 0px solid; 
+	display : inline-block;
+		white-space : nowrap;
+	font-size : 12px;
+	font-family : sans-serif;
+	margin : 4px 4px 4px 4px;
+	cursor : pointer;
+	
+	padding : 4px 8px 3px 7px;
+	line-height : 12px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    vertical-align : top;
+    user-select: none;
+	webkit-text-stroke: 0.1px;
+		border-top-left-radius : 0px;
+		border-bottom-left-radius : 0px;
+	border-bottom-right-radius : 12px;
+	
+	
+}
+/*
+.cmty-tag-wrap {
+	display : inline-block;
+	height : 20px;
+	position : relative;
+		margin : 4px 4px 4px 4px;
+}
+
+.cmty-item-tag, .cmty-tags-itembox-wrapper .cmty-items-input-box li.ui-menu-item a, .cmty-tags-line .cmty-items-input-box li.ui-menu-item a, .cmty-tag-search li.ui-menu-item a {
+	position : relative;
+	height : 100%;
+	color : white; 
+	border : 0px solid; 
+	display : inline-block;
+		white-space : nowrap;
+	font-size : 12px;
+	font-family : sans-serif;
+
+	cursor : pointer;
+	
+	padding : 4px 0px 3px 7px;
+	line-height : 12px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    vertical-align : top;
+    user-select: none;
+	webkit-text-stroke: 0.1px;
+}
+
+.cmty-tag-extra {
+	display : inline-block;
+	height: 100%;
+	/*background-color : #f00;
+	width : 0;
+	border-left : 10px;
+	border-width : 10px;
+	border-style : solid;
+	border-right : 0;
+	border-top-color : transparent;
+	border-bottom-color : transparent;
+}
+*/
+/*
+
+.cmty-item-tag {
+	border-radius : 0px;
+}
+
+
+.cmty-item-tag {
+	border-radius : 15px;
+}
+
+.cmty-item-tag {
+	border-top-left-radius : 0px;
+	border-bottom-left-radius : 0px;
+
+	margin-right : 4px;
+	padding-right : 4px;
+}*/
+
+.cmty-edit-tag {
+	border-radius : 10px;
+	padding-right : 5px;
+}
+
+.cmty-edit-tag:after {
+	content : '';
+	
+}
+
+/*.cmty-item-tag:after {
+	content : ' &bull;';
+	font-size : 34px;
+	font-family : sens-serif;
+	padding-left : 0px;
+	bottom : 14px;
+	position : absolute;
+	right : 5px;
+	color : #fff;
+}
+/*
+.cmty-item-tag:hover:after {
+	color : rgb(254,228,192);
+}*/
+
+/** 
+ * Style for tags for folders and forums
+ * TODO : Add autocomplete crap if need be.
+ */
+.cmty-item-forum_class, .cmty-item-user, .cmty-item-forum, .cmty-item-folder, .cmty-item-folder_forums, .cmty-item-folder_collections, .cmty-item-view_topics, .cmty-item-blogroll, .cmty-item-blog, .cmty-item-view_posts, .cmty-item-view_tags, .cmty-item-view_forums, .cmty-item-bookmark_tags, .cmty-item-bookmark_topics, .cmty-item-bookmark_forums {
+	position : relative;
+	height : 32px;
+	color : white; 
+	display : inline-block;
+	white-space : nowrap;
+/*	font-style : italic;*/
+	font-size : 12px;
+	font-family : sans-serif;
+	margin : 1px 1px;
+	width : 48%;
+	cursor : pointer;
+	padding : 4px 6px 0px 6px;
+	line-height : 12px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    vertical-align : top;
+    user-select: none;
+	webkit-text-stroke: 0.1px;
+}
+
+.cmty-item-user {
+	color : #356cb6;
+}
+
+.cmty-item-user:hover {
+	background-color : #356cb6;
+	color : #dae7f6;
+}
+
+.cmty-item-user .cmty-user-online {
+	color : #356cb6;
+	font-weight : bold;
+}
+
+.cmty-item-user:hover .cmty-user-online {
+	color : #dae7f6;
+}
+
+.cmty-item-user img {
+	width : 26px;
+	height : 26px;
+	vertical-align : top;
+	margin-right : 5px;
+}
+
+.cmty-item-forum:before,
+.cmty-item-forum_class:before {
+	content : 'u';
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 24px;
+	vertical-align : top;
+	padding-right : 4px;
+}
+
+.cmty-item-view_posts:before {
+	content : 'x';
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 24px;
+	vertical-align : top;
+	padding-right : 4px;
+}
+
+.cmty-item-folder:before, .cmty-item-folder_collections:before, .cmty-item-folder_forums:before, .cmty-item-blogroll:before, .cmty-item-blog:before, .cmty-item-view_tags:before, .cmty-item-view_forums:before, .cmty-item-view_topics:before, 
+.cmty-item-bookmark_tags:before, .cmty-item-bookmark_topics:before, .cmty-item-bookmark_forums:before {
+	content : '8';
+	font-size : 18px;
+	font-family : 'AoPS';
+	line-height : 24px;
+	vertical-align : top;
+	padding-right : 4px;
+}
+
+.cmty-item-blog:before {
+	content : '!';
+}
+
+.cmty-item-text-w-extra {
+	text-overflow : ellipsis;
+	width : 90%;
+	display : inline-block;
+	overflow : hidden;
+}
+/*
+.cmty-item-forum {
+	height : 34px;
+}*/
+
+.cmty-item-text {
+	text-overflow : ellipsis;
+	display : inline-block;
+	overflow : hidden;
+	font-weight : bold;
+	width : 94%;
+	font-size : 12px;
+	line-height : 14px !important;
+}
+
+.cmty-item-blog .cmty-item-text, 
+.cmty-item-blogroll .cmty-item-text, 
+.cmty-item-folder .cmty-item-text, 
+.cmty-item-folder_forums .cmty-item-text, 
+.cmty-item-folder_collections .cmty-item-text, 
+.cmty-item-forum .cmty-item-text, 
+.cmty-item-forum_class .cmty-item-text, 
+.cmty-item-view_tags .cmty-item-text, 
+.cmty-item-view_posts .cmty-item-text, 
+.cmty-item-view_forums .cmty-item-text,
+.cmty-item-view_topics .cmty-item-text, 
+.cmty-item-bookmark_tags .cmty-item-text, 
+.cmty-item-bookmark_topics .cmty-item-text, 
+.cmty-item-bookmark_forums .cmty-item-text {
+	font-size : 14px !important; 
+	width : 90%;
+}
+
+.cmty-item-subtitle {
+	text-overflow : ellipsis;
+	display : inline-block;
+	overflow : hidden;
+	width : 100%;
+	font-size : 10px;
+	line-height : 12px;
+	font-weight : normal;
+}
+
+.cmty-item-forum_class-extra, .cmty-item-forum-extra, .cmty-item-folder-extra, .cmty-item-bookmark-extra {
+	font-family : AoPS;
+	font-size : 12px;
+	float : right;
+}
+
+.cmty-tags-line .cmty-special-item:before {
+	content : 'j';
+	font-family : 'AoPS';
+	color : #fff;
+	font-size : 12px;
+	margin-right : 4px;
+	margin-left : -2px;
+}
+
+/** Tags End **/
+
+/** CSS for community components in the feed and the Community pages  **/
+
+/** Start Main window (full-screen and regular-screen) and feed in full-screen mode **/
+
+.community #main-content, 
+.fullscreen #feed-wrapper.feed-open {
+	width : 1230px;
+	margin : 0 auto 0 auto !important;
+	padding : 5px 0;
+}
+
+
+
+.fullscreen #feed-wrapper.feed-open .cmty-post-body {
+	width : 1068px;
+}
+
+@media (max-width : 1270px) {
+	.community #main-content, 
+	.fullscreen #feed-wrapper.feed-open {
+		width : 980px;
+		max-width : 980px;
+	}
+	
+	.fullscreen #feed-wrapper.feed-open .cmty-post-body {
+		width : 820px;
+	}
+
+}
+
+@media (max-width: 1020px) {
+	.community #main-content, 
+	.fullscreen #feed-wrapper.feed-open {
+		width : 890px;
+	}
+	
+	.fullscreen #feed-wrapper.feed-open .cmty-post-body {
+		width : 729px;
+	}
+
+}
+
+@media (max-width: 930px) {
+	.community #main-content, 
+	.fullscreen #feed-wrapper.feed-open {
+		width : 800px;
+	}
+	
+	.fullscreen #feed-wrapper.feed-open .cmty-post-body {
+		width : 639px;
+	}
+}
+
+@media (max-width: 840px) {
+	.community #main-content, 
+	.fullscreen #feed-wrapper.feed-open {
+		width : 765px;
+	}
+	
+	.fullscreen #feed-wrapper.feed-open .cmty-post-body {
+		width : 484px;
+	}
+}
+
+@media (max-width: 768px) {
+	.community #main-content, 
+	.fullscreen #feed-wrapper.feed-open {
+		width : 100%;
+	}
+	
+	/* Now we're just hoping for the best... */
+	.fullscreen #feed-wrapper.feed-open .cmty-post-middle {
+		max-width : 200px;
+	}
+}
+
+/** End Main window and full-screen feed **/
+
+/**********
+ * Topic list and Topic cell start 
+ *
+ * Used in feed, cmty-page-topic, cmty-page-topic-list.
+ *********/
+ 
+ 
+.cmty-topics-list {
+	height : 100%;
+	width : 100%;
+	position : relative;
+	display : inline-block;
+}
+
+
+.cmty-topics-list .aops-scroll-bar {
+	left : 0px;
+}
+
+.cmty-topics-list .aops-scroll-inner {
+	overflow-x : hidden;
+}
+
+.cmty-topics-list.cmty-not-at-top .aops-scroll-bar,
+.cmty-itembox.cmty-not-at-top .aops-scroll-bar {
+	top : 12px;
+	height : calc(100% - 12px);
+	height : -webkit-calc(100% - 12px);
+}
+
+.cmty-topic-list-jump-top {
+	display : none;
+	position : absolute;
+	left : 0;
+	top : 0;
+	color : #666;
+	font-family : AoPS;
+	font-size : 10px;
+	z-index : 10;
+	width : 10px;
+}
+
+#feed-topic-list .cmty-topic-list-jump-top {
+	left : auto;
+	right : -1px;
+	font-size : 9px;
+}
+
+.cmty-itembox.cmty-not-at-top .cmty-topic-list-jump-top {
+	left : auto;
+	right : -1px;
+	z-index : 50;
+}
+
+.cmty-not-at-top .cmty-topic-list-jump-top {
+	display : block;
+}
+
+.cmty-topics-list .aops-scroll-inner {
+	left : 0px;
+/*	width : calc(100% + 4px) !important;
+	width : -webkit-calc(100% + 4px) !important;*/
+	padding : 0px !important;
+}
+
+.cmty-topics-list .aops-scroll-fade-top {
+	height : 10px;
+}
+
+.cmty-topics-list .aops-scroll-fade-bottom {
+	height : 10px;
+}
+
+.cmty-no-more-topics {
+	width : 100%;
+/*	background-color : #ccc; IF I BRING BACK THIS BACKGROUND-COLOR, I'LL HAVE TO WORRY ABOUT WIDTHS IN A LOT OF PLACES (THOSE WITHOUT SCROLLBARS)*/
+	/*background-color : #f2f2f2;*/
+	padding : 5px;
+}
+/*
+.cmty-topics-list-inner-box {
+	background-color : #fff;
+}*/
+/*
+.cmty-topics-list-title {
+	display : none;
+}*/
+
+.cmty-topic-cell {
+	width : 100%;
+	cursor : pointer;
+	position : relative;
+	padding : 5px 0 5px 10px;
+	font-family : helvetica;
+	background-color : #eaeaea;
+	height : 113px;
+	overflow : hidden;
+}	
+/*
+.cmty-topic-cell:hover,
+.cmty-topic-cell:hover .cmty-topic-watchers {
+	background-color : #ddd;
+	opacity : 1;
+}
+
+.cmty-topic-cell.topic-unread:hover,
+.cmty-topic-cell.topic-unread:hover .cmty-topic-watchers {
+	background-color : #ddd;
+	opacity : 1;
+}
+
+
+.cmty-topic-cell.focus-topic:hover,
+.cmty-topics-list .cmty-topic-cell.focus-topic:hover,
+.cmty-topic-cell.focus-topic:hover .cmty-topic-watchers {
+	background-color : #666;
+  	opacity : 1;
+}*/
+
+.cmty-topics-list .cmty-topic-cell {
+	border-bottom : 2px solid #ccc;
+	border-top : 2px solid #fff;
+}
+
+/* Adjust heights of cell announcements and condensed cell topics*/
+.cmty-topics-list-global-announcement,
+.cmty-topics-list-local-announcement,
+.cmty-condensed-topic-list .cmty-topic-cell {
+	height : 60px;
+}
+
+/*
+.cmty-last-announcement {
+	border-bottom : 5px double #aaa !important;
+}
+*/
+
+.cmty-topic-cell .cmty-topic-cell-jump-to-bottom {
+	position : absolute;
+	right : 5px;
+	top : 0;
+	z-index : 4;
+	font-size : 12px;
+}
+
+.cmty-topic-cell .cmty-topic-cell-topic-reported {
+	position : absolute;
+	left : -8px;
+	top : -8px;
+	z-index : 4;
+}
+
+.cmty-topic-cell-jump-to-bottom,
+.cmty-topic-cell-jump-to-bottom a {
+	color : #aaa;
+}
+
+
+a.cmty-topics-list-jump-bottom-link {
+	z-index : 8;
+}
+
+
+.cmty-topic-cell-close-topic {
+	display : none;
+}
+
+.cmty-topic-cell-goto-unread {
+	display : none;
+}
+
+.cmty-topic-cell.topic-unread .cmty-topic-cell-goto-unread {
+	position : absolute;
+	color : #f00;
+	z-index : 4;
+	display : inline-block;
+	font-style : normal;
+	line-height : 17px;
+	font-size : 11px;
+	right : 15px;
+	top : -1px;
+}
+
+/**
+ * A little sleight of hand here.  
+ *  We need to show the icon for unread topic so users can jump to unread posts.
+ *  But that needs absolute positioning.  I want to nudge the poster username in
+ *  when that icon is onscreen.  But while topic-unread is added to the cell
+ *  for all users, we only want the icon when the user is logged in.  So, if 
+ *  the user is logged in, then a spacer div is dropped in to the second row.
+ *  We "display" the spacer only when the topic is unread.
+ **/
+/*.cmty-second-line-spacer {
+	display : none;
+}
+
+.cmty-topic-cell.topic-unread .cmty-second-line-spacer {
+	margin-left : 10px;
+	display : inline-block;
+}*/
+
+.cmty-topic-cell-left {
+	display : inline-block;
+	position : relative;
+	vertical-align : top;
+	width : 100%;
+}
+
+
+.cmty-topic-cell-left-bottom {
+	width : 100%;
+}
+
+.cmty-topic-cell-data {
+	display : none;
+}
+
+.cmty-topic-cell-subject {
+	font-size : 14px; 
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	max-width : 90%;
+	overflow : hidden;
+	height : 17px;
+	line-height : 16px;
+}
+
+.topic-unread .cmty-topic-cell-subject {
+	max-width : 84%;
+}
+
+.cmty-topic-cell-second-row {
+	font-size : 12px;
+	font-style : italic;
+	color : #aaa;
+/*	white-space : nowrap;
+	text-overflow : ellipsis;*/
+	max-width : 99%;
+	overflow : hidden;
+	height : 17px;
+	line-height : 17px;
+}
+
+
+.cmty-topic-cell-replies {
+	float : right;
+	margin-left : 4px;
+}
+
+.cmty-topic-cell-watchers {
+	float : right;
+}
+
+.cmty-topic-cell-watchers > span {
+	font-style : normal;
+}
+
+.cmty-topic-cell-replies:after {
+	content : ' x';
+	font-family : AoPS;
+	font-style : normal;
+	margin-right : 3px;
+	margin-left : 1px;
+}
+
+.cmty-topic-cell-username {
+	font-size : 12px;
+	font-style : italic;
+	height : 17px;
+	line-height : 17px;
+	font-family : sans-serif;
+}
+
+/*
+.cmty-page-topic-list .cmty-topic-cell-username:before {
+	content : 'V';
+	font-family : AoPS;
+	font-style : normal;
+}*/
+
+.cmty-topics-list .cmty-topic-cell-subtitle {
+	color : #aaa;
+	font-size : 12px;
+	line-height : 16px;
+	height : 16px;
+	margin : 0 0 2px 0;
+}
+
+.cmty-topics-list .cmty-topic-cell-subtitle-left {
+	float : left;
+	display : inline-block;
+	max-width : 99%;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+}
+
+.cmty-topic-cell-last-poster {
+	font-style : italic;
+}
+
+.cmty-topic-cell-right {
+	display : none;
+}
+
+.cmty-topic-cell-source {
+	max-width : 99%;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	font-size : 11px;
+	color : #666;
+}
+
+.cmty-topic-cell-source .cmty-source-title {
+	font-weight : bold;
+}
+
+.focus-topic .cmty-topic-cell-source {
+	color : #eee;
+}
+.cmty-topics-list .cmty-topic-cell-post {
+	height : 48px;
+	padding-right : 5px;
+	width : 100%;
+}
+
+.cmty-topic-cell-post img.latex,
+.cmty-topic-cell-post img.latexcenter {
+	opacity : 0.5; /** Grey out the LaTeX in topic previews **/
+/*		transform: scale(0.85, 0.85);  Sad, these look dumb
+	-ms-transform: scale(0.85, 0.85);
+	-webkit-transform: scale(0.85, 0.85);*/
+}
+
+
+.cmty-topic-cell-post .aopscode-error {
+	color : #888;
+}
+
+.cmty-topics-list .focus-topic .cmty-topic-cell-post .aopscode-error {
+	color : #eee;
+}
+
+.focus-topic .cmty-topic-cell-post img.latex,
+.focus-topic .cmty-topic-cell-post img.latexcenter  {
+	/* For Firefox  */
+	filter : url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+	
+	/* For browsers that know 'invert'.  IE just won't work */
+	filter: invert(1);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-o-filter: invert(1);
+	opacity : 1;
+}
+
+/** Must come after the topic-cell background-color setting 
+	TODO : unread announcements.
+**/
+.cmty-topic-cell.topic-unread {
+	background-color : #fff;
+}
+
+.cmty-topic-cell-subject {
+	font-family : sans-serif;
+}
+
+.cmty-topic-cell.topic-unread .cmty-topic-cell-subject  {
+	font-weight : bold;
+}
+
+
+/* Start focus topic adjustments */
+.cmty-topics-list .cmty-topic-cell.focus-topic {
+	background-color : #666;
+	border-top-color : #666;
+}
+
+.cmty-topic-cell.focus-topic .cmty-topic-cell-close-topic {
+	display : block;
+	position : absolute;
+	right : 5px;
+	top : 89px;
+	z-index : 4;
+}
+
+.cmty-topic-cell.focus-topic .cmty-topic-cell-post {
+	width : 93%;
+}
+
+
+.cmty-topics-list .focus-topic .cmty-topic-cell-subject,
+.cmty-topics-list .focus-topic .cmty-topic-cell-subtitle {
+	color : #fff;
+}
+
+.focus-topic .cmty-topic-cell-jump-to-bottom a,
+.focus-topic .cmty-topic-cell-jump-to-bottom,
+.focus-topic .cmty-topic-cell-close-topic,
+.focus-topic .cmty-topic-cell-close-topic a,
+.focus-topic .cmty-topic-cell-replies,
+.focus-topic .cmty-topic-cell-watchers {
+	color : #ddd;
+}
+
+/* End focus topic adjustments */
+
+
+ 
+.cmty-topic-cell-post {
+	color : #888;
+	width : 100%;
+	font-size : 12px;
+	font-family : sans-serif;
+	overflow : hidden;
+	line-height : 16px;
+	float : left;
+}
+
+.cmty-topic-cell-post a:link,
+.cmty-topic-cell-post a:visited {
+	color : #888;
+}
+
+.cmty-topic-cell-post a.cmty-hide-heading {
+	border-bottom : none;
+}
+
+
+.cmty-topics-list .focus-topic .cmty-topic-cell-post {
+	color : #eee;
+}
+
+.cmty-topics-list .focus-topic .cmty-topic-cell-post a {
+	color : #eee;
+}
+
+/** Start popout within Topic List **/
+
+/* remove pointer events to allow scrolling to propagate */
+.cmty-topic-list-popout {
+	z-index : 20;
+	pointer-events : none;
+	position : absolute;
+}	
+
+/* But we still want to hit the jump to bottom link. 
+DELETE if still commented out 6/1/14
+.cmty-topic-list-popout .cmty-topic-cell-jump-to-bottom,
+.cmty-topic-list-popout .cmty-topic-cell-close-topic {
+	pointer-events : all;
+}*/
+
+.cmty-topics-list.top-focus-popup  .cmty-topic-list-popout {
+	top : 0px;
+	border-top : 0px;
+}
+
+.cmty-topics-list.bottom-focus-popup  .cmty-topic-list-popout {
+	bottom : 0px;
+	border-bottom : 0px;
+	border-top : 2px solid #aaa;
+}
+
+.cmty-topics-list  .aops-scrollbar-visible .cmty-topic-list-popout {
+	width : calc(100% - 7px);
+	width : -webkit-calc(100% - 7px);
+	right : -1px; 
+}
+
+.cmty-topics-list.top-focus-popup .aops-scroll-fade-top {
+	top : 113px;
+}
+
+.cmty-topics-list.bottom-focus-popup .aops-scroll-fade-bottom {
+	bottom : 113px;
+}
+
+.cmty-topics-list.top-focus-popup.announcement-popup .aops-scroll-fade-top,
+.cmty-topics-list.top-focus-popup.cmty-condensed-topic-list .aops-scroll-fade-top {
+	top : 60px;
+}
+
+.cmty-topics-list.bottom-focus-popup.announcement-popup .aops-scroll-fade-bottom, 
+.cmty-topics-list.bottom-focus-popup.cmty-condensed-topic-list .aops-scroll-fade-bottom {
+	bottom : 60px;
+}
+
+/* Start stunt double within popout */
+
+.cmty-topic-cell-double {
+	z-index : 10;
+	position : absolute;
+	opacity : 0;
+}
+
+.cmty-stunt-double-announcement {
+	height : 60px;
+}
+
+.cmty-topic-cell-double  {
+	left : 8px;
+	width : 212px;
+}
+
+.cmty-topic-cell-double  {
+	pointer-events : all;
+}
+
+.cmty-topic-cell-double .cmty-topic-cell-topic-reported {
+	left : -2px; 
+}
+
+/* End stunt double */
+/** End popout **/
+
+/** Announcement adjustments **/
+
+
+
+.cmty-topics-list-local-announcement .cmty-topic-cell-post, 
+.cmty-topics-list-global-announcement .cmty-topic-cell-post {
+	display : none;
+}
+
+.cmty-topics-list .cmty-topics-list-local-announcement.focus-topic .cmty-topic-cell-subtitle-left,
+.cmty-topics-list .cmty-topics-list-global-announcement.focus-topic .cmty-topic-cell-subtitle-left,
+.cmty-topics-list.cmty-condensed-topic-list .focus-topic .cmty-topic-cell-subtitle-left {
+	max-width : 89%;
+}
+
+.cmty-topics-list .cmty-topics-list-local-announcement.focus-topic .cmty-topic-cell-close-topic,
+.cmty-topics-list .cmty-topics-list-global-announcement.focus-topic .cmty-topic-cell-close-topic,
+.cmty-topics-list.cmty-condensed-topic-list .focus-topic .cmty-topic-cell-close-topic,
+.cmty-stunt-double-announcement.focus-topic .cmty-topic-cell-close-topic {
+	top : 36px;
+}
+
+/** Topic List End **/
+
+
+/*****************
+ * Full topic - in feed and cmty-page-topic
+ *****************/
+
+/** Community topic list panel end (topic list portion below) **/
+
+
+.cmty-topic-full {
+	width : 100%;
+/*	width : calc(100% - 10px);
+	width : -webkit-calc(100% - 10px);*/
+	height : 100%;
+	background-color : #666;
+	padding : 3px;
+	display : inline-block;
+	position : relative;
+}
+
+
+.cmty-topic-posts-top {
+	width : 100%;
+	background-color : #666;
+	vertical-align : top;
+	padding : 0px 4px 0px 8px;
+/*	display : table;*/
+	position : relative;
+	color : #ddd;
+	z-index : 10; /* To get the tag autocomplete above the posts */
+}
+
+
+
+.cmty-topic-posts-top-left {
+	width : calc(100% - 120px);
+	width : -webkit-calc(100% - 120px);
+	height : 100%;
+	position : relative;
+	vertical-align : top;
+}
+
+.cmty-topic-posts-top-left-middle {
+/*	border-left: 1px solid #666;*/
+	width : 42px;
+	text-align : center;
+	color : #ddd;
+	padding-left : 2px;
+	height : 100%;
+	line-height : 28px;
+	vertical-align : top;
+	font-size : 16px;
+	padding : 0 4px;
+}
+
+.cmty-topic-posts-top-left-middle .cmty-topic-watchers {
+	font-size : 12px;
+}
+
+.cmty-topic-posts-top-middle {
+/*	border-left: 1px solid #666;
+	border-right : 1px solid #666;*/
+	width : 100px;
+	text-align : right;
+	color : #ddd;
+	font-size : 12px;
+	height : 100%;
+	vertical-align : top;
+	font-family : sans-serif;
+	line-height : 28px;
+	padding-right : 8px;
+}
+
+.cmty-topic-posts-top-right {
+	width : 17px;
+	text-align : center;
+	color : #ddd;
+	padding-left : 2px;
+	height : 100%;
+	line-height : 28px;
+	vertical-align : top;
+	font-size : 16px;
+}
+
+.cmty-topic-participants {
+	font-size : 12px;
+	font-weight : bold;
+	font-style : italic;
+}
+
+
+.cmty-add-participant {
+	color : #fff;
+	background-color : #aaa;
+	padding : 0px 9px;
+	line-height : 12px !important;
+	font-size : 12px;
+	font-family : AoPS;
+	font-weight : normal;
+	font-style : normal;
+	border-radius : 6px;
+}
+
+
+.cmty-topic-participants-heading {
+	color : white;
+}
+
+.cmty-topic-participants-usernames a,
+.cmty-topic-participants-usernames a:link,
+.cmty-topic-participants-usernames a:visited {
+	color : #ddd;
+}
+
+.cmty-topic-participants a {
+	margin-right : 5px;
+}
+
+
+.cmty-topic-participant-removed {
+	color : #999;
+	font-weight : normal;
+}
+
+.cmty-remove-me {
+	font-style : normal;
+	cursor : pointer;
+}
+
+/** Start add participant pop-up **/
+.cmty-add-participant-popup {
+	text-align : left;
+	margin : 5px;
+}
+
+
+.cmty-add-participant-info {
+	padding-right : 10px;
+}
+
+.cmty-add-participant-input-line {
+	margin-top : 8px;
+}
+
+/** End add participant pop-up **/
+
+.cmty-hidden-user {
+	font-style : italic;
+}
+
+/** Also in home page index.css **/
+.cmty-user-admin:before {
+	content : 'X';
+	font-family : AoPS !important;
+	margin-right : 1px;
+	font-style : normal;
+	font-weight : normal;
+}
+
+.cmty-topic-subject {
+	font-weight : bold;
+	color : #fff;
+	width : -webkit-calc(100% - 78px);
+	width : calc(100% - 78px);
+	position : relative;
+	font-family : sans-serif;
+	display : inline-block;
+	font-size : 16px; 
+	line-height : 20px;
+	text-align : left;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	vertical-align : top;
+}
+
+.too-many-icons .cmty-topic-subject {
+	width : -webkit-calc(100% - 103px);
+	width : calc(100% - 103px);
+}
+
+.cmty-topic-subject a {
+	color : #fff;
+}
+
+.cmty-topic-posts-top {
+	padding-bottom : 4px;
+}
+
+.cmty-topic-first-row {
+	padding-top : 3px;
+}
+
+.cmty-topic-first-row-right {
+	width : 72px;
+	display : inline-block;
+	text-align : right;
+	line-height : 22px;
+}
+
+
+.too-many-icons .cmty-topic-first-row-right {
+	width : 98px;
+}
+
+.cmty-topic-first-row-right a {
+	color : #ddd;
+}
+
+.cmty-topic-first-row-right .cmty-topic-jump-top,
+.cmty-topic-first-row-right .cmty-topic-jump-bottom {
+	margin-right :12px;
+	font-size : 24px;
+}
+
+.cmty-topic-first-row-right .cmty-full-screen,
+.cmty-target-url {
+	margin-right : 5px;
+}
+
+.cmty-topic-state {
+	margin-right : 5px;
+	font-size : 22px;
+}
+
+.cmty-topic-third-row-left {
+	display : inline-block;
+	width : -webkit-calc(100% - 216px);
+	width : calc(100% - 216px);
+	vertical-align : top;
+}
+
+.cmty-topic-third-row-right {
+	vertical-align : top;
+	width : 211px;
+	text-align : right;
+	display : inline-block;	
+	margin-top : 2px;
+}
+
+
+@media (max-width : 768px) {
+	.cmty-topic-first-row-right { 
+		width : 116px;
+	}
+	
+	.cmty-topic-subject {
+		width : calc(100% - 121px);
+		width : -webkit-calc(100% - 121px);
+	}
+	
+	.too-many-icons .cmty-topic-subject {
+		width : -webkit-calc(100% - 146px);
+		width : calc(100% - 146px);
+	}
+	
+	.too-many-icons .cmty-topic-first-row-right { 
+		width : 142px;
+	}
+}
+
+@media (max-width : 480px), (max-height : 480px) {
+	.cmty-topic-third-row-right .cmty-topic-jump-top,
+	.cmty-topic-third-row-right .cmty-topic-jump-bottom {
+		padding-right : 10px;
+	}
+}
+
+.cmty-topic-can-unlock {
+	cursor : pointer;
+}
+
+.cmty-topic-archive {
+	margin : 0 8px;
+}
+
+.cmty-topic-bookmark {
+	margin : 0 8px;
+}
+
+.cmty-topic-itembox-wrapper {
+	position : relative;
+	width : 100%;
+	/*height : 48px;*/
+	/*overflow : hidden;*/
+	/*border : 1px solid;*/
+	margin-top : 5px; 
+}
+
+.cmty-tags-itembox-wrapper .cmty-items-input-box {
+	width : 100% !important;
+	border : 0px !important;
+	top : 0px;
+	height : 100%;
+	position : relative;
+}
+
+.cmty-topic-full .cmty-tags-itembox-wrapper {
+	position : relative;
+	width : 100%;
+}
+
+.cmty-topic-full .cmty-tags-itembox-wrapper .cmty-item-tag {
+	margin-top : 2px;
+	margin-bottom : 1px;
+}
+
+
+.cmty-click-for-tags {
+	display : none;
+	height : 28px;
+	padding-top : 1px;
+}
+
+.cmty-click-for-tags a {
+	font-size : 14px;
+	color : #ddd;
+	text-decoration : underline;
+}
+
+.cmty-hide-topic-tags .cmty-click-for-tags {
+	display : block;
+}
+
+.cmty-hide-topic-tags .cmty-tags-itembox-wrapper {
+	display : none;
+}
+
+.cmty-moderate-topic .btn-primary {
+	margin : 3px 0 3px 5px;
+}
+
+.cmty-mod-topic-hidden-title {
+	margin-left : 3px;
+}
+
+.cmty-mod-topic-hidden-tag {
+	margin-left : 6px;
+}
+
+.cmty-mod-topic-hidden-tag .aops-font {
+	margin-right : 3px;
+	cursor : pointer;
+}
+
+.cmty-mod-topic-input-row input[type="text"] {
+	width : 375px;
+}
+.cmty-mod-topic-move .cmty-item-forum {
+	vertical-align : middle;
+}
+
+
+.cmty-topic-posts-outer-wrapper {
+	position : relative;
+	width : 100%;
+	overflow : hidden;
+	top : 0px;
+	bottom : 0px;
+}
+
+.cmty-topic-posts-outer-wrapper .aops-scroll-inner {
+	overflow-x : hidden;
+}
+
+.cmty-full-screen {
+	display : inline-block;
+/*	font-size : 16px;*/
+	line-height : 20px;
+	cursor : pointer;
+}
+
+.cmty-full-screen:after {
+	content : "P"
+}
+
+.fullscreen .cmty-full-screen:after {
+	content : "s"
+}
+
+
+.cmty-topic-jump {
+	position : absolute;
+	right : 0;
+	color : #ddd;
+	font-family : AoPS;
+	font-size : 10px;
+}
+
+.cmty-topic-posts-outer-wrapper .aops-scrollbar-not-visible .cmty-topic-jump {
+	display : none;
+}
+
+.cmty-topic-jump-top {
+	top : -2px;
+	
+}
+
+.cmty-topic-posts-outer-wrapper .aops-scroll-bar {
+	right : 0px;
+	height : calc(100% - 18px);
+	height : -webkit-calc(100% - 18px);
+/*	height : calc(100% - 22px);
+	height : -webkit-calc(100% - 22px);*/
+	top : 9px;
+/*	top : 20px;*/
+	margin : 0;
+	z-index : 4;
+	border-radius : 0px;
+	box-shadow : none;
+	background-color : transparent; /*#7a7a7a;*/
+}
+
+.cmty-topic-posts-outer-wrapper .aops-scroll-slider {
+	background-color : #ddd;
+/*	background-color : rgb(158, 187, 240);*/
+}
+
+.cmty-topic-jump-bottom {
+	bottom : -3px;
+/*	top : 8px; -3px;*/
+}
+
+
+.cmty-topic-posts-outer-wrapper .aops-scroll-inner {
+	padding : 0px !important;
+}
+
+.cmty-topic-posts-outer-wrapper .aops-scroll-content {
+	min-height : 100%;
+	background-color : #666;
+	z-index : 5;
+}
+
+#cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content,
+#cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-spoof-scrollbar-visible .aops-scroll-content {
+	padding-right : 3px;
+}
+
+.aops-scrollbar-not-visible .cmty-topic-jump {
+	display : none;
+}
+
+/** scroll-content widths set on the pages where these elements occur **/
+
+
+.cmty-topic-posts-window {
+	position : relative;
+	width : calc(100% + 20px);
+	width : -webkit-calc(100% + 20px);
+	overflow-x : hidden;
+	overflow-y : scroll;
+	height : 100%;
+/*	border : 1px solid;*/
+}
+
+
+.cmty-topic-posts {
+	position : relative;
+	width : 100%;
+}
+
+
+.cmty-topic-posts-bottom {
+	height : 28px;
+	position : relative;
+	width : 100%;
+	padding : 2px 4px;
+	background-color : #666;
+}
+
+.cmty-topic-mini-reply {
+	background-color : white;
+	position : relative;
+	line-height : 18px;
+	font-family : sans-serif;
+	font-size : 12px;
+	font-style : italic;
+	color : #aaa;
+	padding-left : 6px;
+	display : inline-block;
+	width : 100%;
+	border-radius : 6px;
+	cursor : pointer;
+}
+
+.cmty-topic-posts-bottom-right {
+	width : 30px;
+	text-align : center;
+	color : #ddd;
+	height : 100%;
+	vertical-align : top;
+	display : inline-block;
+	font-family : sans-serif;
+	line-height : 28px;
+}
+
+
+.cmty-topic-full .aops-scroll-fade-top {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	width : calc(100% - 10px);
+	width : -webkit-calc(100% - 10px);
+	
+	height : 6px;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+    background: -moz-linear-gradient(top,  rgba(122,122,122,1) 0%, rgba(122,122,122,0.5) 50%, rgba(122,122,122,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,122,122,0.5)), color-stop(50%,rgba(122,122,122,1)), color-stop(100%,rgba(122,122,122,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(122,122,122,1) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(122,122,122,1) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(122,122,122,1) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(122,122,122,1) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#00666666',GradientType=0 ); /* IE6-9 */
+}
+
+.cmty-topic-full  .aops-scroll-fade-bottom {
+    /* From http://www.colorzilla.com/gradient-editor/ */
+	position : absolute;
+	width : calc(100% - 10px);
+	width : -webkit-calc(100% - 10px);
+	height : 6px;
+	left : 0px;
+	bottom : 0px;
+	background: -moz-linear-gradient(top,  rgba(122,122,122,0) 0%, rgba(122,122,122,0.5) 50%, rgba(122,122,122,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,122,122,0)), color-stop(50%,rgba(122,122,122,0.5)), color-stop(100%,rgba(122,122,122,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.5) 50%,rgba(122,122,122,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00666666', endColorstr='#666666',GradientType=0 ); /* IE6-9 */
+}
+
+
+.cmty-topic-source-display {
+	position : relative;
+	width : 100%;
+	background : #fff;
+	font-size : 12px;
+	margin-bottom : 1px;
+	padding : 3px 0 2px 10px;
+}
+
+.cmty-topic-source-display .cmty-source-title {
+	font-weight : bold;
+}
+
+
+
+/** Single topic thread end **/
+
+
+/************
+ * Single Post
+ *  Used in feed and on cmty-page-topic
+ ************/
+  
+.cmty-post {
+	/*margin-bottom : 5px;*/
+	border-bottom : 1px #666 solid;
+	position : relative;
+}
+
+.cmty-post-target-note {
+	border : 1px dashed #aaa;
+	width : 90%;
+	margin : 5px auto;
+	background-color : #f4f4f4;
+	border-radius : 10px;
+	padding : 5px;
+}
+
+.cmty-remove-target {
+	width : 100%;
+	margin-top : 5px;
+	font-size : 11px;
+	text-align : center;
+}
+
+.cmty-post-deleted-info {
+	display : none;
+}
+
+.cmty-post-wrapper {
+	padding-top : 0;
+	position : relative;
+	width : 100%;
+	background : white;
+	display : table;
+	overflow : hidden;
+}
+
+/** Don't think I need this div in the middle, but we'll keep it for now **/
+.cmty-post-tr {
+	display : table-row;
+}
+
+.cmty-post-tr > div {
+	display : table-cell;
+	vertical-align : top;
+	height : 100%;
+}
+
+
+.cmty-post-left {
+	width : 100px;
+	padding : 10px 10px 8px 10px;
+	overflow : hidden;
+	position : relative;
+	line-height : 18px;
+}
+
+.cmty-post-left a {
+	color : black;
+}
+
+.cmty-post-middle {
+	padding-top : 5px !important;
+	position : relative;
+	/*width : calc(100% - 125px);
+	width : -webkit-calc(100% - 125px);
+	max-width : calc(100% - 125px);
+	max-width : -webkit-calc(100% - 125px);
+	max-width : 843px;*/
+	padding-right : 8px;
+	border-right : 1px solid #eee;
+	margin : 0 auto 0 0;
+	top : 0;
+	bottom : 0;
+	height : 100%;
+	overflow : hidden;
+}
+
+
+
+.cmty-post-right {
+	padding-top : 3px;
+	width : 25px;
+	padding-left : 5px;
+	font-size : 16px;
+	color : #aaa;
+}
+
+.cmty-post-right .aops-font {
+	cursor : pointer;
+}
+
+
+.cmty-post-settle-report {
+	color : #f00;
+	z-index : 4;
+
+}
+
+@media (min-width : 800px) {
+	.cmty-post-settle-report {
+		animation : settle-report 1s infinite;
+		-webkit-animation : settle-report 1s infinite;
+	}
+	@keyframes settle-report {
+		from {
+			color : #f00;
+		}
+		to {
+			color : #fff;
+		}
+	}
+	@-webkit-keyframes settle-report {
+		from {
+			color : #f00;
+		}
+		to {
+			color : #fff;
+		}
+	}
+}
+
+
+.cmty-post-username {
+	position : relative;
+	margin-top : 5px;
+	font-weight : bold;
+	font-size : 12px;
+	width : 90px;
+	overflow : hidden;
+	white-space : nowrap;
+	cursor : pointer;
+	text-overflow : ellipsis;
+}
+
+
+.cmty-post .cmty-user-admin a,
+.cmty-post .cmty-user-admin:before {
+	color : #356cb5;
+}
+
+
+.cmty-forum-admin a {
+	color : #990000;
+}
+
+.cmty-forum-mod a {
+	color : #009900;
+}
+
+.cmty-hide-avatars .cmty-post-username {
+	margin-top : 0px;
+}
+
+.cmty-post-top {
+	font-style : italic;
+	font-size :12px;
+	color : #aaa;
+	position : relative;
+	width : 100%;
+}
+
+.cmty-post-top-inline {
+	display : inline-block;
+}
+
+.cmty-post-top-data {
+	width : 100%;
+	position : relative;
+	vertical-align : top;
+}
+
+
+
+.cmty-post-real-username,
+.cmty-post-num-posts {
+	font-size : 12px;
+	color : #aaa;
+	font-style : italic;
+	overflow : hidden;
+	white-space : nowrap;
+	display : inline-block;
+	text-overflow : ellipsis;
+	width : 80px;
+}
+
+.cmty-phone-poster a {
+	font-weight : bold;
+	color : black;
+}
+
+.cmty-post-date {
+	float : left;
+}	
+
+.cmty-post-thank-count {
+	float : left;
+	margin-left : 4px;
+	cursor : pointer;
+}
+
+.cmty-post-nothank-count {
+	float : left;
+	margin-left : 4px;
+}
+
+.cmty-post-number {
+	float : right;
+}
+
+.cmty-pm-from-post {
+	float : right;
+	padding : 0 7px 0 3px;
+	cursor: pointer;
+}
+
+.cmty-pm-from-post:hover > span {
+	border-bottom : 1px solid;
+}
+
+.cmty-pm-from-post .aops-font {
+	font-size : 11px;
+}
+
+.cmty-post-body {
+	line-height : 19px;
+	width : 850px;
+	font-size : 15px;
+	margin-top : 0px;
+	margin-bottom : 8px;
+	position : relative;
+	max-width : 100%;
+	overflow : hidden;
+}
+
+.cmty-post-body img,
+.cmty-view-post-item-text img {
+	max-width : 100%;
+	max-height : 600px;
+}
+
+.cmty-post-body a span,
+.cmty-post-preview-text a span {
+	color : #1155CC !important;
+}
+
+.cmty-post-show-thanks .cmty-post-thankers {
+	display : block;
+}
+.cmty-post-thankers {
+	margin : 2px 2px 10px 0;
+	font-size : 12px;
+	color : #888;
+	width : 100%;
+	border-bottom : 1px dashed #888;
+	display : none;
+}
+
+.cmty-thank-title {
+	font-weight : bold;
+}
+
+.cmty-thankers {
+	font-style : italic;
+}
+
+.bbcode-youtube {
+	max-width : 100%;
+}
+
+.cmty-post-reports-container .cmty-post-body {
+	width : 780px;
+}
+
+.cmty-post-edit-info {
+	position : relative;
+	width : 100%;
+	font-size : 10px;
+	font-style : italic;
+	color : #aaa;
+	margin-top : 8px;
+	line-height : 12px;
+	display : none;
+}
+
+.cmty-post-edited .cmty-post-edit-info {
+	display : block;
+}
+
+.cmty-post-direct-modal input {
+	width : 100%;
+}
+
+a.cmty-post-number {
+	color : #aaa;
+}
+
+.cmty-unread-icon {
+	display : none;
+	color : #aaa;
+	font-family : AoPS;
+	font-size : 11px;
+	float : right;
+	margin-right : 2px;
+	line-height : 16px;
+	font-style : normal;
+}
+
+.cmty-post-unread .cmty-unread-icon {
+	display : inline-block;
+}
+
+.cmty-post-attachments {
+	padding-top : 5px;
+	display : none;
+}
+
+.post-has-attachment .cmty-post-attachments {
+	display : block;
+}
+
+
+.cmty-post-attached-title {
+	font-style : italic;
+	font-size : 12px;
+}
+
+.cmty-post-too-long {
+	color : #f00;
+}
+
+
+/* Start poll display */
+
+
+
+.cmty-poll-display {
+	position : relative;
+	width : 90%;
+	margin : 5px auto;
+	border : 2px solid #888;
+	background-color : #ddd;
+	padding : 8px;
+}
+
+.cmty-poll-display-top {
+	font-style : italic;
+}
+
+.cmty-poll-display-data {
+	display : table;
+	margin : 5px auto;
+	position : relative;
+	table-layout : fixed;
+}
+
+.cmty-poll-option {
+	display : table-row;
+	margin : 4px 0;
+}
+
+.cmty-poll-option > div {
+	display : table-cell;
+	position :relative;
+	padding : 3px 0;
+}
+
+.cmty-poll-display-top .aops-font {
+	font-style : normal;
+	margin-right : 5px;
+}
+
+
+.cmty-poll-option .cmty-poll-result-bar-cell {
+	display : none;
+	border-left : 1px solid #aaa;
+	position : relative;
+	width : 150px;
+	vertical-align : middle;
+}
+
+
+.cmty-poll-display-data .cmty-poll-top-center {
+	border : none;
+}
+
+.cmty-poll-result-bar {
+	height : 10px;
+	background-color : #aaa;
+}
+
+.cmty-poll-option  .cmty-poll-result-data {
+	display : none;
+	padding-left : 1px;
+	vertical-align : middle;
+}
+
+.cmty-poll-hide-results {
+	display : none;
+}
+
+.cmty-poll-num-votes {
+	display : none;
+	text-align : center;
+}
+
+.cmty-poll-display input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+.cmty-poll-select-no-results {
+	display : block;
+	text-align : center;
+}
+
+.cmty-poll-select-with-results { 
+	display : none;
+	text-align : center;
+}
+
+.cmty-poll-option-text {
+	text-align : left;
+	max-width : 300px;
+	overflow : hidden;
+	position : relative;
+}
+
+.cmty-poll-result-percent {
+	display : inline-block;
+	text-align : right;
+	width : 35px;
+}
+
+.cmty-poll-result-number {
+	display : inline-block;
+	text-align : left;
+	padding-left : 2px;
+}
+
+.cmty-poll-vote-row {
+	margin : 4px auto;
+	text-align : center;
+}
+
+.cmty-poll-results-toggle {
+	text-align : center;
+}
+
+.cmty-poll-results-toggle span {
+	font-size : 12px;
+	cursor : pointer;
+}
+
+.cmty-poll-helper-text {
+	font-style : italic;
+	text-align : center;
+	font-size : 11px;
+}
+
+.cmty-poll-show-results .cmty-poll-cannot-vote .cmty-poll-option-text {
+	text-align : right;
+}
+
+.cmty-poll-show-results .cmty-poll-option-text {
+	padding-right : 5px;
+}
+
+.cmty-poll-show-results .cmty-poll-num-votes {
+	display : block;
+}
+
+.cmty-poll-show-results  .cmty-poll-result-bar-cell {
+	display : table-cell;
+}
+
+.cmty-poll-show-results  .cmty-poll-result-data {
+	display : table-cell;
+}
+
+.cmty-poll-show-results  .cmty-poll-hide-results {
+	display : block;
+}
+
+.cmty-poll-show-results  .cmty-poll-show-results {
+	display : none;
+}
+
+#feed-wrapper  .cmty-poll-option .cmty-poll-result-bar-cell  {
+	display : none;
+}
+
+#feed-wrapper  .cmty-poll-option-text {
+	max-width : 200px;
+}
+
+/* end poll display */
+
+/*.cmty-post-bottom {
+	position : relative;
+	width : 100%;
+	border-top : 1px dashed;
+	padding-left : 104px;
+	margin-top : 5px;
+	font-size : 9px;
+	padding-top : 2px;
+	padding-bottom : 0px;
+	height : 20px;
+}
+
+.cmty-post-bottom-left {
+	float : left;
+}
+
+
+.cmty-post-bottom-left img {
+	margin-top : 2px;
+	height : 15px;
+}
+
+.cmty-post-h-f-right img {
+	margin-top : 2px;
+	height : 15px;
+	width : 15px;
+	margin-right : 6px;
+	cursor : pointer;
+}*/
+
+/** Start responsive stuff **/
+
+
+@media (max-width: 1270px) {
+	.cmty-post-body,
+	.cmty-post-reports-container .cmty-post-body {
+		width : 592px;
+	}
+
+}
+
+@media (max-width: 1020px) {
+	.cmty-post-body,
+	.cmty-post-reports-container .cmty-post-body {
+		width : 510px;
+	}
+
+}
+
+
+
+@media (max-width: 930px) {
+	.cmty-post-body,
+	.cmty-post-reports-container .cmty-post-body {
+		width : 420px;
+	}
+}
+
+
+@media (max-width: 840px) {
+	/** We're hoping for the best here 
+	 If phone mode breaks, then you're starting here. 
+	 This is leaning on the hope that display : table-cell continues
+	 to force the width out to fill the whole display : table **/
+	.cmty-post-middle {
+		max-width : 200px;
+	}
+	
+	.cmty-post-body {
+		width : 100%;
+	}
+}
+
+/** End responsive stuff **/
+
+/* Start report post */
+
+.cmty-report-post table {
+	margin-bottom : 10px;
+}
+
+.cmty-report-post td {
+	padding-top : 8px;
+}
+
+.cmty-report-post td:nth-child(1) {
+	text-align : right;
+	font-weight : bold;
+	vertical-align :top;
+	padding-right : 3px;
+}
+
+.cmty-report-post textarea {
+	width : 100%;
+}
+
+/* End report post */
+
+/* Start delete post */
+
+.cmty-delete-post {
+	text-align : left;
+	max-width : 500px;
+}
+
+.cmty-delete-post input {
+	vertical-align : top;
+}
+
+.cmty-delete-post label {
+	margin-left : 10px;
+}
+
+/* End delete post */
+
+/* Start deleted post */
+
+.cmty-post-is-deleted .cmty-post-wrapper {
+	display : none;
+	background-color : #ddd;
+}
+
+.cmty-post-is-deleted .cmty-post-right {
+	display : none;
+}
+	
+.cmty-post-is-deleted .cmty-post-deleted-info {
+	display : block;
+} 
+
+.cmty-deleted-info-post-open {
+	display : none;
+}
+
+.cmty-post-deleted-info {
+	position : relative;
+	width : 100%;
+	background-color : #fff;
+	padding : 5px;
+}
+
+.cmty-undelete-post {
+	float : right;
+}
+
+
+.cmty-post-deleted-open .cmty-post-wrapper {
+	display : table;	
+}
+
+.cmty-post-deleted-open .cmty-deleted-info-post-closed {
+	display : none;
+}
+
+.cmty-post-deleted-open .cmty-deleted-info-post-open {
+	display : block;
+}
+
+/* End deleted post */
+
+/* Rendered BBcode */
+
+a.cmty-hide-heading {
+	text-decoration : none;
+	border-bottom : 1px dotted #1155cc ;
+}
+
+
+a.cmty-hide-heading:hover {
+	border-bottom : 1px solid #1155cc ;
+}
+
+div.cmty-hide-content {
+	display : none;
+}
+
+span.cmty-hide-open+div.cmty-hide-content {
+	display : block;
+}
+
+/*a.cmty-hide-heading:after {
+	content : ' S';
+	font-family : AoPS;
+}
+
+a.cmty-hide-heading.cmty-hide-open:after {
+	content : ' T';
+	font-family : AoPS;
+}*/
+
+.cmty-hide-content {
+	border : 1px dashed #ccc;
+	border-radius : 10px;
+	background-color : #f2f2f2;
+	padding : 10px;
+	margin : 5px 10px 10px 10px;
+}
+
+.bbcode_quote {
+	position : relative;
+	background-color : #eee;
+	border-radius : 10px;
+	border : 1px solid #bbb;
+	margin : 10px;
+	padding : 10px;
+	color : #555;
+	overflow : hidden;
+}
+/*
+Triangle for quote.  
+.bbcode_quote:before {
+	content : 'h';
+	font-family : AoPS;
+	font-size : 30px;
+	color : #bbb;
+	position : absolute;
+	left : -10px;
+	top : 15px;
+}
+*/
+
+.bbcode_quote_head:before {
+	content : 'z ';
+	font-family : AoPS;
+	font-size : 14px;
+	margin-right : 4px;
+
+}
+
+.bbcode_quote_head {
+	margin-bottom : 5px;
+	font-style : italic;
+	font-size : 12px;
+	color : #666;
+}
+
+/** Single post end **/
+
+/****
+ * Posting environment Begin 
+ **/
+
+.cmty-posting-environ {
+	position : relative;
+	height : 100%;
+	text-align : left;
+}
+
+.cmty-posting-modal {
+	width : 800px;
+	height : 80%;
+}
+
+
+.cmty-posting-modal .aops-modal-content-wrapper {
+	box-shadow : none;
+}
+
+.cmty-posting-modal .aops-scroll-content {
+	height : 100%;
+}
+
+.cmty-posting-box {
+	text-align : left;
+	width : 100%;
+}
+
+
+.cmty-posting-top {
+	width : 100%;
+	background-color : #555;
+	color : #fff;
+}
+
+.cmty-heading-text {
+	font-size : 14px;
+/*	font-weight : bold;*/
+	width : 70px;
+	text-align : right;
+	vertical-align : top;
+	margin-top : 3px;
+	display : inline-block;
+}
+
+.cmty-posting-subject-line {
+	padding : 5px 0px 5px 0;
+}
+
+.cmty-posting-subject-line .cmty-subject-input {
+	height : 26px;
+}
+
+.cmty-subject-input {
+	width : calc(100% - 280px);
+	width : -webkit-calc(100% - 280px);
+}
+  
+@media (max-width : 650px) {
+	.cmty-post-in {
+		display : none;
+	}
+	.cmty-subject-input {
+		width : calc(100% - 85px);
+		width : -webkit-calc(100% - 85px);
+	}
+}
+
+.cmty-posting-forum {
+	max-width : 180px;
+	margin-right : 10px;
+	display : inline-block;
+}
+
+.cmty-posting-forum-name {
+	float:right;
+	padding : 3px 6px 5px 6px;
+	height : 24px;
+	width : 165px;
+	margin-right : 11px;
+	overflow : hidden;
+	white-space : nowrap;
+	display : inline-block;
+	text-overflow : ellipsis;
+	line-height : 18px;
+	text-align : center;
+	vertical-align : middle;
+}
+
+.cmty-tags-line {
+	padding : 0 0 5px 0;
+	position : relative;
+	width : 100%;
+}
+
+.cmty-tags-line .cmty-items-input-box {
+	width : calc(100% - 85px);
+	width : -webkit-calc(100% - 85px);
+	position : relative;
+	display : inline-block;
+	min-height : 26px;
+}
+
+.cmty-tags-line .cmty-item-tag {
+	margin : 1px 2px;
+}
+
+.cmty-posting-source {
+	padding : 0 0 5px 0;
+/*	font-size : 12px; */
+}
+
+.cmty-source-input {
+	width : calc(100% - 85px);
+	width : -webkit-calc(100% - 85px);
+}
+
+.cmty-posting-checkbox {
+	margin-left : 58px;
+	line-height : 16px;
+	height : 22px;
+	font-size : 14px;
+	padding-bottom : 10px;
+	margin-top : -3px;
+}
+
+.cmty-posting-checkbox input {
+	margin-right : 3px;
+}
+
+
+/* Buttons row begins */
+
+.cmty-posting-button-row {
+	height : 34px;
+	position : relative;
+	padding : 5px 0px;
+	background-color : #ccc;
+}
+
+/* Bbcode buttons begin **/
+
+.cmty-bbcode-buttons {
+	position : relative;
+	height : 24px;
+	width : calc(100% - 265px);
+	width : -webkit-calc(100% - 265px);
+	display : inline-block;
+	float : left;
+/*	white-space : nowrap;
+	overflow : hidden;*/
+}
+
+.cmty-bbcode-btn {
+	width : 30px;
+	height : 24px;
+	/*border : 1px solid black;*/
+	display : inline-block;
+	background-image : url('/m/community/img/posting-buttons-small.png');
+	z-index : 20;
+}
+
+.cmty-bbcode-btn:hover {
+	opacity : 0.6;
+	/*z-index : 40;*/
+}
+
+
+.cmty-bbcode-btn.selected:hover {
+	opacity : 1;
+	z-index : 20;
+}
+
+.cmty-bbcode-other {
+	background : transparent;
+	color : white;
+	font-family : AoPS;
+	vertical-align : top;
+	padding : 0 0 0 5px;
+	font-size : 22px;
+	top : -2px;
+	position : relative;
+}
+
+.cmty-bbcode-other:after {
+	content : "Q";
+}
+
+
+.cmty-bbcode-bold {
+	background-position : -116px -5px;
+}
+
+.cmty-bbcode-underline {
+	background-position : -143px -5px;
+}
+
+.cmty-bbcode-italic {
+	background-position : -170px -5px;
+}
+
+.cmty-bbcode-text-size {
+	background-position : -2px -5px;
+	width : 48px;
+	margin-left : 2px;
+}
+
+.cmty-bbcode-text-color {
+	background-position : -60px -5px;
+	width : 48px;
+	margin-left : 2px;
+}
+
+.cmty-bbcode-quote {
+	background-position : -204px -5px;
+	margin-left : 2px;
+}
+
+.cmty-bbcode-list {
+	background-position : -234px -5px;
+}
+
+.cmty-bbcode-hide {
+	background-position : -264px -6px;
+}
+
+.cmty-bbcode-code {
+	background-position : -297px -6px;
+}
+
+.cmty-bbcode-img {
+	background-position : -340px -6px;
+	margin-left : 2px;
+}
+
+.cmty-bbcode-url {
+	background-position : -371px -6px;
+}
+
+.cmty-bbcode-smiley {
+	width : 36px;
+	background-position : -408px -6px;
+	margin-left : 2px;
+}
+
+.cmty-bbcode-attachment {
+	margin-left : 2px;
+	background-position : -449px -6px;
+}
+
+.cmty-bbcode-poll {
+	width : 36px;
+	background-position : -480px -6px;
+}
+
+.cmty-bbcode-disabled .cmty-is-bbcode {
+	opacity : 0.6;
+	cursor : auto;
+}
+
+/* Bbcode buttons end */
+
+/* posting button popups start */
+.cmty-posting-submenu {
+	position : absolute;
+	z-index : 20;
+	background : #fff;
+	border : 1px solid #ccc;
+}
+
+.cmty-posting-submenu-extras {
+	margin : 3px 0 0 4px;
+	padding : 5px;
+}
+
+.cmty-posting-announce-extra {
+	padding-left : 22px;
+	font-size : 12px;
+	padding-top : 2px;
+}
+
+.cmty-posting-submenu-extras label {
+	cursor : pointer;
+}
+
+.cmty-posting-submenu-font-color {
+	width : 130px;
+	height : 130px;
+
+	line-height : 10px;
+}
+
+.cmty-posting-font-color-swatch {
+	width : 12px;
+	cursor : pointer;
+	height : 12px;
+	margin : 2px;
+	display : inline-block;
+
+}
+
+.cmty-posting-font-color-swatch:hover {
+	box-shadow : 0 0 4px #666;
+}
+
+.cmty-posting-submenu-smileys {
+	width : 200px;
+	height : 200px;
+}
+
+.cmty-posting-smiley-holder.aops-scroll-content {
+	width : 180px;
+}
+
+.cmty-posting-submenu-smileys .bbcode_smiley {
+	margin : 2px;
+	cursor : pointer;
+}
+
+.cmty-posting-submenu-smileys .aops-scroll-content {
+	height : auto;
+}
+
+.cmty-posting-font-size {
+	padding : 0 5px;
+	cursor : pointer;
+}
+
+.cmty-posting-font-size:hover {
+	background-color : #ddd;
+}
+
+/* posting button popups end */
+
+.cmty-posting-environ-buttons {
+	float : right;
+	width : 260px;
+	display : inline-block;
+	position : relative;
+	z-index : 1;
+	text-align : right;
+}
+
+.cmty-posting-environ-buttons .btn {
+	width : 120px;
+}
+
+
+
+.cmty-cancel-button.btn-primary {
+	background-color : #fff;
+	color : #336CB5;
+}
+
+.cmty-cancel-button.btn-primary:hover {
+	background-color : #eee;
+	color : #336CB5;
+}
+
+.cmty-cancel-posting-x {
+	display : none;
+	cursor : pointer;
+}
+
+.cmty-edit-post .cmty-submit-button {
+	margin-right : 7px;
+}
+
+/* Buttons row ends */
+
+.cmty-posting-box-container {
+	position : relative;
+/*	height : calc(100% - 115px); */
+}
+
+.cmty-posting-previewing .cmty-posting-box-container {
+	position : relative;
+	height : calc(50% - 60px);
+	height : -webkit-calc(50% - 60px);
+}
+
+.cmty-post-textarea {
+	width : 100%;
+	height : 100%;
+	resize : none;
+}
+
+/* Start Posting Preview */
+
+.cmty-posting-preview-bar {
+	height : 20px;
+	color : white;
+	text-align : center;
+	width : 100%;
+	font-size : 12px;
+	line-height : 20px;
+	background-color : #336CB5;
+}
+
+.cmty-posting-preview-bar .aops-font {
+	font-size : 14px;
+}
+
+.cmty-refresh-preview {
+	margin-left : 10px;
+}
+
+.cmty-refresh-preview .aops-font {
+	margin-right : 3px;
+}
+
+.cmty-post-preview {
+	display : none;
+	position : relative;
+	height : calc(50% - 60px);
+	height : -webkit-calc(50% - 60px);
+}
+
+.cmty-post-preview-text.aops-scroll-content {
+	height : auto;
+	padding : 0 5px 5px 5px;
+}
+
+.cmty-posting-previewing .cmty-post-preview {
+	display : block;
+}
+
+.cmty-posting-preview-bar-hidden {
+	display : inline-block;
+}
+
+.cmty-preview-bar-attachments {
+	display : none;
+	position : absolute;
+	left : 0px;
+	margin-left : 5px;
+}	
+
+.cmty-posting-with-attachments .cmty-preview-bar-attachments {
+	display : inline-block;
+}
+
+.cmty-posting-previewing .cmty-posting-preview-bar-hidden {
+	display : none;
+}
+
+.cmty-posting-preview-bar-shown {
+	display : none;
+}
+
+.cmty-posting-previewing .cmty-posting-preview-bar-shown {
+	display : inline-block;
+}
+
+
+
+
+.cmty-post-preview-container {
+	position : relative;
+	text-align: left;
+	width : 100%;
+	height : 100px;
+	overflow : hidden;
+}
+
+.cmty-post-preview-text {
+	text-align: left;
+	width : -webkit-calc(100% - 20px);
+	width : calc(100% - 20px);
+	position : relative;
+}
+
+.cmty-post-preview-scrollbox {
+	position : absolute;
+	right : 0px;
+	top : 0px;
+	height : -webkit-calc(100% - 2px);
+	height : calc(100% - 2px);
+	width : 10px;
+	border-radius : 10px;
+	border : 1px solid blue;
+}
+
+.cmty-post-preview-slider {
+	position : relative;
+	width : 10px;
+	border-radius : 10px;
+	background-color : blue;
+}
+
+.cmty-post-preview .aops-scroll-bar {
+	height : 100%;
+	top : 0;
+}
+
+
+/* End posting preview */
+
+/** Start polls input **/
+
+.cmty-poll-build {
+	width : 100%;
+	position : relative;
+	background-color : #555;
+	color : #fff;
+	padding : 5px;
+}
+
+
+
+.cmty-poll-build > div > div {
+	display : inline-block;
+	vertical-align : top;
+}
+
+.cmty-poll-left {
+	width : 100px;
+}
+
+.cmty-poll-left > div {
+	font-size : 10px;
+}
+
+.cmty-poll-right {
+	width : calc(100% - 110px);
+}
+
+.cmty-poll-right input {
+	width : 100%;
+}
+.cmty-poll-right textarea {
+	width : 100%;
+	height : 110px;
+}
+
+.cmty-poll-right select {
+	margin-right : 10px;
+}
+
+input.cmty-poll-cancel-btn {
+	width : 125px;
+	float : right;
+}
+
+.cmty-poll-input-row {
+	margin : 5px 0;
+}
+
+.cmty-poll-options-row {
+	font-size : 12px;
+}
+
+.cmty-poll-build  {
+	display : none;
+}
+
+.cmty-posting-with-poll .cmty-poll-build {
+	display : block;
+}
+
+.cmty-posting-with-poll .cmty-bbcode-poll {
+	background-position : -567px -6px;
+}
+
+
+
+/** End polls input **/
+
+/** Start attachments **/
+
+
+.cmty-posting-with-attachments .cmty-bbcode-attachment {
+	background-position : -535px -6px;
+}
+
+
+.aops-modal-standard.cmty-upload-modal .aops-modal-body {
+	width : 400px;
+	min-width : 400px;
+}
+
+.cmty-posting-attachments {
+	width : 100%;
+}
+
+.cmty-attach-buttonholder {
+	position : relative;
+	width : 100%;
+	height : 18px;
+	margin-top : 5px;
+}
+.cmty-attach-done {
+	float : right;
+}
+
+#post-attachments.dropzone {
+	height : 192px;
+	width : 100%;
+	padding : 10px;
+	min-height : 100px;
+	margin : 0 auto;
+	padding : 12px 0 0 8px;
+}
+
+#post-attachments .dz-message {
+	position : absolute;
+	color : #888;
+	width : 330px;
+}
+
+#post-attachments .dz-message a {
+	cursor : pointer;
+}
+
+#post-attachments.dropzone .dz-preview {
+	margin : 0 5px;
+	vertical-align : top;
+	padding : 4px;
+
+}
+
+#post-attachments .dz-fallback {
+	width : 100%;
+	height : 100%;
+	background-color : #ffaaaa;
+	color : #990000;
+}
+
+.post-attachments-existing-title {
+	margin-top : 5px;
+}
+
+.post-attachment-existing-row {
+/*	margin-left : 5px;
+	cursor : pointer;*/
+}
+
+.post-attachment-existing-row .aops-font {
+	margin-right : 3px;
+	cursor : pointer;
+}
+
+/** End attachments **/
+
+
+/** Start private conversation **/
+
+
+.cmty-private-recipients {
+	padding-bottom: 5px;
+}
+
+
+.cmty-new-private-conversation .cmty-subject-input,
+.cmty-new-private-conversation .cmty-items-input-box {
+	width : calc(100% - 85px);
+	min-height : 26px;
+	width : -webkit-calc(100% - 85px);
+}
+
+/** End private conversation **/
+
+/** Reply (much overwriting of posting classes **/
+
+.cmty-reply-window {
+	margin-top : 2px;
+	display : none;
+	padding-bottom : 4px;
+}
+
+.cmty-topic-full-drag-wrapper {
+	position : absolute;
+	width : 50%;
+	height : calc(100% - 230px);
+	height : -webkit-calc(100% - 230px);
+	top : 130px;
+}
+
+.cmty-open-preview .cmty-topic-full-drag-wrapper {
+	height : calc(100% - 390px);
+	height : -webkit-calc(100% - 390px);
+}
+
+.cmty-reply-divider {
+	width : 90px;
+	margin : 0 auto;
+	position : relative;
+	height : 5px;
+	background-color : #333;
+	color : white;
+	cursor : NS-resize;
+	text-align : center;
+	font-size : 11px;
+	line-height : 5px;
+/*	font-family : AoPS;
+	font-size : 10px;
+	line-height : 14px;*/
+	border-top-right-radius : 6px;
+	border-top-left-radius : 6px;
+}
+
+.cmty-reply-divider div {
+	display : inline-block;
+	 transform:scale(3,1); 
+  -webkit-transform:scale(3,1);
+
+}
+/*
+.cmty-reply-divider:after{
+	content : '=';Q
+}*/
+
+.cmty-reply-divider.ui-draggable-dragging {
+	display : none;
+}
+
+.cmty-tiny-viewport .cmty-reply-divider {
+	display : none;
+}
+
+.cmty-reply-window .cmty-posting-box-container textarea {
+	width : 100%;
+	height : 200px; /** This controls the height of the reply posting window. **/
+}
+
+.cmty-reply-window .cmty-posting-button-row {
+	background-color : #333;
+}
+
+.cmty-reply-window .cmty-bbcode-poll {
+	display : none;
+}
+
+.cmty-reply-window .cmty-bbcode-buttons {
+	width : calc(100% - 110px);
+	width : -webkit-calc(100% - 110px);
+}
+
+.cmty-reply-window .cmty-posting-environ-buttons {
+	width : 100px;
+}
+
+/*
+.cmty-reply-window .cmty-posting-full-screen {
+	display : inline-block;
+	font-size : 16px;
+	line-height : 20px;
+	color : white;
+}*/
+
+.cmty-reply-window .cmty-cancel-button {
+	display : none;
+}
+
+.cmty-reply-window .cmty-submit-button {
+	width : 60px;
+	font-family : sans-serif;
+	padding : 0px 6px;
+}
+
+.cmty-reply-window .cmty-cancel-posting-x {
+	display : inline-block;
+	color : white;
+	margin-right : 4px;
+	font-size : 16px;
+	line-height : 20px;
+}
+
+
+.cmty-reply-window .cmty-posting-submenu-smileys {
+	width : 240px;
+	height : 120px;
+}
+
+.cmty-topic-full .cmty-posting-smiley-holder.aops-scroll-content {
+	width : 220px;
+}
+
+.cmty-reply-window .cmty-post-preview {
+	background : white;
+	height : 160px; /*Controls the height of the preview region upon reply */
+}
+
+
+
+.cmty-no-preview .cmty-post-preview,
+.cmty-no-preview .cmty-posting-preview-bar {
+	display : none;
+}
+
+/** Start edit Post **/
+
+.cmty-edit-reason textarea {
+	height : 100px;
+	width : 100%;
+	margin-top : 10px;
+}
+
+.cmty-edit-post .cmty-bbcode-poll {
+	display : none;
+}
+
+/** Start Responsive design items **/
+
+@media (max-width: 920px) {
+	.cmty-posting-modal {
+		width : 750px;
+	}
+	
+	.cmty-posting-modal {
+		width : calc(100% - 185px);
+		width : -webkit-calc(100% - 185px);
+	}
+	
+	.cmty-posting-modal .cmty-posting-environ-buttons {
+		width : 180px;
+	}
+	
+	.cmty-posting-modal .cmty-posting-environ-buttons .btn{
+		width : 80px;
+	}
+	
+	.cmty-posting-modal .cmty-bbcode-buttons {
+		width : -webkit-calc(100% - 185px);
+		width : calc(100% - 185px);
+	}
+}
+
+@media (max-width: 550px) {
+	.cmty-upload-modal {
+		display : none;
+	}
+	
+	.cmty-posting-with-attachments .cmty-preview-bar-attachments {
+		display : none;
+	}
+	
+	
+	.cmty-posting-modal {
+		left : 8px;
+		width : calc(100% - 28px);
+		width : -webkit-calc(100% - 28px);
+	}
+	
+	.cmty-edit-reason-modal .aops-modal-title {
+		display : none;
+	}
+	
+	.cmty-edit-reason-modal textarea {
+		height : 40px;
+	}
+
+}
+
+
+/** End Responsive design items **/
+
+/**
+ * Polymath modal
+ */
+.cmty-polymath-terms-container {
+	width : 100%;
+	margin : 5px 0;
+}
+
+.cmty-polymath-terms {
+	max-height : 250px;
+	overflow-y : scroll;
+	width : 90%;
+	margin : 0 auto;
+	border : 1px solid black;
+	padding : 3px 12px 3px 9px;
+}
+
+.cmty-polymath-radios {
+	padding : 2px 5px;
+}
+
+.cmty-polymath-heading {
+	font-weight : bold;
+}
+
+.cmty-polymath-rules-postscript {
+	padding-top : 5px;
+	font-size : 0.8em;
+}
+/** Begin reply full-screen mode **/
+
+.fullscreen #feed-wrapper, .fullscreen .cmty-category-cell-bottom,
+.fullscreen #cmty-no-topic-view-bottom {
+	display : none;
+}
+
+.fullscreen #cmty-topic-view-right,
+.fullscreen #cmty-topic-view-left {
+	height : calc(100% - 30px);
+	height : -webkit-calc(100% - 30px);
+
+}
+
+@media (min-width : 480px) and (min-height : 480px) {
+	/* Full-reply mode */
+/*	.full-reply #cmty-topic-view-left,*/
+	.full-reply  #header-wrapper, 
+	.full-reply  #footer-wrapper, 
+	.full-reply  #small-footer-wrapper,
+	.full-reply #cmty-my-aops-top,
+	.full-reply .atop-the-community  {
+		display : none !important;
+	}
+	.full-reply #cmty-topic-view-left {
+		width : 0;
+	}
+
+
+	.full-reply.school-class-page #main-content {
+		padding-top : 5px;
+		/*padding-bottom : 5px;*/
+	}
+
+	/* Grr Safari */
+	.full-reply .cmty-post-preview {
+		position : absolute;
+		width : calc(100% + 6px);
+		width : -webkit-calc(100% + 6px);
+		border : 3px solid #666;
+		left : -3px;
+		border-top : none;
+		box-shadow: 9px 3px 13px -4px #aaa;
+		margin-bottom : 5px;
+	}
+
+	.full-reply #cmty-topic-view-right {
+		width : 100%;
+		overflow-y : visible;
+		position : initial;
+	}
+
+	.full-reply .cmty-reply-window .cmty-post-preview,
+	.full-reply #community-all,
+	.full-reply .cmty-reply-window .cmty-posting-environ {
+		height : auto !important;
+	}
+
+	.full-reply #community-all {
+		margin-bottom : 5px;
+	}
+
+	.full-reply #main-column-standard {
+		height : auto;
+	}
+
+	.full-reply.school-class-page #community-all {
+		margin-bottom : 0px;
+	}
+
+	.full-reply #cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 1224px;
+	}
+
+	.full-reply #cmty-topic-view-right  .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 1216px;
+	}
+
+	.full-reply  #cmty-topic-view-right .cmty-post-body {
+		width : 1070px;
+	}
+}
+
+@media (min-width : 480px) and (min-height : 480px) and (max-width : 1270px) {
+
+	.full-reply #cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 974px;
+	}
+
+	.full-reply #cmty-topic-view-right  .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 966px;
+	}
+
+	.full-reply  #cmty-topic-view-right .cmty-post-body {
+		width : 820px;
+	}
+
+
+}
+
+@media (min-width : 480px) and (min-height : 480px) and (max-width : 1020px) {
+
+	.full-reply #cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 884px;
+	}
+
+	.full-reply #cmty-topic-view-right  .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 876px;
+	}
+
+	.full-reply  #cmty-topic-view-right .cmty-post-body {
+		width : 730px;
+	}
+
+
+}
+
+@media (min-width : 480px) and (min-height : 480px) and (max-width : 930px) {
+
+	.full-reply #cmty-topic-view-right .cmty-topic-posts-outer-wrapper .aops-scroll-content {
+		width : 794px;
+	}
+
+	.full-reply #cmty-topic-view-right  .cmty-topic-posts-outer-wrapper .aops-scrollbar-visible .aops-scroll-content {
+		width : 786px;
+	}
+
+	.full-reply  #cmty-topic-view-right .cmty-post-body {
+		width : 640px;
+	}
+
+
+}
+
+/*
+.fullscreen .cmty-postbox-inner-box {
+	width : 1220px !important;
+}
+
+.fullscreen .aops-scrollbar-visible .cmty-postbox-inner-box {
+	width : 1198px !important;
+}*/
+
+/* 938 
+@media (max-width: 1270px) {
+	.fullscreen .cmty-postbox-inner-box {
+		width : 970px !important;
+	}
+
+	.fullscreen .aops-scrollbar-visible .cmty-postbox-inner-box {
+		width : 948px !important;
+	}
+
+}*/
+
+/* 938 
+@media (max-width: 1020px) {
+	.fullscreen .cmty-postbox-inner-box {
+		width : 880px !important;
+	}
+
+	.fullscreen .aops-scrollbar-visible .cmty-postbox-inner-box {
+		width : 858px !important;
+	}
+
+}
+
+@media (max-width: 930px) {
+	.fullscreen .cmty-postbox-inner-box {
+		width : 790px !important;
+	}
+	
+	.fullscreen .aops-scrollbar-visible .cmty-postbox-inner-box {
+		width : 768px !important;
+	}
+}
+
+
+
+*/
+
+.cmty-edit-post.cmty-posting-previewing .cmty-post-preview {
+	height : calc(50% - 45px);
+	height : -webkit-calc(50% - 45px);
+}
+
+/** Feed adjustments to full screen **/
+
+.feed-fullscreen html, .feed-fullscreen body {
+	height : 100%;
+	margin : 0;
+	padding : 0;
+}
+
+.feed-fullscreen #feed-left {
+	display : block;
+	height : 100%;
+}
+
+/* HOW TO FINISH FROM HERE:
+	Do this at the same time as responsive; get the window to be the same width
+	as when you fullscreen the regular community, then you can add the appropriate entries
+	for the feed stuff to the general reply stuff above **/
+	
+.feed-fullscreen #feed-wrapper {
+	display : block;
+	position : absolute;
+	height : calc(100% - 20px); 
+	width : calc(100% - 20px);
+	height : -webkit-calc(100% - 20px); 
+	width : -webkit-calc(100% - 20px);
+	top : 10px;
+	left : 0;
+}
+
+.feed-fullscreen #feed-topic {
+	width : 100%;
+	height : 100%;
+	position : relative;
+	top : 0px;
+	right : 0px;
+	box-shadow : 3px 3px 13px #aaa;	
+}
+
+.feed-fullscreen #cmty-topic-view-right, .feed-fullscreen #feed-tabs,
+.feed-fullscreen #feed-topic-list {
+	display : none;
+}
+
+
+
+/** End Feed full screen **/
+
+
+
+/** End reply full-screen mode **/
+
+/** Start friends (used in Alcumus and cmty) **/
+
+
+.cmty-friend-box {
+	width : 393px; 
+	padding : 2px;
+	background-color : #eee;
+	text-align : left;
+	position : relative;
+	display : inline-block;
+	margin : 5px;
+	font-size : 12px;
+	cursor : pointer;
+	height : 70px;
+	overflow : hidden;
+}
+
+.cmty-friend-box:hover {
+	background-color : #ddd;
+}
+
+.cmty-no-friends {
+	margin-left : 5px;
+}
+
+.cmty-friend-avatar {
+	display : inline-block;
+}
+
+.cmty-friend-details {
+	display : inline-block;
+	padding-left : 5px;
+	vertical-align : top;
+	width : calc(100% - 72px);
+	width : -webkit-calc(100% - 72px);
+}
+
+.cmty-hide-avatars .cmty-friend-details {
+	width : calc(100% - 8px);
+	width : -webkit-calc(100% - 8px);
+}
+
+.cmty-friend-username {
+	color : #356cb5;
+	font-weight : bold;
+	float : left;
+} 
+
+.cmty-unfriend {
+	float : right;
+	display : none;
+	cursor : pointer;
+}
+
+.cmty-unfriend:hover {
+	color : #888;
+}
+
+
+.cmty-friend-message {
+	clear : both;
+	color : #222;
+}
+
+/** Phone- and tablet-specific **/
+
+.cmty-phone,
+.cmty-phone-inline {
+	display : none;
+}
+
+.cmty-tablet-inline {
+	display : none;
+}
+
+@media (max-width : 768px) {
+	.cmty-tablet-inline {
+		display : inline-block;
+	}
+	
+	.cmty-no-tablet {
+		display : none !important;
+	}
+}
+
+
+@media (max-width: 480px), (max-height:480px) {
+	.cmty-phone {
+		display : block;
+	}
+	
+	.cmty-phone-inline {
+		display : inline-block;
+	}
+	
+	.cmty-no-phone {
+		display : none !important;
+	}
+	
+	
+	/** Reading a topic **/
+	.cmty-post-middle {
+		padding-left : 12px;
+	}
+	
+	.cmty-post-body {
+		margin-top : 5px;
+	}
+	
+	.cmty-post-top-data {
+		width : calc(100% - 46px);
+		width : -webkit-calc(100% - 46px);
+	}
+	
+	.cmty-topic-subject {
+		width : calc(100% - 51px);
+		width : -webkit-calc(100% - 51px);
+	}
+	.cmty-topic-first-row-right {
+		width : 46px;
+	}
+	
+	.cmty-topic-bookmark, 
+	.cmty-category-cell-bookmark,
+	.cmty-mark-all-read,
+	.cmty-new-topic-button .cmty-cat-cell-symbol-tag,
+	.cmty-topic-third-row-left,
+	.cmty-topic-first-row-right .cmty-full-screen {
+		display : none;
+	}
+	
+	.cmty-post-number {
+		float : left;
+		margin-right : 5px;
+	}
+
+	.cmty-pm-from-post {
+		float : left;
+		margin-top : 0;
+		padding : 0 9px 0 4px;
+	}
+	
+	.cmty-unread-icon {
+		float : left;
+		margin-right : 2px;
+	}
+	
+	
+
+	/** Posting environ **/
+	
+}
+
+.cmty-olympiad-tag-modal .cmty-item-tag {
+	background-color : rgb(2, 147, 134);
+}
+
+.cmty-olympiad-tag-modal  .cmty-warning-tags {
+	margin : 10px 0 0 87px;
+}
+
+.cmty-college-tag-modal .cmty-item-tag {
+	background-color : rgb(81, 30, 143);
+}
+
+.cmty-college-tag-modal .cmty-warning-tags {
+	margin : 10px 0 0 27px;
+}
+
+/* Because Chrome iOS is the suck **/
+
+.cmty-tags-itembox-wrapper .cmty-itembox {
+	height : auto;
+}
+
+/* Intervention modal when a topic is deleted while posting a new topic */
+.cmty-deleted-topic-w-extra {
+	max-width : 400px !important;
+}
+
+.cmty-deleted-topic-w-extra textarea {
+	width : 100%;
+	height : 60px;
+}
+
+
+
+
+/** Experimental phone stuff **/
+.cmty-category-cell .cmty-category-cell-heading.cmty-phone-cell-top {
+	display : none
+}
+
+.cmty-topic-full-top.cmty-phone-cell-top {
+	display : none;
+}
+.cmty-topic-full-top-placeholder {
+	position : absolute;
+}
+.cmty-cat-cell-jump-top {
+	display : none;
+}
+
+
+@media (max-width:768px) {
+	/*.cmty-away-from-top #community-all.cmty-page-topic #cmty-topic-view-top .cmty-category-cell .cmty-category-cell-heading {
+		display : none;
+	}*/
+
+	.cmty-hide-header #header-wrapper,
+	.cmty-hide-header .atop-the-community  {
+		display : none;
+	}
+	.cmty-hide-header #main-content {
+		padding-top : 0;
+	}
+	.cmty-topic-cell-left .cmty-topic-cell-jump-to-bottom,
+	.cmty-topic-cell.topic-unread .cmty-topic-cell-left .cmty-topic-cell-goto-unread	{
+		padding : 6px 8px;
+		top : -8px;
+		font-size : 16px;
+	}
+		
+	#feed-wrapper .cmty-topic-cell-left .cmty-topic-cell-jump-to-bottom,
+	#feed-wrapper .cmty-topic-cell.topic-unread .cmty-topic-cell-left .cmty-topic-cell-goto-unread	{
+		padding : 6px 2px;
+	}
+
+	.cmty-topic-cell-left .cmty-topic-cell-jump-to-bottom {
+		right : 5px;
+		top : -10px;
+	}
+	#feed-wrapper .cmty-topic-cell-left .cmty-topic-cell-jump-to-bottom {
+		right: 4px;
+	}
+
+	.cmty-topic-cell-subject {
+		max-width : 86%;
+	}
+	
+	.topic-unread .cmty-topic-cell-subject {
+		max-width : 78%;
+	}
+	
+	.cmty-topic-cell.topic-unread .cmty-topic-cell-goto-unread	{
+		right : 32px;
+	}
+	
+	#feed-wrapper .cmty-topic-cell.topic-unread .cmty-topic-cell-goto-unread	{
+		right : 17px;
+	}
+
+	.cmty-full-screen {
+		display : none;
+	}
+	
+	.cmty-away-from-top .cmty-topic-full-top-placeholder {
+		position : relative;
+	}
+	
+	.cmty-away-from-top .cmty-page-topic-list .cmty-cat-cell-jump-top,
+	.cmty-away-from-top .cmty-folder-top .cmty-cat-cell-jump-top  {
+		display : inline-block;
+		font-size : 16px;
+		padding : 2px 10px 6px 5px;
+		z-index : 40;
+		position : absolute;
+	}
+	
+	.cmty-away-from-top #community-all.cmty-page-topic:not(.reply-focused) #cmty-topic-view-top .cmty-category-cell .cmty-category-cell-heading.cmty-phone-cell-top,
+	.cmty-away-from-top #community-all.cmty-page-topic-list:not(.reply-focused) #cmty-topic-view-top .cmty-category-cell .cmty-category-cell-heading.cmty-phone-cell-top,
+	.cmty-away-from-top #community-all .cmty-folder-top .cmty-small-category-heading {
+		position : fixed;
+		top : 0;
+		display : block;
+		z-index : 35;
+		box-shadow : 3px 3px 13px #aaa;
+	}
+	
+	.cmty-away-from-top #community-all .cmty-folder-top .cmty-small-category-heading .cmty-category-cell-right {
+		display : none;
+	}
+
+	.cmty-away-from-top #community-all #cmty-topic-view-top .cmty-search-results .cmty-category-cell-left {
+		width : calc(100% - 30px);
+		width : -webkit-calc(100% - 30px);
+		max-width : calc(100% - 30px);
+		max-width : -webkit-calc(100% - 30px);
+	}
+
+	.cmty-away-from-top #cmty-topic-view-top .cmty-search-results .cmty-category-cell-left {
+		max-width : 95%; /** We clean out the search window */
+		padding-left : 0;
+	}	
+
+	.cmty-away-from-top #community-all.cmty-page-topic:not(.reply-focused) #cmty-topic-view-top .cmty-category-cell .cmty-category-cell-heading.cmty-phone-cell-top {
+		box-shadow : none;	
+	}
+
+	.cmty-away-from-top .cmty-folder-top .cmty-folder-top-placeholder {
+		display : block;
+		height : 30px;
+	}
+	
+	
+
+	.cmty-page-topic .cmty-category-cell-mid {
+		display : none;
+	}
+	
+	.cmty-away-from-top .cmty-page-topic:not(.reply-focused) .cmty-topic-full-top {
+		position : fixed;
+		top : 30px; 
+		box-shadow : 3px 3px 13px #aaa;
+		display : block;
+		padding : 3px 7px 4px 11px;
+		z-index : 25;
+		left : 0;
+	}
+
+	
+	
+	.cmty-post-right {
+		width : 36px;
+		padding-left : 0;
+	}
+	
+	.cmty-post-right span {
+		line-height : 28px;
+		width : 100%;
+		padding-left : 10px;
+		font-size : 16px;
+	}
+	
+	.cmty-page-topic-list #cmty-topic-view-left .cmty-topic-cell-data {
+		margin-right : 10px;
+	}
+	
+	#cmty-topic-view-left .cmty-topic-list-jump-top {
+		display : none;
+	}
+}
+
+@media (max-width:600px) {
+	select,
+	textarea,
+	input[type='text'],
+	input[type='search'],
+	input[type='password'],
+	div[contenteditable="true"]:focus {
+		font-size : 16px;
+	}
+}
+
+
+@media (max-width:480px) {
+
+	.cmty-category-cell .topic-unread .cmty-topic-cell-subject {
+		max-width : 74%;
+	}
+	
+
+}
+
+/** Hit the phone in either mode, but do not hit tablets in portrait mode **/
+@media (max-width:480px), (max-height:480px) {
+	.cmty-bbcode-buttons {
+		display : none;
+	}
+
+	.cmty-topic-close {
+		padding-right : 6px;
+	}
+	
+	
+	.cmty-reply-window .cmty-posting-environ-buttons {
+		width : 100%;
+		text-align : left;
+	}
+	
+	.cmty-reply-window .cmty-submit-button {
+		margin-left : 8px;
+		width : 80px;
+		padding-left : 12px;
+	}
+	.cmty-cancel-posting-x {
+		float : right;
+		padding : 2px 8px;
+	}
+	
+	.cmty-reply-divider {
+		display : none;
+	}
+	
+	.cmty-posting-preview-bar {
+		display : none;
+	}
+	
+	.cmty-category-cell .cmty-new-topic-button.cmty-icon-w-text {
+		line-height : 18px;
+		top : 3px;
+		padding : 5px 2px 5px 20px;
+	}
+	
+	
+	
+	.cmty-select-row-select {
+		width : 95px;
+		text-align : right;
+		margin-right : 5px;
+		padding-top : 1px;
+	}
+
+	.cmty-select-row-text {
+		width : calc(100% - 105px);
+		width : -webkit-calc(100% - 105px);
+		text-align : left;
+		font-size : 14px;
+		padding-right : 5px;
+	}
+
+	.blog-report-post {
+		display : none !important;
+	}	
+}
+
+
+/** Posting in phone mode **/
+
+@media (max-width:500px), (max-height:500px) {
+	.cmty-posting-modal {
+		height : calc(100% - 10px) !important;
+		max-height : 100% !important;
+		width : -webkit-calc(100% - 10px) !important;
+		width : calc(100% - 10px) !important;
+		max-width : 100% !important;
+		top : 0 !important;
+		left : 0 !important;
+	}
+	
+	.cmty-posting-modal .aops-close-x {
+		display : none;
+	}
+	
+	.cmty-posting-modal .cmty-posting-button-row.cmty-phone {
+		height : 20px;
+	}
+	
+	.cmty-posting-modal .cmty-posting-button-row.cmty-phone .btn {
+		display : none;	
+	}
+}
