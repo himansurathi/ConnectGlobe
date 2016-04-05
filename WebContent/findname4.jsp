@@ -7,30 +7,42 @@ String country=request.getParameter("country");
 String state=request.getParameter("state");
 String district=request.getParameter("district");
 String police=request.getParameter("police");
-System.out.println(state);
 if(country.length()>0){
-try{
-	Class.forName(Constants.DRIVER_NAME);
-	Connection con =DriverManager.getConnection(Constants.DB_URL,Constants.DB_USERNAME,Constants.DB_PASSWORD);
-
-PreparedStatement ps=con.prepareStatement("select * from forumrep where country='"+country+"' and state='"+state+"' and district='"+district+"'and police_station='"+police+"' order by postedon desc");
-//ps.setString(1,n);
-out.print("<br>");
-ResultSet rs=ps.executeQuery();
-while(rs.next()){
-
-out.print("</br><div id='index_box_top'></div>");
-								out.print("<div id='index_box_bg'>");
-								out.print("<B><font style='color:navy' size='2'>Report:&nbsp;&nbsp;&nbsp;&nbsp;</font></B></br><B>"+rs.getString(6)+"</B></br>");	
-								out.print("<B><font style='color:navy' size='2'>Status:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(7)+"</B></br>");	
-								out.print("<B><font style='color:navy' size='2'>Email:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(9)+"</B><span align='right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><font style='color:navy' size='2'>Posted On:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getDate(10)+"</B></span></br>");		
-									out.print("</div>");
-							out.print("<div id='index_box_bot'></div>");
-}
-
-
-
-con.close();
+	try{
+		Class.forName(Constants.DRIVER_NAME);
+		Connection con =DriverManager.getConnection(Constants.DB_URL,Constants.DB_USERNAME,Constants.DB_PASSWORD);
+		String query="select * from forumrep where country='"+country+"'";
+		if(!state.equals("undefined"))
+			query+=" and state='"+state+"'";
+		if(!district.equals("undefined"))
+			query+=" and district='"+district+"'";
+		if(!police.equals("undefined"))
+			query+=" and police_station='"+police+"'";
+		query+=" order by postedon desc";
+		System.out.println(query);
+		
+		PreparedStatement ps=con.prepareStatement(query);
+		//ps.setString(1,n);
+		out.print("<br>");
+		ResultSet rs=ps.executeQuery();
+		int flag=0;
+		while(rs.next()){
+			out.print("<br/><div id='index_box_top'></div>");
+			out.print("<div id='index_box_bg'>");
+			if(rs.getString(6)!=null)
+				out.print("<B><font style='color:navy' size='2'>Report:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><br/><B>"+rs.getString(6)+"</B><br/>");	
+			else
+				out.print("<B><font style='color:navy' size='2'>Report:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><br/><B>Blank Report </B><br/>");				
+			out.print("<B><font style='color:navy' size='2'>Category:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(7)+"</B><br/>");	
+			out.print("<B><font style='color:navy' size='2'>Email:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(9)+"</B><div style='float: right;'><span><B><font style='color:navy' size='2' >Posted On:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getDate(10)+"</B></span></div><br/>");		
+			out.print("</div>");
+			out.print("<div id='index_box_bot'></div>");
+			flag=1;
+	}
+	if(flag==0){
+		out.print("<B><font style='color:navy' size='2'>Report:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><br/><B> No Records Found</B><br/>");	
+	}
+	con.close();
 }catch(Exception e){e.printStackTrace();}
 }//end of if
 %>

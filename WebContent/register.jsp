@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Test</title>
+<title>Connect Globe</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
@@ -180,11 +180,11 @@ document.getElementById('location1').innerHTML=val;
 					</div>
 					<div id="menu">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="home.jsp">Home</a></li>
 							<li><a href="post.jsp">Post Report</a></li>
-							<li><a href="status.jsp">View Status</a></li>
-							<li><a href="area.jsp">Your Area</a></li>
-							<li><a href="advice.jsp">Your Advice</a></li>
+							<li><a href="status.jsp">View Report</a></li>
+							<li><a href="area.jsp">Search Report</a></li>
+							<li><a href="advice.jsp">Give Advice</a></li>
 							<li><a href="discuss.jsp">Discuss</a></li>
 							<li><a href="register.jsp">Register</a></li>
 								<li><a href="admin.jsp">Admin</a></li>
@@ -196,7 +196,7 @@ document.getElementById('location1').innerHTML=val;
 				
 				
 				
-				<div class="inner_copy"><div class="inner_copy">Best selection of premium <a href="http://www.templatemonster.com/pack/joomla-1-6-templates/">Joomla 1.6 templates</a></div></div>
+				
 				<div id="main">
 					<div class="index_main_top"></div>
 					<div class="main_bg">
