@@ -34,13 +34,13 @@
 				
 							 <% 
 								if(request.getAttribute("notlogin_msg")!=null){
-								out.print("<p align='center'><font size='2' color='red'>"+request.getAttribute("notlogin_msg")+"</font></p><br/>");
+								out.print("<p align='center'><font size='2' color='blue'>"+request.getAttribute("notlogin_msg")+"</font></p><br/>");
 								}
 								if(request.getAttribute("Error")!=null){
 								out.print("<p align='center'><font size='2' color='red'>"+request.getAttribute("Error")+"</font></p><br/>");
 								}
 								if(request.getAttribute("reg")!=null){
-									out.print("<p align='center'><font style='color:red'>"+request.getAttribute("reg")+"</font></p><br/>");
+									out.print("<p align='center'><font style='color:green'>"+request.getAttribute("reg")+"</font></p><br/>");
 								
 								} 
 							%>
@@ -54,7 +54,6 @@
 										<ul class="ls">
 											<li style="margin-left:20%;"><a href="register.jsp" >New User</a></li>
 											<li style="margin-left:20%;"><a href="forgot.jsp">Forgot Password</a></li>	
-											<li style="margin-left:20%;"><a href="admin.jsp">Administrator Login</a></li>
 										</ul>
 									</div>
 								</fieldset>

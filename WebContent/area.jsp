@@ -67,9 +67,10 @@ document.getElementById('location').innerHTML=val;
 										<b>Country: </b>
 									</td>
 									<td>
-										<select name="slist1" id="coun" onchange="SList.getSelect('slist2', this.value);">
-	 									<option value="India" selected>India</option>
-	 									<option value="s1_opt2">USA</option>
+										<select required name="slist1" id="coun" onchange="SList.getSelect('slist2', this.value);">
+	 									<option value="" selected>Select Your Country</option>
+	 									<option value="India" >India</option>
+	 									<option value="USA">USA</option>
 										</select>
 									</td>
 								</tr>
@@ -101,7 +102,7 @@ document.getElementById('location').innerHTML=val;
 									*/
 									SList.slist2 = {
 									 "India": ['Uttar Pradesh', 'Madhya Pradesh'],
-									 "s1_opt2": ['New York','Washington'],
+									 "USA": ['New York','Washington'],
 									};
 									
 									/*
@@ -156,7 +157,7 @@ document.getElementById('location').innerHTML=val;
 									           document.getElementById('slist4').innerHTML = '';
 									          break;
 									            case 'slist4':
-									          document.getElementById('slist4').innerHTML = txtsl4+' <td><select name="slist4" id="pol">'+addata+'</select></td>';
+									          document.getElementById('slist4').innerHTML = txtsl4+' <td><select required name="slist4" id="pol">'+addata+'</select></td>';
 									          break;
 									      }
 									    }

@@ -78,7 +78,7 @@ function post(a){
 								    out.print("<br/><div id='index_box_top'></div>");
 									out.print("<div id='index_box_bg'>");
 									if(rs.getString(1)!=null)
-										out.print("<B><font style='color:navy' size='2'>Country:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(1)+"</B><br/>");
+										out.print("<B><font style='color:navy' size='2'>Country:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(1)+"</B>"+"<div style='float: right;'><a href='delete.jsp?id="+rs.getString(9)+"'>Delete</a></div><br/>");
 									if(rs.getString(2)!=null)
 										out.print("<B><font style='color:navy' size='2'>State:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(2)+"</B><br/>");	
 									if(rs.getString(3)!=null)

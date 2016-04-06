@@ -62,7 +62,7 @@
 							<li><a href="home.jsp">Home</a></li>							
 							<li><a href="post.jsp">Post Report</a></li>
 							<li><a href="status.jsp">View Report</a></li>
-							<li><a href="area.jsp">Search Report</a></li>
+							<li><a href="search.jsp">Search Report</a></li>
 							<li><a href="register.jsp">Register</a></li>
 						</ul>
 					</div>

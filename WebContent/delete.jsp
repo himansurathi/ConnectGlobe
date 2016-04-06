@@ -21,7 +21,7 @@ ps.executeUpdate();
 con.close();
 %>
 
-<jsp:forward page="astatus.jsp"></jsp:forward>
+<jsp:forward page="postsmade.jsp"></jsp:forward>
 <% 
 }catch(Exception e){e.printStackTrace();}
 %>

@@ -2,24 +2,13 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.javatpoint.Constants" %>
 
-<body>
 <%
-String country=request.getParameter("country");
-String state=request.getParameter("state");
-String district=request.getParameter("district");
-String police=request.getParameter("police");
-if(country.length()>0){
+String category=request.getParameter("category");
+if(category.length()>0){
 	try{
 		Class.forName(Constants.DRIVER_NAME);
 		Connection con =DriverManager.getConnection(Constants.DB_URL,Constants.DB_USERNAME,Constants.DB_PASSWORD);
-		String query="select * from forumrep where country='"+country+"'";
-		if(!state.equals("undefined"))
-			query+=" and state='"+state+"'";
-		if(!district.equals("undefined"))
-			query+=" and district='"+district+"'";
-		if(!police.equals("undefined"))
-			query+=" and police_station='"+police+"'";
-		query+=" order by postedon desc";
+		String query="select * from forumrep where category='"+category+"' order by postedon desc";
 		System.out.println(query);
 		
 		PreparedStatement ps=con.prepareStatement(query);
@@ -28,7 +17,6 @@ if(country.length()>0){
 		ResultSet rs=ps.executeQuery();
 		int flag=0;
 		while(rs.next()){
-			System.out.println("ID: "+rs.getString(1)+" State: "+rs.getString(3)+" District: "+rs.getString(4)+"  Number of Advices: "+rs.getString(6));
 			out.print("<br/><div id='index_box_top'></div>");
 			out.print("<div id='index_box_bg'>");
 			if(rs.getString(6)!=null)
@@ -38,7 +26,7 @@ if(country.length()>0){
 			out.print("<B><font style='color:navy' size='2'>Category:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(7)+"</B><br/>");	
 			out.print("<B><font style='color:navy' size='2'>Email:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getString(9)+"</B><div style='float: right;'><span><B><font style='color:navy' size='2' >Posted On:&nbsp;&nbsp;&nbsp;&nbsp;</font></B><B>"+rs.getDate(10)+"</B></span></div><br/>");		
 			out.print("</div>");
-			out.print("<div id='index_box_bot'></div>");	
+			out.print("<div id='index_box_bot'></div>");
 			flag=1;
 	}
 	if(flag==0){
@@ -48,4 +36,3 @@ if(country.length()>0){
 }catch(Exception e){e.printStackTrace();}
 }//end of if
 %>
-</body>

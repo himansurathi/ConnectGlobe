@@ -20,9 +20,10 @@
 						<img src="images/contact.png" alt="" title="" style="float: left; padding-right: 10px; padding-bottom: 4px;" />
 						<h4>Search By</h4>
 						<br /><br />
-						<button onclick="">Search by Location</button>
+						<a href="area.jsp"><button>Search by Location</button></a>
 						<br/>
-						<button onclick="topic.jsp">Search by Topic</button>
+						<br/>
+						<a href="topic.jsp"><button>Search by Topic</button></a>
 						<br/>
 					</div>
 					<div style="clear: both"></div>
